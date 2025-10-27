@@ -20,7 +20,6 @@ public class masterdiestate : EnemyState
     {
 
         base.Enter();
-        enemy.StartCoroutine("BusyFor");
 
     }
 
@@ -34,7 +33,16 @@ public class masterdiestate : EnemyState
     {
         base.Update();
         enemy.ZeroVelocity();
+        if (TriggerCalled)
+        {
+            //Debug.Log("die");
+            enemy.StartCoroutine(enumerator(0f));
+        }
 
     }
-    
+    private IEnumerator enumerator(float time)
+    {
+        yield return new WaitForSeconds(time);
+        stateMachine.ChangeState(enemy.elimination);
+    }
 }

@@ -7933,7 +7933,7 @@ MonoBehaviour:
     modifiers: 
   damage:
     Value: 10
-    modifiers: 28000000
+    modifiers: 64000000
   strenth:
     Value: 0
     modifiers: 

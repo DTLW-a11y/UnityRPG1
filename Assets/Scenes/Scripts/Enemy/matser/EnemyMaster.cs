@@ -11,6 +11,7 @@ public class EnemyMaster : Enemy
     public masterattackstate attackstate { get; private set; }
     public masterstunnedstate stunnedstate { get; private set; }
     public masterdiestate diestate { get; private set; }
+    public elimination elimination { get; private set; }
     #endregion
     protected override void Awake()
     {
@@ -21,6 +22,7 @@ public class EnemyMaster : Enemy
         attackstate = new masterattackstate(this, stateMachine, "Attack", this);
         stunnedstate = new masterstunnedstate(this, stateMachine, "Stunned", this);
         diestate = new masterdiestate(this, stateMachine, "Die", this);
+        elimination = new elimination(this, stateMachine, "Die", this);
     }
 
     protected override void Start()
