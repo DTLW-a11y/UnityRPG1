@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerStateMachine 
+{
+    public PlayerState currentState {  get; private set; }//
+    public void Initialize(PlayerState _startstate)
+    {
+        currentState = _startstate;
+        currentState.Enter();
+    }
+    public void changeState(PlayerState _newstate)
+    {
+        currentState.Exit();
+        currentState = _newstate;
+        currentState.Enter();
+    }
+}
