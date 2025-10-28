@@ -22,6 +22,8 @@ public class Entity : MonoBehaviour
     public int facingdir { get; private set; } = 1;
     protected bool facingright = true;
 
+    public System.Action OnFlip;
+
     #region Conponents
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
@@ -58,6 +60,8 @@ public class Entity : MonoBehaviour
         facingdir *= -1;
         facingright = !facingright;
         transform.Rotate(0, 180, 0);
+        if(OnFlip != null) 
+        OnFlip();
     }
     public virtual void flipController(float _x)
     {

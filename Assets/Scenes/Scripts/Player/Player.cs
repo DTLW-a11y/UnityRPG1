@@ -36,6 +36,7 @@ public class Player : Entity
     public playerwalljump walljumpstate { get; private set; }
     public playerprimeattack primeattack { get; private set; }
     public playerdiestate diestate { get; private set; }
+    public eliminationplayer elimination { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -52,6 +53,7 @@ public class Player : Entity
         primeattack = new playerprimeattack(this, stateMachine, "Attack");
         counterstate = new playercounterstate(this, stateMachine, "CounterAttack");
         diestate = new playerdiestate(this, stateMachine, "Die");
+        elimination = new eliminationplayer(this, stateMachine, "Die");
     }
 
     public void CheckDash()

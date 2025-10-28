@@ -27,5 +27,15 @@ public class playerdiestate : PlayerState
     {
         base.Update();
         player.ZeroVelocity();
+        if (triggerCalled)
+        {
+            //Debug.Log("die");
+            player.StartCoroutine(enumerator(0f));
+        }
+    }
+    private IEnumerator enumerator(float time)
+    {
+        yield return new WaitForSeconds(time);
+        stateMachine.changeState(player.elimination);
     }
 }

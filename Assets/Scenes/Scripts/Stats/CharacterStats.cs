@@ -20,13 +20,15 @@ public class CharacterStats : MonoBehaviour
     public Stat critchance;
     public Stat critpower;
     public bool isdied;
-    [SerializeField] private int currentHP;
-    
+    public int currentHP;
+
+    public System.Action Onhealthchange;
+
     protected virtual void Start()
     {
         isdied = false;
         critpower.Setvalue(150);
-        currentHP = maxHP.GetValue();
+        currentHP = GetMaxHP();
     }
 
     public void dodamage(CharacterStats stats)//根据攻击者条件计算伤害
@@ -38,7 +40,9 @@ public class CharacterStats : MonoBehaviour
         int totaldamage = damage.GetValue() + strenth.GetValue();
 
         if (Cirtcheck())
-            Debug.Log("crit hit");
+        {
+            totaldamage = Criticaldamage(totaldamage);
+        }
 
         totaldamage = checktargetarmor(stats,totaldamage);
         stats.takedamage(totaldamage);
@@ -50,7 +54,19 @@ public class CharacterStats : MonoBehaviour
             return true;
         else return false;
     }
+    private int Criticaldamage(int _damage)
+    {
+        float criticalpoint = (critpower.GetValue() + strenth.GetValue()) * .01f;
+        float critdamage = _damage * criticalpoint;
+        return Mathf.RoundToInt(critdamage);
+    }
+    protected virtual void Decreasehealthby(int _damage)
+    {
+        currentHP -=_damage;
+        if(Onhealthchange != null)
+        Onhealthchange();
 
+    }
     private int checktargetarmor(CharacterStats stats,int totaldamage)
     {
         totaldamage -= stats.armor.GetValue();
@@ -72,7 +88,7 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void takedamage(int _damage)
     {
-        currentHP -= _damage;
+        Decreasehealthby(_damage);
         if (currentHP < 0)
         {
             die();
@@ -83,4 +99,9 @@ public class CharacterStats : MonoBehaviour
     {
         isdied = true;
     }
+    public int GetMaxHP()
+    {
+        return maxHP.GetValue() + vitality.GetValue() * 5;
+    }
 }
+    
