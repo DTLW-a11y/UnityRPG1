@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ManaSprite
+  - HealthSprite
   layers:
   - Default
   - TransparentFX
@@ -52,4 +54,7 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 3932933151
+    locked: 0
+  - name: item
+    uniqueID: 2750608127
     locked: 0
