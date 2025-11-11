@@ -16,7 +16,7 @@ public class ItemObject : MonoBehaviour
     {
         if (collision.GetComponent<Player>() != null)
         {
-            Debug.Log("impicked");
+            //Debug.Log("impicked");
             Inventory.Instance.AddItem(itemdata);
             Destroy(gameObject);
         }
