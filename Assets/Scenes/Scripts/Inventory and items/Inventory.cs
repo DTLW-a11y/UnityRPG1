@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * 仓库
+ * 
+ * 
+ */
 public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
@@ -84,22 +88,24 @@ public class Inventory : MonoBehaviour
         if (itemToRemove != null)
         {
             Unequiped(itemToRemove);
+            
             AddItem(itemToRemove);
         }
         equipments.Add(item);
         equipmentDictionary.Add(newequipment, item);
+        newequipment.AddModifier();
         RemoveItem(_item);
 
         UpdateUI();
     }
 
-    private void Unequiped(itemData_equipment itemToRemove)
+    public void Unequiped(itemData_equipment itemToRemove)
     {
         if (equipmentDictionary.TryGetValue(itemToRemove, out InventoryItem value))
         {
             equipments.Remove(value);
             equipmentDictionary.Remove(itemToRemove);
-            
+            itemToRemove.RemoveModifier();
         }
     }
 
@@ -122,7 +128,7 @@ public class Inventory : MonoBehaviour
         AddToStash(_item);
         }
             UpdateUI();
-    }
+    }//添加物品并更新ui
     private void AddToInventory(ItemData _item)
     {
         if (inventoryDictionary.TryGetValue(_item, out InventoryItem value))

@@ -16,3 +16,16 @@ MonoBehaviour:
   itemname: wood_sword
   icon: {fileID: 21300166, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   equipmenttype: 0
+  strenth: 0
+  agility: 0
+  intelligence: 0
+  vitality: 0
+  maxHP: 0
+  armor: 0
+  evision: 0
+  damage: 5
+  critchance: 0
+  critpower: 0
+  firedamage: 0
+  icedamage: 0
+  lightingdamage: 0

@@ -15,7 +15,6 @@ public class UI_Itemslot : MonoBehaviour , IPointerDownHandler
         itemimage.color = Color.white;
         if (item != null)
         {
-            //Debug.Log("1");
             itemimage.sprite = item.ItemData.icon;
             if (item.stacksize > 1)
             {
@@ -25,7 +24,7 @@ public class UI_Itemslot : MonoBehaviour , IPointerDownHandler
             { itemtext.text = ""; }
         }
     }
-    public void ClanUpSlot()
+    public void ClanUpSlot() //Çå¿ÕuiÀ¸
     {
         item = null;
         itemimage.color = Color.clear;
@@ -33,7 +32,7 @@ public class UI_Itemslot : MonoBehaviour , IPointerDownHandler
         itemtext.text = "";   
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public virtual void OnPointerDown(PointerEventData eventData)
     {
         if (item.ItemData.ItemType == ItemType.Equipment)
         {

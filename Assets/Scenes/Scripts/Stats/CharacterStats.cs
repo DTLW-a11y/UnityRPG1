@@ -36,7 +36,6 @@ public class CharacterStats : MonoBehaviour
         if (CanAvoidAttack(stats))
             return;
 
-
         int totaldamage = damage.GetValue() + strenth.GetValue();
 
         if (Cirtcheck())
@@ -71,7 +70,7 @@ public class CharacterStats : MonoBehaviour
     {
         totaldamage -= stats.armor.GetValue();
         if (totaldamage <= 0)
-            totaldamage = 0;
+            totaldamage = 1;
         return totaldamage;
     }
 
