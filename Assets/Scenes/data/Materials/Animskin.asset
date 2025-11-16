@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2911dc3ba7ddf9479b9846ccdd303c7, type: 3}
   m_Name: Animskin
   m_EditorClassIdentifier: 
+  ItemType: 0
   itemname: animskin
   icon: {fileID: 2018053615, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
+  dropChance: 65

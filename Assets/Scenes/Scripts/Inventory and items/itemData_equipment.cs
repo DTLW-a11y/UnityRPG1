@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum EquipmentType
@@ -11,6 +12,7 @@ public enum EquipmentType
 [CreateAssetMenu(fileName = "New Item Data", menuName = "Data/Equipment")]
 public class itemData_equipment : ItemData
 {
+    public ItemEffect[] itemEffects;
     public EquipmentType equipmenttype;
 
     [Header("Base info")]
@@ -33,6 +35,9 @@ public class itemData_equipment : ItemData
     public int firedamage;
     public int icedamage;
     public int lightingdamage;
+
+    [Header("Craft Requirements")]
+    public List<InventoryItem> CraftMaterials;
 
     public void AddModifier()
     {
@@ -65,5 +70,12 @@ public class itemData_equipment : ItemData
         playerStats.damage.removemodifier(damage);
         playerStats.critpower.removemodifier(critpower);
         playerStats.critchance.removemodifier(critchance);
+    }
+    public void ExecuteItemEffect()
+    {
+        foreach (var item in itemEffects)
+        {
+            item.ExecuteEffect();
+        }
     }
 }

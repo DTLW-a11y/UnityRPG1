@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playeranimationtrigger : MonoBehaviour
 {
-    private     Player player => GetComponentInParent<Player>();
+    private Player player => GetComponentInParent<Player>();
 
     private void AnimationTrigger()
     {
@@ -20,6 +20,8 @@ public class playeranimationtrigger : MonoBehaviour
                 //hit.GetComponent<Enemy>().Damage();
                 EnemyStats _target = hit.GetComponent<EnemyStats>();
                 player.stats.dodamage(_target);
+
+                Inventory.Instance.getEquipment(ItemType.Equipment).ExecuteItemEffect();
             }
                 
         }

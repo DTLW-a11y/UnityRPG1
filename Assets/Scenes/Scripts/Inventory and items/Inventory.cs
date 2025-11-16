@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 /*
  * 仓库
+ * 单例，可在其他类随意调用
  * 
  * 
  */
 public class Inventory : MonoBehaviour
 {
+    
+
     public static Inventory Instance;
 
     public List<InventoryItem> equipments;
@@ -19,6 +22,8 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> StashItems;
     public Dictionary<ItemData,InventoryItem> StashDictionary;
 
+    public List<ItemData> startingItems;
+
     [Header("Inventory UI")]
     [SerializeField] private Transform inventoryslotParent;
     [SerializeField] private Transform StashslotParent;
@@ -26,7 +31,40 @@ public class Inventory : MonoBehaviour
     private UI_Itemslot[] itemslots;
     private UI_Itemslot[] stashslots;
     private UI_equipmentslot[] equipmentslots;
+    /*
+     * 制作装备的材料在stash栏里
+     * */
+    public bool CanCraft(itemData_equipment itemToCraft, List<InventoryItem> requirements) 
+    {
+        List<InventoryItem> itemsToRemove = new List<InventoryItem>();
+        for (int i = 0; i < requirements.Count; i++)
+        {
+            if (StashDictionary.TryGetValue(requirements[i].ItemData, out var itemData))
+            {
+                if(itemData.stacksize < requirements[i].stacksize)
+                {
+                    Debug.Log("Not Enough Materials");
+                    return false;
+                }
+                else
+                {
+                    itemsToRemove.Add(itemData);
+                }
+            }
+            else
+            {
+                Debug.Log("Not Enough Materials");
+                return false;
+            }
+        }
+        for(int i=0; i < itemsToRemove.Count; i++)
+        {
+            RemoveItem(itemsToRemove[i].ItemData);
+        }
+        AddItem(itemToCraft);
 
+        return true;
+    }
     private void UpdateUI()
     {
         for(int i=0; i<itemslots.Length; i++)
@@ -63,14 +101,27 @@ public class Inventory : MonoBehaviour
     {
         equipments = new List<InventoryItem>();
         equipmentDictionary = new Dictionary<itemData_equipment, InventoryItem>();
-        inventoryItems = new List<InventoryItem>();
-        inventoryDictionary = new Dictionary<ItemData,InventoryItem>();
-        itemslots = inventoryslotParent.GetComponentsInChildren<UI_Itemslot>();
-        StashItems = new List<InventoryItem>();
-        StashDictionary = new Dictionary<ItemData,InventoryItem>();
-        stashslots = StashslotParent.GetComponentsInChildren<UI_Itemslot>();
         equipmentslots = EquipmentSlotParent.GetComponentsInChildren<UI_equipmentslot>();
+
+        inventoryItems = new List<InventoryItem>();
+        inventoryDictionary = new Dictionary<ItemData, InventoryItem>();
+        itemslots = inventoryslotParent.GetComponentsInChildren<UI_Itemslot>();
+
+        StashItems = new List<InventoryItem>();
+        StashDictionary = new Dictionary<ItemData, InventoryItem>();
+        stashslots = StashslotParent.GetComponentsInChildren<UI_Itemslot>();
+        AddStartingItems();
+
     }
+
+    private void AddStartingItems()
+    {
+        for (int i = 0; i < startingItems.Count; i++)
+        {
+            AddItem(startingItems[i]);
+        }
+    }
+
     public void equipitems(ItemData _item)
     {
         InventoryItem item = new InventoryItem(_item);
@@ -98,8 +149,7 @@ public class Inventory : MonoBehaviour
 
         UpdateUI();
     }
-
-    public void Unequiped(itemData_equipment itemToRemove)
+    public void Unequiped(itemData_equipment itemToRemove)//取消装备物品，并且不回到仓库
     {
         if (equipmentDictionary.TryGetValue(itemToRemove, out InventoryItem value))
         {
@@ -108,7 +158,6 @@ public class Inventory : MonoBehaviour
             itemToRemove.RemoveModifier();
         }
     }
-
     private void Awake()
     {
         if (Instance == null)
@@ -118,12 +167,12 @@ public class Inventory : MonoBehaviour
     }   
     public void AddItem(ItemData _item)
     {
-        if (_item.ItemType == ItemType.Material)
+        if (_item.ItemType == ItemType.Equipment)
         {
         AddToInventory(_item);
 
         }
-        else if( _item.ItemType == ItemType.Equipment)
+        else if( _item.ItemType == ItemType.Material)
         {
         AddToStash(_item);
         }
@@ -183,12 +232,21 @@ public class Inventory : MonoBehaviour
         if(ismoved) 
         UpdateUI();
     }
-    private void Update()
+
+    public List<InventoryItem> GetEquipmentList() => equipments;
+
+    public List<InventoryItem> GetStashList() => StashItems;
+
+    public itemData_equipment getEquipment(ItemType _type)//根据物品类型获得已装备物品
     {
-        if(Input.GetKeyDown(KeyCode.L))
+        itemData_equipment equipedItem = null;
+        foreach (var item in equipmentDictionary)
         {
-            ItemData newitem = inventoryItems[inventoryItems.Count-1].ItemData;
-            RemoveItem(newitem);
+            if (item.Key.ItemType == _type)
+            {
+                equipedItem = item.Key;
+            }
         }
+        return equipedItem;
     }
 }

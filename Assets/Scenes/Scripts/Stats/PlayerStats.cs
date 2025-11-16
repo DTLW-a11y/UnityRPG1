@@ -20,5 +20,7 @@ public class PlayerStats : CharacterStats
     {
         base.die();
         player.stateMachine.changeState(player.diestate);
+
+        GetComponent<PlayerItemDrop>()?.GenerateDrop();
     }
 }

@@ -19,10 +19,10 @@ public class CharacterStats : MonoBehaviour
     public Stat damage;
     public Stat critchance;
     public Stat critpower;
-    public bool isdied;
     public int currentHP;
 
     public System.Action Onhealthchange;
+    public bool isdied {  get; private set; }
 
     protected virtual void Start()
     {

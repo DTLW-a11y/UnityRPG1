@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2911dc3ba7ddf9479b9846ccdd303c7, type: 3}
-  m_Name: grass
+  m_Name: grass1
   m_EditorClassIdentifier: 
-  itemname: grass
-  icon: {fileID: -400365580, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
+  ItemType: 0
+  itemname: grass1
+  icon: {fileID: -1603182679, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
+  dropChance: 78
