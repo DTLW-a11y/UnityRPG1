@@ -12,7 +12,7 @@ public enum EquipmentType
 [CreateAssetMenu(fileName = "New Item Data", menuName = "Data/Equipment")]
 public class itemData_equipment : ItemData
 {
-    public ItemEffect[] itemEffects;
+    //public ItemEffect[] itemEffects;
     public EquipmentType equipmenttype;
 
     [Header("Base info")]
@@ -71,11 +71,11 @@ public class itemData_equipment : ItemData
         playerStats.critpower.removemodifier(critpower);
         playerStats.critchance.removemodifier(critchance);
     }
-    public void ExecuteItemEffect()
-    {
-        foreach (var item in itemEffects)
-        {
-            item.ExecuteEffect();
-        }
-    }
+    //public void ExecuteItemEffect()
+    //{
+    //    foreach (var item in itemEffects)
+    //    {
+    //        item.ExecuteEffect();
+    //    }
+    //}
 }

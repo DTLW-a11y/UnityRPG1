@@ -37,6 +37,10 @@ public class playergroundstate : PlayerState
         {
             stateMachine.changeState(player.primeattack);
         }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            stateMachine.changeState(player.magicattack1);
+        }
 
     }
 }

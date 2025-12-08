@@ -13,15 +13,19 @@ public class Inventory : MonoBehaviour
 
     public static Inventory Instance;
 
+    //装备
     public List<InventoryItem> equipments;
     public Dictionary<itemData_equipment, InventoryItem> equipmentDictionary;
 
+    //
     public List<InventoryItem> inventoryItems;
     public Dictionary<ItemData,InventoryItem> inventoryDictionary;
 
+    //材料
     public List<InventoryItem> StashItems;
     public Dictionary<ItemData,InventoryItem> StashDictionary;
 
+    //初始物品
     public List<ItemData> startingItems;
 
     [Header("Inventory UI")]
@@ -34,6 +38,8 @@ public class Inventory : MonoBehaviour
     /*
      * 制作装备的材料在stash栏里
      * */
+
+    //物品合成判断
     public bool CanCraft(itemData_equipment itemToCraft, List<InventoryItem> requirements) 
     {
         List<InventoryItem> itemsToRemove = new List<InventoryItem>();
@@ -65,6 +71,7 @@ public class Inventory : MonoBehaviour
 
         return true;
     }
+    //更新ui
     private void UpdateUI()
     {
         for(int i=0; i<itemslots.Length; i++)
@@ -149,6 +156,16 @@ public class Inventory : MonoBehaviour
 
         UpdateUI();
     }
+    public void useitems(ItemData _item)
+    {
+        InventoryItem item = new InventoryItem(_item);
+
+        RemoveItem(_item);//物品数量减少
+
+        _item.ExecuteItemEffect();
+
+        UpdateUI();
+    }
     public void Unequiped(itemData_equipment itemToRemove)//取消装备物品，并且不回到仓库
     {
         if (equipmentDictionary.TryGetValue(itemToRemove, out InventoryItem value))
@@ -167,16 +184,15 @@ public class Inventory : MonoBehaviour
     }   
     public void AddItem(ItemData _item)
     {
-        if (_item.ItemType == ItemType.Equipment)
+        if (_item.ItemType == ItemType.Equipment || _item.ItemType == ItemType.Item)//添加装备和消耗品
         {
         AddToInventory(_item);
-
         }
-        else if( _item.ItemType == ItemType.Material)
+        else if( _item.ItemType == ItemType.Material)//添加材料
         {
         AddToStash(_item);
         }
-            UpdateUI();
+        UpdateUI();
     }//添加物品并更新ui
     private void AddToInventory(ItemData _item)
     {

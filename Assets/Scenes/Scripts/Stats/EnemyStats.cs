@@ -7,7 +7,7 @@ public class EnemyStats : CharacterStats
     private EnemyMaster enemy;
     private ItemDrop myDropSystem;
 
-    [Header("Level Details")]
+    [Header("Level Details")]//µÈ¼¶
     [SerializeField] private int level = 1;
     [Range(0f, 1f)]
     [SerializeField] private float percentage = .1f;

@@ -5,9 +5,16 @@ using UnityEngine;
 public class PlayerStats : CharacterStats
 {
     private Player player;
+
+    [Header("Level Details")]//等级
+    [SerializeField] private int level = 1;
+    [SerializeField] private int manalevel = 1;
+    [Range(0f, 1f)]
+    [SerializeField] private float percentage = .1f;
     protected override void Start()
     {
         base.Start();
+        AddModifiers();
         player = GetComponent<Player>();
     }
     public override void takedamage(int _damage)
@@ -22,5 +29,33 @@ public class PlayerStats : CharacterStats
         player.stateMachine.changeState(player.diestate);
 
         GetComponent<PlayerItemDrop>()?.GenerateDrop();
+    }
+
+    private void Modify(Stat _stat)//数值随等级指数级增长
+    {
+        for (int i = 1; i < level; i++)
+        {
+            float modifier = _stat.GetValue() * percentage;
+            _stat.addmodifier(Mathf.RoundToInt(modifier));
+        }
+    }
+    private void ModifyMana(Stat _stat)//数值随等级指数级增长
+    {
+        for (int i = 1; i < manalevel; i++)
+        {
+            float modifier = 0f;
+            modifier += _stat.GetValue();
+            _stat.addmodifier(Mathf.RoundToInt(modifier));
+        }
+    }
+    private void AddModifiers() // 随等级增长修改的属性
+    {
+        Modify(damage);
+        Modify(strenth);
+
+        Modify(armor);
+        Modify(maxHP);
+
+        ModifyMana(intelligence);
     }
 }

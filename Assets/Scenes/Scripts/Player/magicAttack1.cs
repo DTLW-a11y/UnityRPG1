@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playermovestate : playergroundstate
+public class magicAttack1 : PlayerState
 {
-    public playermovestate(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    Player player;
+    public magicAttack1(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
+        this.player = _player;
     }
-
     public override void Enter()
     {
         base.Enter();
+        
     }
 
     public override void Exit()
@@ -21,10 +23,7 @@ public class playermovestate : playergroundstate
     public override void Update()
     {
         base.Update();
-        if(xInput == 0 || player.IsWallDetected())
-        { 
+        if (triggerCalled)
             stateMachine.changeState(player.idlestate);
-        }
-        player.SetVelocity(xInput * player.movespeed,rb.velocity.y);
     }
 }

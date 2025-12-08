@@ -32,15 +32,19 @@ public class UI_Itemslot : MonoBehaviour , IPointerDownHandler
         itemtext.text = "";   
     }
 
-    public virtual void OnPointerDown(PointerEventData eventData)
+    public virtual void OnPointerDown(PointerEventData eventData)//鼠标点击物品栏
     {
         if (Input.GetKey(KeyCode.LeftControl)) {
             Inventory.Instance.RemoveItem(item.ItemData);
                 return;
         }
-        if (item.ItemData.ItemType == ItemType.Equipment)
+        if (item.ItemData.ItemType == ItemType.Equipment)//装备
         {
             Inventory.Instance.equipitems(item.ItemData);
+        }
+        if (item.ItemData.ItemType == ItemType.Item)//使用消耗品
+        {
+            Inventory.Instance.useitems(item.ItemData);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBarUI : MonoBehaviour
+public class ManaBarUI : MonoBehaviour
 {
     private CharacterStats mystats;
     Entity entity;
@@ -16,7 +16,7 @@ public class HealthBarUI : MonoBehaviour
         slider = GetComponentInChildren<Slider>();
         mystats = GetComponentInParent<CharacterStats>();
         entity.OnFlip += flip;
-        mystats.onhealthchange += ChangeHealthUI;
+        mystats.Onmanachange += ChangeManaUI;
     }
     private void flip()
     {
@@ -26,13 +26,13 @@ public class HealthBarUI : MonoBehaviour
     private void OnDisable()
     {
         entity.OnFlip -= flip;
-        mystats.onhealthchange -= ChangeHealthUI;
+        mystats.Onmanachange -= ChangeManaUI;
     }
-    private void ChangeHealthUI()
-    { 
-        slider.maxValue = mystats.GetMaxHP();
-        slider.value= mystats.currentHP;
-    
+    private void ChangeManaUI()
+    {
+        slider.maxValue = mystats.GetMaxMana();
+        slider.value = mystats.Mana;
+        Debug.Log(slider.value);
     }
-    
+
 }

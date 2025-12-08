@@ -25,7 +25,6 @@ public class Player : Entity
 
     #region States
     public PlayerStateMachine stateMachine { get; private set; }//
-
     public playeridlestate idlestate {  get; private set; }//
     public playermovestate movestate { get; private set; }//
     public playerJumpstate jumpstate { get; private set; }
@@ -37,6 +36,8 @@ public class Player : Entity
     public playerprimeattack primeattack { get; private set; }
     public playerdiestate diestate { get; private set; }
     public eliminationplayer elimination { get; private set; }
+
+    public magicAttack1 magicattack1 { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -54,6 +55,9 @@ public class Player : Entity
         counterstate = new playercounterstate(this, stateMachine, "CounterAttack");
         diestate = new playerdiestate(this, stateMachine, "Die");
         elimination = new eliminationplayer(this, stateMachine, "Die");
+        magicattack1 = new magicAttack1(this, stateMachine, "MagicAttack1");
+
+        //player = GetComponent<CharacterStats>();
     }
 
     public void CheckDash()
@@ -80,9 +84,12 @@ public class Player : Entity
         base.Update();
         stateMachine.currentState.Update();
         CheckDash();
-        
+
+        //if (Input.GetKeyDown(KeyCode.Y))
+        //    player.Decreasemana(20);
         
     }
+    //CharacterStats player;
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
 

@@ -1,34 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class CharacterStats : MonoBehaviour
 {
-    [Header("Base info")]
+    [Header("Base info")]//基础数值
     public Stat strenth;
     public Stat agility;
-    public Stat intelligence;
+    public Stat intelligence; //影响魔力量
     public Stat vitality;
 
-    [Header("Defense info")]
+    [Header("Defense info")]//防御数值
     public Stat maxHP;
     public Stat armor;
-    public Stat evision;
+    public Stat evision;//闪避
 
     [Header("Attack info")]
     public Stat damage;
-    public Stat critchance;
-    public Stat critpower;
+    public Stat critchance;//暴击率
+    public Stat critpower;//暴击倍率
     public int currentHP;
 
-    public System.Action Onhealthchange;
+    public int Mana;//魔力量
+
+    public System.Action onhealthchange; //委托，发生时通知订阅者
+    public System.Action Onmanachange;
+
     public bool isdied {  get; private set; }
+
+    
 
     protected virtual void Start()
     {
+
         isdied = false;
         critpower.Setvalue(150);
         currentHP = GetMaxHP();
+        Mana = GetMaxMana();
     }
 
     public void dodamage(CharacterStats stats)//根据攻击者条件计算伤害
@@ -62,10 +71,29 @@ public class CharacterStats : MonoBehaviour
     protected virtual void Decreasehealthby(int _damage)
     {
         currentHP -=_damage;
-        if(Onhealthchange != null)
-        Onhealthchange();
+        if(onhealthchange != null)
+        onhealthchange();
 
     }
+    public virtual void Increasehealthby(int _heal)
+    {
+        int maxhp = GetMaxHP();
+        if (currentHP + _heal <= maxhp)
+        {
+            currentHP += _heal;
+            if (onhealthchange != null)
+                onhealthchange();
+        }
+        else
+            currentHP = maxhp;
+
+    }
+
+    public void Decreasemana(int _cost)
+    {
+        Mana -=_cost;
+        if(Onmanachange != null) Onmanachange();
+    }//释放技能时减少魔力量
     private int checktargetarmor(CharacterStats stats,int totaldamage)
     {
         totaldamage -= stats.armor.GetValue();
@@ -102,5 +130,12 @@ public class CharacterStats : MonoBehaviour
     {
         return maxHP.GetValue() + vitality.GetValue() * 5;
     }
+    public int GetMaxMana()
+    {
+        return 50 + intelligence.GetValue() * 5;
+    }
+
+    
+    
 }
     
