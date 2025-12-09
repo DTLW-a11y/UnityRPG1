@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\InventoryItem.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerwallsliderstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Save and Load\SerializableDictionary.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\FileDataHandler.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GUIColorAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\PlayerManager.cs" />
