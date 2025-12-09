@@ -16,7 +16,7 @@ public class HealthBarUI : MonoBehaviour
         slider = GetComponentInChildren<Slider>();
         mystats = GetComponentInParent<CharacterStats>();
         entity.OnFlip += flip;
-        mystats.Onhealthchange += ChangeHealthUI;
+        mystats.onhealthchange += ChangeHealthUI;
     }
     private void flip()
     {
@@ -26,7 +26,7 @@ public class HealthBarUI : MonoBehaviour
     private void OnDisable()
     {
         entity.OnFlip -= flip;
-        mystats.Onhealthchange -= ChangeHealthUI;
+        mystats.onhealthchange -= ChangeHealthUI;
     }
     private void ChangeHealthUI()
     { 

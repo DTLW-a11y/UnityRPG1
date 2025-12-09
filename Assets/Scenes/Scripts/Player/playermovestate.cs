@@ -25,6 +25,6 @@ public class playermovestate : playergroundstate
         { 
             stateMachine.changeState(player.idlestate);
         }
-        player.SetVelocity(xInput * player.movespeed,rb.velocity.y);//为什么是player是Player实例
+        player.SetVelocity(xInput * player.movespeed,rb.velocity.y);
     }
 }

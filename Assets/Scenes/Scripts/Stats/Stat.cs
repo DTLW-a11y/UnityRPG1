@@ -8,7 +8,7 @@ public class Stat
     [SerializeField] private int Value;
     private int FinalValue;
     [SerializeField] List<int> modifiers;//动态数组
-    public int GetValue()
+    public int GetValue()//得到修改后的数值
     {
         FinalValue = Value;
         foreach (var modifier in modifiers)

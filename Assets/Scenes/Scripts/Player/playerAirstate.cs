@@ -32,5 +32,13 @@ public class playerAirstate : PlayerState
         {
             rb.velocity = new Vector2(xInput * player.movespeed *.8f , rb.velocity.y); 
         }
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.J))
+        {
+            stateMachine.changeState(player.primeattack);
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            stateMachine.changeState(player.magicattack1);
+        }
     }
 }

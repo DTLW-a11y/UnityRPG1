@@ -5,20 +5,29 @@ using UnityEngine;
 public class ItemObject : MonoBehaviour
 {
     [SerializeField]ItemData itemdata;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Vector2 velocity;
 
-    private void OnValidate()
+
+    private void SetUpVisuals()
     {
+        if (itemdata == null)
+            return;
         GetComponent<SpriteRenderer>().sprite = itemdata.icon;
         gameObject.name = "item object - " + itemdata.itemname;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void SetupItem(ItemData _itemdata, Vector2 _velocity)
     {
-        if (collision.GetComponent<Player>() != null)
-        {
-            Debug.Log("impicked");
-            Inventory.Instance.AddItem(itemdata);
-            Destroy(gameObject);
-        }
+        itemdata = _itemdata;
+        rb.velocity = _velocity;
+
+        SetUpVisuals();
+    }
+
+    public void PickItem()
+    {
+        Inventory.Instance.AddItem(itemdata);
+        Destroy(gameObject);
     }
 }
