@@ -64,10 +64,41 @@ public class SaveManager : MonoBehaviour
     {
         SaveGame();
     }
+
+    public GameData GetCurrentGameData()
+    {
+        if(gameData == null)
+        {
+            NewGame();
+        }
+        return gameData;
+    }
     private List<ISaveManager> FindAllSaveManagers()
     {
         IEnumerable<ISaveManager> saveManagers = FindObjectsOfType<MonoBehaviour>().OfType<ISaveManager>();
         return new List<ISaveManager>(saveManagers);
-    }//找到所有实现了接口的脚本，保存接口到list中
+    }//找到所有实现了接口的脚本，保存到list中
 
+    //存档点系统，可以通过下面的两个方法手动读取和加载存档
+    public void SaveAtCheckpoint()
+    {
+        if(gameData == null)
+        {
+            Debug.Log("No gameData to be saved.");
+        }
+        else
+        {
+            SaveGame();
+            Debug.Log("GameData saved at checkpoint.");
+        }
+    }
+    public void LoadFromLastCheckpoint()
+    {
+        LoadGame();
+
+        if(CheckpointManager.instance != null)
+        {
+            CheckpointManager.instance.RestoreFromLastCheckpoint();
+        }
+    }
 }

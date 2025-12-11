@@ -117,6 +117,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\EnemyStateMachine.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Save and Load\CheckpointManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ItemData.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\HealthBarUI.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BlockquoteAttribute.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemybattlestate.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Save and Load\Checkpoint.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playercounterstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerdiestate.cs" />
