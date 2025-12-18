@@ -9,42 +9,61 @@ public class Bag_UI : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject hptext;
     [SerializeField] GameObject hpbar;
+    [SerializeField] GameObject valuelist;
 
     private RectTransform recTrans;
     private CharacterStats playerstats;
     private RectTransform bartrans;
-    private TextMeshProUGUI hptextmeshpro;
+    private TextMeshProUGUI hptextmeshpro, value;
+    private float hp = 100.0f, maxhp;
     // Start is called before the first frame update
     void Start()
     {
         playerstats = player.GetComponent<CharacterStats>();
         bartrans = hpbar.GetComponent<RectTransform>();
         hptextmeshpro = hptext.GetComponent<TextMeshProUGUI>();
+        value = valuelist.GetComponent<TextMeshProUGUI>();
         recTrans = GetComponent<RectTransform>();
         recTrans.anchoredPosition = new Vector2(0, 2000);
     }
-
     private void UpdateHP()
     {
-        float hp = playerstats.currentHP;
-        float maxhp = playerstats.GetMaxHP();
-        hptextmeshpro.text = "Your HP:  " + hp.ToString() + " / " + maxhp.ToString();
+        if (Mathf.Abs(playerstats.currentHP - hp) < 1.0f)
+        {
+            hp = playerstats.currentHP;
+        }
+        else
+        {
+            hp += (playerstats.currentHP - hp) * 2.0f * Time.deltaTime;
+        }
+        maxhp = playerstats.GetMaxHP();
+        hptextmeshpro.text = playerstats.currentHP.ToString() + " / " + maxhp.ToString();
+        value.text = playerstats.damage.GetValue().ToString() + "\n" + ((float)(playerstats.critchance.GetValue())/100.0f).ToString() + "\n" + ((float)(playerstats.critpower.GetValue()) / 100.0f).ToString() + "\n" + playerstats.armor.GetValue().ToString() + "\n" + playerstats.evision.GetValue().ToString();
         if (hp < 0.0f) hp = 0.0f;
-        bartrans.sizeDelta = new Vector2(590.0f * hp / maxhp, 36);
-        bartrans.anchoredPosition = new Vector2((bartrans.sizeDelta.x - 590.0f) / 2.0f, 0);
+        bartrans.sizeDelta = new Vector2(584.0f * hp / maxhp, 36);
+        bartrans.anchoredPosition = new Vector2((bartrans.sizeDelta.x - 584.0f) / 2.0f, 0);
         return;
     }
 
     // Update is called once per frame
     private bool isMoving = false;
-    private bool isShow = false;
+    private bool isShow = false, KeyEDown;
     private float anitime = 0.0f;
     void Update()
     {
+        KeyEDown = Input.GetKeyDown(KeyCode.E);
         UpdateHP();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isMoving = false;
+            isShow = false;
+            anitime = 0.0f;
+            recTrans.anchoredPosition = new Vector2(0, 2000);
+            return;
+        }
         if (isMoving)
         {
-            if (Input.anyKeyDown)
+            if (KeyEDown)
             {
                 isMoving = false;
                 isShow = false;
@@ -73,7 +92,7 @@ public class Bag_UI : MonoBehaviour
         switch (isShow)
         {
             case true:
-                if (Input.anyKeyDown)
+                if (KeyEDown)
                 {
                     anitime = 0.0f;
                     isMoving = true;
@@ -81,7 +100,7 @@ public class Bag_UI : MonoBehaviour
                 }
                 break;
             case false:
-                if (Input.GetKeyDown(KeyCode.E))
+                if (KeyEDown)
                 {
                     anitime = 0.0f;
                     isMoving = true;

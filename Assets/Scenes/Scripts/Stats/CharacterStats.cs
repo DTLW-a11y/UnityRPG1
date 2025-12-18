@@ -13,8 +13,8 @@ public class CharacterStats : MonoBehaviour
 
     [Header("Defense info")]//·ÀÓùÊıÖµ
     public Stat maxHP;
-    public Stat armor;
-    public Stat evision;//ÉÁ±Ü
+    public Stat armor; // ·ÀÓù
+    public Stat evision; // ÉÁ±Ü
 
     [Header("Attack info")]
     public Stat damage;
