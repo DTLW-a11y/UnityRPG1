@@ -11,6 +11,7 @@ public class enemyidlestate : enemygroundstate
     public override void Enter()
     {
         base.Enter();
+        Debug.Log("1c");
         stateTime = enemy.idletime;
     }
 

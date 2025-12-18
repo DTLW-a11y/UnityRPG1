@@ -21,6 +21,9 @@ public class Enemy : Entity
     public EnemyStateMachine stateMachine { get; private set; }
     [SerializeField] protected LayerMask whatisplayer;
 
+    [SerializeField] protected Transform Isattackcheck;
+    [SerializeField] protected float Isattackcheckdistance;
+
     protected override void Awake()
     {
         base.Awake();
@@ -51,7 +54,7 @@ public class Enemy : Entity
         else 
             return false;   
     }
-    public virtual RaycastHit2D isplayerdetected() =>Physics2D.Raycast(wallcheck.position, Vector2.right * facingdir, 50, whatisplayer);//为什么不能写成函数形式
+    public virtual RaycastHit2D isplayerdetected() =>Physics2D.Raycast(Isattackcheck.position, Vector2.right * facingdir, Isattackcheckdistance, whatisplayer);//为什么不能写成函数形式
 
     public virtual void AnimationFinishTrigger() => stateMachine.currentstate.AnimationFinishTrigger();
     protected override void OnDrawGizmos()
@@ -59,5 +62,6 @@ public class Enemy : Entity
         base.OnDrawGizmos();
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackdistance * facingdir, transform.position.y));
+        Gizmos.DrawLine(Isattackcheck.position, new Vector3(Isattackcheck.position.x + Isattackcheckdistance, Isattackcheck.position.y));
     }
 }

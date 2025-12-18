@@ -26,7 +26,6 @@ public class masterdiestate : EnemyState
     public override void Exit()
     {
         base.Exit();
-
     }
 
     public override void Update()

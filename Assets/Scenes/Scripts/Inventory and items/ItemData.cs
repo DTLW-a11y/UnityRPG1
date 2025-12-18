@@ -10,6 +10,7 @@ public enum ItemType
 
 public class ItemData : ScriptableObject
 {
+    public int itemId;
     public ItemEffect[] itemEffects;
 
     public ItemType ItemType;

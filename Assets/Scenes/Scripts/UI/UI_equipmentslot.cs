@@ -16,7 +16,7 @@ public class UI_equipmentslot : UI_Itemslot
         {
             Inventory.Instance.Unequiped(item.ItemData as itemData_equipment);
 
-            Inventory.Instance.AddItem(item.ItemData);
+            Inventory.Instance.AddItemByData(item.ItemData);
             ClanUpSlot();
         }
     }

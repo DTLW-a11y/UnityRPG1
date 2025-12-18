@@ -24,6 +24,7 @@ public class enemymovestate : enemygroundstate
         enemy.SetVelocity(enemy.movespeed * enemy.facingdir, enemy.rb.velocity.y);
         if (enemy.IsWallDetected() || !enemy.IsGroundDetected())
         {
+            enemy.ZeroVelocity();
             enemy.Flip();
             stateMachine.ChangeState(enemy.idlestate);
         }
