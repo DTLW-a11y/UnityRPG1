@@ -10,11 +10,13 @@ public class GameData
     public Vector3 playerPosition;
     public string currentCheckpoint;
     public SerializableDictionary<string, bool> activatedCheckpoints;
+    public CharacterAttributesData playerAttributes;
     public GameData()
     {
         this.currency = 0;
         inventory = new SerializableDictionary<string, int>();
         playerPosition = Vector3.zero;
+        playerAttributes = new CharacterAttributesData();
         currentCheckpoint = "start";
         activatedCheckpoints = new SerializableDictionary<string, bool>();
     }

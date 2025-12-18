@@ -71,7 +71,21 @@ public class CheckpointManager : MonoBehaviour,ISaveManager
     }
     public void RestoreFromLastCheckpoint()
     {
-        //´Ó´æµµµã»Ö¸´
+        Checkpoint targetCheckpoint = checkpoints.Find(cp => cp.checkpointId == currentActiveCheckpoint);
+        if(targetCheckpoint == null)
+        {
+            Debug.Log($"cannot find checkpoint with id {currentActiveCheckpoint}");
+        }
+        GameObject player = GameObject.FindWithTag("Player");
+        if(player == null)
+        {
+            Debug.Log("cannot find object \"Player");
+            player.transform.position = targetCheckpoint.transform.position;
+        }
+        else
+        {
+
+        }
     }
 
    

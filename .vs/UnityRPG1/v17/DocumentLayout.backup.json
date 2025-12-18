@@ -3,48 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\27825\\Desktop\\UnityRPG1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\save and load\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|c:\\users\\27825\\desktop\\unityrpg1\\assets\\scenes\\scripts\\stats\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\stats\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|c:\\users\\27825\\desktop\\unityrpg1\\assets\\scenes\\scripts\\save and load\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\stats\\characterstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\stats\\characterstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\save and load\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\save and load\\checkpointmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\checkpointmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\stats\\stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\stats\\stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\save and load\\isavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\isavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\save and load\\filedatahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\filedatahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\save and load\\serializabledictionary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\serializabledictionary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\player\\playeranimationtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\player\\playeranimationtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\inventory and items\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\inventory and items\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\inventory and items\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\inventory and items\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|C:\\Users\\27825\\Desktop\\UnityRPG1\\assets\\scenes\\scripts\\save and load\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\save and load\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,32 +34,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Checkpoint.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\Checkpoint.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\Checkpoint.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\Checkpoint.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Save and Load\\Checkpoint.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvxoAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Stat.cs",
+              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Stats\\Stat.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Stats\\Stat.cs",
+              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Stats\\Stat.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Stats\\Stat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T12:13:12.491Z",
+              "WhenOpened": "2025-12-18T12:51:44.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerStats.cs",
+              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Stats\\PlayerStats.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Stats\\PlayerStats.cs",
+              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Stats\\PlayerStats.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Stats\\PlayerStats.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAywCEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:23:34.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CheckpointManager.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\CheckpointManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\CheckpointManager.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\CheckpointManager.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Save and Load\\CheckpointManager.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAUwEkAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CharacterStats.cs",
+              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Stats\\CharacterStats.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Stats\\CharacterStats.cs",
+              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Stats\\CharacterStats.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Stats\\CharacterStats.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T11:43:47.38Z"
+              "WhenOpened": "2025-12-18T11:47:39.349Z"
             },
             {
               "$type": "Document",
@@ -89,7 +81,7 @@
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\ISaveManager.cs",
               "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\ISaveManager.cs",
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Save and Load\\ISaveManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T09:18:44.76Z"
             },
@@ -101,94 +93,21 @@
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\GameData.cs",
               "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\GameData.cs",
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Save and Load\\GameData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T09:18:38.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "SaveManager.cs",
               "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\SaveManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\SaveManager.cs",
               "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\SaveManager.cs",
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Save and Load\\SaveManager.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAkwGQAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwEkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:22:52.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FileDataHandler.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\FileDataHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\FileDataHandler.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\FileDataHandler.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Save and Load\\FileDataHandler.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvxsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:18:42.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SerializableDictionary.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\SerializableDictionary.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\SerializableDictionary.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\SerializableDictionary.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Save and Load\\SerializableDictionary.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvxsAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T10:57:13.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ItemData.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\ItemData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Inventory and items\\ItemData.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\ItemData.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Inventory and items\\ItemData.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:22:56.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAIwA8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:34:22.919Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "playeranimationtrigger.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\playeranimationtrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Player\\playeranimationtrigger.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\playeranimationtrigger.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Player\\playeranimationtrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T13:10:36.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PlayerManager.cs",
-              "DocumentMoniker": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\PlayerManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\PlayerManager.cs",
-              "ToolTip": "C:\\Users\\27825\\Desktop\\UnityRPG1\\Assets\\Scenes\\Scripts\\PlayerManager.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Scripts\\PlayerManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T11:43:59.856Z"
+              "WhenOpened": "2025-12-09T09:22:52.234Z"
             }
           ]
         }
