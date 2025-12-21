@@ -24,7 +24,7 @@ public class UI_Itemslot : MonoBehaviour , IPointerDownHandler
             { itemtext.text = ""; }
         }
     }
-    public void ClanUpSlot() //Çå¿ÕuiÀ¸
+    public void ClanUpSlot() //ï¿½ï¿½ï¿½uiï¿½ï¿½
     {
         item = null;
         itemimage.color = Color.clear;
@@ -32,17 +32,17 @@ public class UI_Itemslot : MonoBehaviour , IPointerDownHandler
         itemtext.text = "";   
     }
 
-    public virtual void OnPointerDown(PointerEventData eventData)//Êó±êµã»÷ÎïÆ·À¸
+    public virtual void OnPointerDown(PointerEventData eventData)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½
     {
         if (Input.GetKey(KeyCode.LeftControl)) {
             Inventory.Instance.RemoveItem(item.ItemData);
                 return;
         }
-        if (item.ItemData.ItemType == ItemType.Equipment)//×°±¸
+        if (item.ItemData.ItemType == ItemType.Equipment)//×°ï¿½ï¿½
         {
             Inventory.Instance.equipitems(item.ItemData);
         }
-        if (item.ItemData.ItemType == ItemType.Item)//Ê¹ÓÃÏûºÄÆ·
+        if (item.ItemData.ItemType == ItemType.Item)//Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
         {
             Inventory.Instance.useitems(item.ItemData);
         }

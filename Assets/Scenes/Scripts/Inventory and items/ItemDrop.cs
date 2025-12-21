@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * ¹ÒÔØÔÚµĞÈËÉíÉÏ£¬¾ö¶¨µôÂäÎïÆ·
- * Inspector µ÷Õûpossibledrop
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
+ * Inspector ï¿½ï¿½ï¿½ï¿½possibledrop
  */
 public class ItemDrop : MonoBehaviour
 {
-    [Header("×î´óµôÂäÎïÆ·ÊıÁ¿")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½")]
     [SerializeField] private int possibleitemDrop;
-    [Header("¿ÉµôÂäÎïÆ·ÁĞ±í")]
+    [Header("ï¿½Éµï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½Ğ±ï¿½")]
     [SerializeField] private ItemData[] possibledrop;
     private List<ItemData> dropList = new List<ItemData>();
 
@@ -18,7 +18,7 @@ public class ItemDrop : MonoBehaviour
 
     public virtual void GenerateDrop()
     {
-        for (int i = 0; i < possibledrop.Length; i++)//´Ó¿ÉÄÜµôÂäÎïÆ·ÀïËæ»úÉú³ÉµôÂäÁĞ±í
+        for (int i = 0; i < possibledrop.Length; i++)//ï¿½Ó¿ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½Ğ±ï¿½
         {
             if(Random.Range(0,100) < possibledrop[i].dropChance)
                 dropList.Add(possibledrop[i]);
@@ -37,7 +37,7 @@ public class ItemDrop : MonoBehaviour
 
     protected void DropItem(ItemData _itemData)
     {
-        GameObject newDrop = Instantiate(dropPrefab, transform.position, Quaternion.identity);//ÓÃÔ¤ÖÆÌå´´½¨ĞÂµÄÓÎÏ·¶ÔÏó
+        GameObject newDrop = Instantiate(dropPrefab, transform.position, Quaternion.identity);//ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½å´´ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½
 
         Vector2 randomVelocity = new Vector2(Random.Range(-5 , 5) , Random.Range(12 , 15));
 

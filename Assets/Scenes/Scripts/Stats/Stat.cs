@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]//ÏµÍ³¿ÉÊÓ»¯
+[System.Serializable]//ÏµÍ³ï¿½ï¿½ï¿½Ó»ï¿½
 public class Stat 
 {
     [SerializeField] private int Value;
     private int FinalValue;
-    [SerializeField] List<int> modifiers;//¶¯Ì¬Êý×é
-    public int GetValue()//µÃµ½ÐÞ¸ÄºóµÄÊýÖµ
+    [SerializeField] List<int> modifiers;//ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
+    public int GetValue()//ï¿½Ãµï¿½ï¿½Þ¸Äºï¿½ï¿½ï¿½ï¿½Öµ
     {
         FinalValue = Value;
         foreach (var modifier in modifiers)

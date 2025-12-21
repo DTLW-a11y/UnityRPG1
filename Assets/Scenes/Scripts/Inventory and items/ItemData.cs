@@ -1,4 +1,5 @@
 
+using UnityEditor;
 using UnityEngine;
 public enum ItemType
 {
@@ -26,6 +27,13 @@ public class ItemData : ScriptableObject
             item.ExecuteEffect();
         }
     }
+
+
+    private void OnValidate()
+    {
+#if UNITY_EDITOR
+        string path = AssetDatabase.GetAssetPath(this);
+        itemId = AssetDatabase.AssetPathToGUID(path);
+#endif
+    }
 }
-
-

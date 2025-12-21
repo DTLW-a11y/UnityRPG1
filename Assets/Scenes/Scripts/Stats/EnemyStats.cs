@@ -7,7 +7,7 @@ public class EnemyStats : CharacterStats
     private EnemyMaster enemy;
     private ItemDrop myDropSystem;
 
-    [Header("Level Details")]//µÈ¼¶
+    [Header("Level Details")]//ï¿½È¼ï¿½
     [SerializeField] private int level = 1;
     [Range(0f, 1f)]
     [SerializeField] private float percentage = .1f;
@@ -21,7 +21,7 @@ public class EnemyStats : CharacterStats
 
     }
 
-    private void AddModifiers() // ËæµÈ¼¶Ôö³¤ÐÞ¸ÄµÄÊôÐÔ
+    private void AddModifiers() // ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½
     {
         Modify(damage);
         Modify(strenth);
@@ -30,7 +30,7 @@ public class EnemyStats : CharacterStats
         Modify(maxHP);
     }
 
-    private void Modify(Stat _stat)//ÊýÖµËæµÈ¼¶Ö¸Êý¼¶Ôö³¤
+    private void Modify(Stat _stat)//ï¿½ï¿½Öµï¿½ï¿½È¼ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         for (int i = 1; i < level; i++)
         {

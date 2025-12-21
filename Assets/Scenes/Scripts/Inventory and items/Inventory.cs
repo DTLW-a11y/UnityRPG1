@@ -5,19 +5,20 @@ using UnityEngine;
 using UnityEditor;
 using static UnityEditor.Progress;
 #endif
+using TMPro;
 /*
- * ²Ö¿â
- * µ¥Àý£¬¿ÉÔÚÆäËûÀàËæÒâµ÷ÓÃ
+ * ï¿½Ö¿ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * 
  */
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, ISaveManager
 {
     
 
     public static Inventory Instance;
 
-    //×°±¸
+    //×°ï¿½ï¿½
     public List<InventoryItem> equipments;
     public Dictionary<itemData_equipment, InventoryItem> equipmentDictionary;
 
@@ -25,14 +26,14 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> inventoryItems;
     public Dictionary<ItemData,InventoryItem> inventoryDictionary;
 
-    //²ÄÁÏ
+    //ï¿½ï¿½ï¿½ï¿½
     public List<InventoryItem> StashItems;
     public Dictionary<ItemData,InventoryItem> StashDictionary;
 
-    //½«ÎïÆ·Êý¾ÝÓë±àºÅ°ó¶¨
+    //ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å°ï¿½
     public Dictionary<int, ItemData> ItemDictionary;
 
-    //³õÊ¼ÎïÆ·
+    //ï¿½ï¿½Ê¼ï¿½ï¿½Æ·
     public List<ItemData> startingItems;
 
     [Header("Inventory UI")]
@@ -43,7 +44,7 @@ public class Inventory : MonoBehaviour
     private UI_Itemslot[] stashslots;
     private UI_equipmentslot[] equipmentslots;
     /*
-     * ÖÆ×÷×°±¸µÄ²ÄÁÏÔÚstashÀ¸Àï
+     * ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½stashï¿½ï¿½ï¿½ï¿½
      * */
 
     
@@ -75,14 +76,14 @@ public class Inventory : MonoBehaviour
         
 
     }
-    private void LoadAllFiles()//½«itemdata·ÅÈëresource/itemdataÎÄ¼þ¼Ð£¬½«±àºÅÓëÎÄ¼þ·ÅÈë×Öµä
+    private void LoadAllFiles()//ï¿½ï¿½itemdataï¿½ï¿½ï¿½ï¿½resource/itemdataï¿½Ä¼ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½
     {
         ItemData[] itemDatas = Resources.LoadAll<ItemData>("ItemData");
         foreach (ItemData itemData in itemDatas)
         {
             if (ItemDictionary.ContainsKey(itemData.itemId))
             {
-                Debug.Log("ÒÑ´æÔÚÏàÍ¬ÎïÆ·");
+                Debug.Log("ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Æ·");
                 return;
             }
             else
@@ -98,7 +99,9 @@ public class Inventory : MonoBehaviour
             AddItemByData(startingItems[i]);
         }
     }
-    public bool CanCraft(itemData_equipment itemToCraft, List<InventoryItem> requirements)  //ÎïÆ·ºÏ³ÉÅÐ¶Ï
+    [Header("Data base")]
+    public List<InventoryItem> LoadedItems;
+    public bool CanCraft(itemData_equipment itemToCraft, List<InventoryItem> requirements)  //ï¿½ï¿½Æ·ï¿½Ï³ï¿½ï¿½Ð¶ï¿½
     {
         List<InventoryItem> itemsToRemove = new List<InventoryItem>();
         for (int i = 0; i < requirements.Count; i++)
@@ -129,7 +132,7 @@ public class Inventory : MonoBehaviour
 
         return true;
     }
-    private void UpdateUI()    //¸üÐÂui
+    private void UpdateUI()    //ï¿½ï¿½ï¿½ï¿½ui
     {
         for (int i = 0; i < itemslots.Length; i++)
         {
@@ -161,6 +164,48 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+    private void Start()
+    {
+        equipments = new List<InventoryItem>();
+        equipmentDictionary = new Dictionary<itemData_equipment, InventoryItem>();
+        equipmentslots = EquipmentSlotParent.GetComponentsInChildren<UI_equipmentslot>();
+
+        inventoryItems = new List<InventoryItem>();
+        inventoryDictionary = new Dictionary<ItemData, InventoryItem>();
+        itemslots = inventoryslotParent.GetComponentsInChildren<UI_Itemslot>();
+
+        StashItems = new List<InventoryItem>();
+        StashDictionary = new Dictionary<ItemData, InventoryItem>();
+        stashslots = StashslotParent.GetComponentsInChildren<UI_Itemslot>();
+        AddStartingItems();
+
+    }
+
+    private void AddStartingItems()
+    {
+        if(LoadedItems.Count > 0)
+        {
+            foreach(InventoryItem item in LoadedItems)
+            {
+                for (int i = 0; i <item.stacksize; i++)
+                {
+                    AddItem(item.ItemData);
+                }
+            }
+
+            return;
+        }
+
+
+
+
+
+        for (int i = 0; i < startingItems.Count; i++)
+        {
+            AddItem(startingItems[i]);
+        }
+    }
+
     public void equipitems(ItemData _item)
     {
         InventoryItem item = new InventoryItem(_item);
@@ -180,6 +225,7 @@ public class Inventory : MonoBehaviour
             Unequiped(itemToRemove);
             
             AddItemByData(itemToRemove);
+            AddItem(itemToRemove);
         }
         equipments.Add(item);
         equipmentDictionary.Add(newequipment, item);
@@ -192,13 +238,13 @@ public class Inventory : MonoBehaviour
     {
         InventoryItem item = new InventoryItem(_item);
 
-        RemoveItem(_item);//ÎïÆ·ÊýÁ¿¼õÉÙ
+        RemoveItem(_item);//ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         _item.ExecuteItemEffect();
 
         UpdateUI();
     }
-    public void Unequiped(itemData_equipment itemToRemove)//È¡Ïû×°±¸ÎïÆ·£¬²¢ÇÒ²»»Øµ½²Ö¿â
+    public void Unequiped(itemData_equipment itemToRemove)//È¡ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½Øµï¿½ï¿½Ö¿ï¿½
     {
         if (equipmentDictionary.TryGetValue(itemToRemove, out InventoryItem value))
         {
@@ -223,30 +269,30 @@ public class Inventory : MonoBehaviour
     public void AddItemByData(ItemData _item)
     {
         //TaskManager.instance.UpdateProgress(tasktype.Collectitem, 201, 1);
-        if (_item.ItemType == ItemType.Equipment || _item.ItemType == ItemType.Item)//Ìí¼Ó×°±¸ºÍÏûºÄÆ·
+        if (_item.ItemType == ItemType.Equipment || _item.ItemType == ItemType.Item)//ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
         {
             AddToInventory(_item);
         }
-        else if (_item.ItemType == ItemType.Material)//Ìí¼Ó²ÄÁÏ
+        else if (_item.ItemType == ItemType.Material)//ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½
         {
             AddToStash(_item);
         }
         UpdateUI();
-    }//Ìí¼ÓÎïÆ·²¢¸üÐÂui
+    }//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ui
     public void AddItem(int itemID)
     {
         ItemData _item = ItemDictionary[itemID];
         TaskManager.instance.UpdateProgress(tasktype.Collectitem, itemID, 1);
-        if (_item.ItemType == ItemType.Equipment || _item.ItemType == ItemType.Item)//Ìí¼Ó×°±¸ºÍÏûºÄÆ·
+        if (_item.ItemType == ItemType.Equipment || _item.ItemType == ItemType.Item)//ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
         {
             AddToInventory(_item);
         }
-        else if (_item.ItemType == ItemType.Material)//Ìí¼Ó²ÄÁÏ
+        else if (_item.ItemType == ItemType.Material)//ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½
         {
             AddToStash(_item);
         }
         UpdateUI();
-    }//Ìí¼ÓÎïÆ·²¢¸üÐÂui
+    }//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ui
     private void AddToInventory(ItemData _item)
     {
         if (inventoryDictionary.TryGetValue(_item, out InventoryItem value))
@@ -306,7 +352,7 @@ public class Inventory : MonoBehaviour
 
     public List<InventoryItem> GetStashList() => StashItems;
 
-    public itemData_equipment getEquipment(ItemType _type)//¸ù¾ÝÎïÆ·ÀàÐÍ»ñµÃÒÑ×°±¸ÎïÆ·
+    public itemData_equipment getEquipment(ItemType _type)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½Æ·
     {
         itemData_equipment equipedItem = null;
         foreach (var item in equipmentDictionary)
@@ -317,5 +363,44 @@ public class Inventory : MonoBehaviour
             }
         }
         return equipedItem;
+    }
+
+    public void LoadData(GameData _data)
+    {
+        foreach(KeyValuePair<string,int> pair in _data.inventory)
+        {
+            foreach(var item in GetItemDataBase())
+            {
+                if(item != null && item.itemId == pair.Key)
+                {
+                    InventoryItem itemToLoad = new InventoryItem(item);
+                    itemToLoad.stacksize = pair.Value;
+
+                    LoadedItems.Add(itemToLoad);
+                }
+            }
+        }
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        _data.inventory.Clear();
+        foreach(KeyValuePair<ItemData,InventoryItem>pair in inventoryDictionary)
+        {
+            _data.inventory.Add(pair.Key.itemId, pair.Value.stacksize);
+        }
+    }
+    private List<ItemData> GetItemDataBase()
+    {
+        List <ItemData>itemDataBase = new List<ItemData>();
+        string[] assetNames = AssetDatabase.FindAssets("", new[] { "Assets/Scenes/Data/Equipments" });
+        
+        foreach(string SOName in assetNames)
+        {
+            var SOpath = AssetDatabase.GUIDToAssetPath(SOName);
+            var itemData = AssetDatabase.LoadAssetAtPath<ItemData>(SOpath);
+            itemDataBase.Add(itemData);
+        }
+        return itemDataBase;
     }
 }

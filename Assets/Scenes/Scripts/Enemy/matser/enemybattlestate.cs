@@ -11,7 +11,7 @@ public class enemybattlestate : EnemyState
     public enemybattlestate(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,EnemyMaster enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
         this.enemy = enemy;
-    }//创建时使用
+    }//锟斤拷锟斤拷时使锟斤拷
 
     public override void Enter()
     {

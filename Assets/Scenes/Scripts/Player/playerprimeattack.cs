@@ -14,7 +14,7 @@ public class playerprimeattack : PlayerState
     public override void Enter()
     {
         base.Enter();
-        if(comboCounter >2 ||Time.time >= lasttimeAttacked + comboWindow)//а╛╩Веп╤о
+        if(comboCounter >2 ||Time.time >= lasttimeAttacked + comboWindow)//О©╫О©╫О©╫О©╫О©╫п╤О©╫
         {
             comboCounter = 0;
            // Debug.Log("++");

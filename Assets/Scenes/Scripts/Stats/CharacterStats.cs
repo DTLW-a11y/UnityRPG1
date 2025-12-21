@@ -5,28 +5,28 @@ using static Cinemachine.DocumentationSortingAttribute;
 
 public class CharacterStats : MonoBehaviour
 {
-    [Header("Base info")]//»ù´¡ÊýÖµ
+    [Header("Base info")]//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
     public Stat strenth;
     public Stat agility;
-    public Stat intelligence; //Ó°ÏìÄ§Á¦Á¿
+    public Stat intelligence; //Ó°ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½
     public Stat vitality;
 
-    [Header("Defense info")]//·ÀÓùÊýÖµ
+    [Header("Defense info")]//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
     public Stat maxHP;
-    public Stat armor; // ·ÀÓù
-    public Stat evision; // ÉÁ±Ü
+    public Stat armor; // ï¿½ï¿½ï¿½ï¿½
+    public Stat evision; // ï¿½ï¿½ï¿½ï¿½
 
     [Header("Attack info")]
     public Stat damage;
-    public Stat critchance;//±©»÷ÂÊ
-    public Stat critpower;//±©»÷±¶ÂÊ
+    public Stat critchance;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Stat critpower;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public int currentHP;
 
     [Header("Mana info")]
     public Stat maxMana;
-    public int Mana;//Ä§Á¦Á¿
+    public int Mana;//Ä§ï¿½ï¿½ï¿½ï¿½
 
-    public System.Action onhealthchange; //Î¯ÍÐ£¬·¢ÉúÊ±Í¨Öª¶©ÔÄÕß
+    public System.Action onhealthchange; //Î¯ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Í¨Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public System.Action Onmanachange;
 
     public bool isdied;
@@ -42,7 +42,7 @@ public class CharacterStats : MonoBehaviour
         Mana = GetMaxMana();
     }
 
-    public void dodamage(CharacterStats stats)//¸ù¾Ý¹¥»÷ÕßÌõ¼þ¼ÆËãÉËº¦
+    public void dodamage(CharacterStats stats)//ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½
     {
         if (CanAvoidAttack(stats))
             return;
@@ -111,7 +111,7 @@ public class CharacterStats : MonoBehaviour
     {
         Mana -=_cost;
         if(Onmanachange != null) Onmanachange();
-    }//ÊÍ·Å¼¼ÄÜÊ±¼õÉÙÄ§Á¦Á¿
+    }//ï¿½Í·Å¼ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½
     private int checktargetarmor(CharacterStats stats,int totaldamage)
     {
         totaldamage -= stats.armor.GetValue();
