@@ -164,47 +164,9 @@ public class Inventory : MonoBehaviour, ISaveManager
             }
         }
     }
-    private void Start()
-    {
-        equipments = new List<InventoryItem>();
-        equipmentDictionary = new Dictionary<itemData_equipment, InventoryItem>();
-        equipmentslots = EquipmentSlotParent.GetComponentsInChildren<UI_equipmentslot>();
+    
 
-        inventoryItems = new List<InventoryItem>();
-        inventoryDictionary = new Dictionary<ItemData, InventoryItem>();
-        itemslots = inventoryslotParent.GetComponentsInChildren<UI_Itemslot>();
-
-        StashItems = new List<InventoryItem>();
-        StashDictionary = new Dictionary<ItemData, InventoryItem>();
-        stashslots = StashslotParent.GetComponentsInChildren<UI_Itemslot>();
-        AddStartingItems();
-
-    }
-
-    private void AddStartingItems()
-    {
-        if(LoadedItems.Count > 0)
-        {
-            foreach(InventoryItem item in LoadedItems)
-            {
-                for (int i = 0; i <item.stacksize; i++)
-                {
-                    AddItem(item.ItemData);
-                }
-            }
-
-            return;
-        }
-
-
-
-
-
-        for (int i = 0; i < startingItems.Count; i++)
-        {
-            AddItem(startingItems[i]);
-        }
-    }
+    
 
     public void equipitems(ItemData _item)
     {
@@ -225,7 +187,6 @@ public class Inventory : MonoBehaviour, ISaveManager
             Unequiped(itemToRemove);
             
             AddItemByData(itemToRemove);
-            AddItem(itemToRemove);
         }
         equipments.Add(item);
         equipmentDictionary.Add(newequipment, item);
@@ -371,7 +332,7 @@ public class Inventory : MonoBehaviour, ISaveManager
         {
             foreach(var item in GetItemDataBase())
             {
-                if(item != null && item.itemId == pair.Key)
+                if(item != null)
                 {
                     InventoryItem itemToLoad = new InventoryItem(item);
                     itemToLoad.stacksize = pair.Value;
@@ -387,7 +348,7 @@ public class Inventory : MonoBehaviour, ISaveManager
         _data.inventory.Clear();
         foreach(KeyValuePair<ItemData,InventoryItem>pair in inventoryDictionary)
         {
-            _data.inventory.Add(pair.Key.itemId, pair.Value.stacksize);
+            _data.inventory.Add(pair.Key.itemId.ToString(), pair.Value.stacksize);
         }
     }
     private List<ItemData> GetItemDataBase()
