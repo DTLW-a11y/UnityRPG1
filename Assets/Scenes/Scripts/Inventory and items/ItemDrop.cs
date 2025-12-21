@@ -8,7 +8,9 @@ using UnityEngine;
  */
 public class ItemDrop : MonoBehaviour
 {
+    [Header("最大掉落物品数量")]
     [SerializeField] private int possibleitemDrop;
+    [Header("可掉落物品列表")]
     [SerializeField] private ItemData[] possibledrop;
     private List<ItemData> dropList = new List<ItemData>();
 
@@ -16,17 +18,20 @@ public class ItemDrop : MonoBehaviour
 
     public virtual void GenerateDrop()
     {
-        for (int i = 0; i < possibledrop.Length; i++)
+        for (int i = 0; i < possibledrop.Length; i++)//从可能掉落物品里随机生成掉落列表
         {
             if(Random.Range(0,100) < possibledrop[i].dropChance)
                 dropList.Add(possibledrop[i]);
         }
-        if(dropList.Count > 0)
+        
         for(int i = 0;i < possibleitemDrop; i++)
         {
-            ItemData randomitem = dropList[Random.Range(0, dropList.Count - 1)];
-            dropList.Remove(randomitem);
-            DropItem(randomitem);
+            if (dropList.Count > 0)
+            {
+                ItemData randomitem = dropList[Random.Range(0, dropList.Count - 1)];
+                dropList.Remove(randomitem);
+                DropItem(randomitem);
+            }
         }
     }
 

@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewDialogue", menuName = "剧情/对话数据")]
 
 
-public class DialogueLine
+public class DialogueLine : ScriptableObject
 {
     public string characterName; // 角色名
     public Sprite characterIcon; // 角色立绘（可选）

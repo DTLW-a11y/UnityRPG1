@@ -22,12 +22,14 @@ public class CharacterStats : MonoBehaviour
     public Stat critpower;//暴击倍率
     public int currentHP;
 
+    [Header("Mana info")]
+    public Stat maxMana;
     public int Mana;//魔力量
 
     public System.Action onhealthchange; //委托，发生时通知订阅者
     public System.Action Onmanachange;
 
-    public bool isdied {  get; private set; }
+    public bool isdied;
 
     
 
@@ -85,10 +87,26 @@ public class CharacterStats : MonoBehaviour
                 onhealthchange();
         }
         else
+        {
             currentHP = maxhp;
+            if (onhealthchange != null)
+                onhealthchange();
+        }
 
     }
-
+    public bool CanDecreaseMana(int _cost)
+    {
+        if (Mana - _cost < 0)
+        {
+            Debug.Log("not enough mana");
+            return false;
+        }
+        else
+        {
+            Decreasemana(_cost);
+            return true;
+        }
+    }
     public void Decreasemana(int _cost)
     {
         Mana -=_cost;
@@ -115,10 +133,14 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void takedamage(int _damage)
     {
-        Decreasehealthby(_damage);
-        if (currentHP < 0)
+        if(currentHP > 0)
         {
-            die();
+
+            Decreasehealthby(_damage);
+            if (currentHP < 0)
+            {
+                die();
+            }
         }
     }
     
@@ -132,7 +154,7 @@ public class CharacterStats : MonoBehaviour
     }
     public int GetMaxMana()
     {
-        return 50 + intelligence.GetValue() * 5;
+        return maxMana.GetValue() + intelligence.GetValue() * 5;
     }
 
     

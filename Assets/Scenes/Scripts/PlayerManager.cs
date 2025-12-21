@@ -7,8 +7,10 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager instance;
 
     public Player player;
+    public GameObject playerentity;
     public void Awake()
     {
         instance = this;
     }
 }
+

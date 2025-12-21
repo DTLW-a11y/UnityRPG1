@@ -7,15 +7,22 @@ public class PlayerStats : CharacterStats
     private Player player;
 
     [Header("Level Details")]//等级
-    [SerializeField] private int level = 1;
-    [SerializeField] private int manalevel = 1;
+    //[SerializeField] private int level = 1;
+    //[SerializeField] private int manalevel = 1;
     [Range(0f, 1f)]
     [SerializeField] private float percentage = .1f;
+
+
+    //[SerializeField] int currentEXP;
+    //[SerializeField] int maxEXP;
     protected override void Start()
     {
         base.Start();
-        AddModifiers();
+       // AddModifiers();
         player = GetComponent<Player>();
+
+        EXPSystem.instance.onLevelUp += levelup;
+        EXPSystem.instance.onmanaLevelUp += manalevelup;
     }
     public override void takedamage(int _damage)
     {
@@ -33,21 +40,20 @@ public class PlayerStats : CharacterStats
 
     private void Modify(Stat _stat)//数值随等级指数级增长
     {
-        for (int i = 1; i < level; i++)
-        {
+        
             float modifier = _stat.GetValue() * percentage;
             _stat.addmodifier(Mathf.RoundToInt(modifier));
-        }
+       
     }
-    private void ModifyMana(Stat _stat)//数值随等级指数级增长
+    private void ModifyMana(Stat _stat)//魔力增加，线性
     {
-        for (int i = 1; i < manalevel; i++)
-        {
+        
             float modifier = 0f;
-            modifier += _stat.GetValue();
+            modifier += 20;
             _stat.addmodifier(Mathf.RoundToInt(modifier));
-        }
+        
     }
+
     private void AddModifiers() // 随等级增长修改的属性
     {
         Modify(damage);
@@ -56,6 +62,24 @@ public class PlayerStats : CharacterStats
         Modify(armor);
         Modify(maxHP);
 
-        ModifyMana(intelligence);
+        //ModifyMana(intelligence);
+    }
+
+    private void levelup()
+    {
+        AddModifiers();
+    }
+    private void manalevelup()
+    {
+        ModifyMana(maxMana);
+    }
+
+    public void OnDestroy()//销毁物品时取消订阅，防止内存泄露
+    {
+        if(EXPSystem.instance != null)
+        {
+            EXPSystem.instance.onLevelUp -= levelup;
+            EXPSystem.instance.onmanaLevelUp -= manalevelup;
+        }
     }
 }

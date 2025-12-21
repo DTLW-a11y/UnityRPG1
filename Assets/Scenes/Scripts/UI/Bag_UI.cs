@@ -41,7 +41,7 @@ public class Bag_UI : MonoBehaviour
         value.text = playerstats.damage.GetValue().ToString() + "\n" + ((float)(playerstats.critchance.GetValue())/100.0f).ToString() + "\n" + ((float)(playerstats.critpower.GetValue()) / 100.0f).ToString() + "\n" + playerstats.armor.GetValue().ToString() + "\n" + playerstats.evision.GetValue().ToString();
         if (hp < 0.0f) hp = 0.0f;
         bartrans.sizeDelta = new Vector2(584.0f * hp / maxhp, 36);
-        bartrans.anchoredPosition = new Vector2((bartrans.sizeDelta.x - 584.0f) / 2.0f, 0);
+        bartrans.anchoredPosition = new Vector2((bartrans.sizeDelta.x - 584.0f) / 2.0f, -10.0f);
         return;
     }
 
@@ -51,7 +51,7 @@ public class Bag_UI : MonoBehaviour
     private float anitime = 0.0f;
     void Update()
     {
-        KeyEDown = Input.GetKeyDown(KeyCode.E);
+        KeyEDown = Input.GetKeyDown(KeyCode.B);
         UpdateHP();
         if (Input.GetKeyDown(KeyCode.Escape))
         {

@@ -34,11 +34,6 @@ public class EnemyMaster : Enemy
     protected override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Debug.Log("stun");
-            stateMachine.ChangeState(stunnedstate);
-        }
     }
     public override bool canbestunned()
     {

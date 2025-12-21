@@ -15,6 +15,8 @@ public class Entity : MonoBehaviour
     [SerializeField] protected float groundcheckdistance;
     [SerializeField] protected Transform wallcheck;
     [SerializeField] protected float wallcheckdistance;
+
+
     [SerializeField] protected LayerMask whatisGround;
 
     
@@ -47,10 +49,14 @@ public class Entity : MonoBehaviour
     }
     #region Collision
     public virtual bool IsGroundDetected() => Physics2D.Raycast(groundcheck.position, Vector2.down, groundcheckdistance, whatisGround);
-    public virtual bool IsWallDetected() => Physics2D.Raycast(wallcheck.position, Vector2.right * facingdir, wallcheckdistance, whatisGround);
+    public virtual bool IsWallDetected()
+    {
+        return Physics2D.Raycast(wallcheck.position, Vector2.right * facingdir, wallcheckdistance, whatisGround);
+    }
     protected virtual void OnDrawGizmos()
     {
         Gizmos.DrawLine(groundcheck.position, new Vector3(groundcheck.position.x, groundcheck.position.y - groundcheckdistance));
+
         Gizmos.DrawLine(wallcheck.position, new Vector3(wallcheck.position.x + wallcheckdistance, wallcheck.position.y));
         Gizmos.DrawWireSphere(attackCheck.position, attackcheckdistance);
     }
