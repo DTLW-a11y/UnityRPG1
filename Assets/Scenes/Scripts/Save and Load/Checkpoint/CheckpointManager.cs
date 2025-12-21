@@ -16,26 +16,15 @@ public class CheckpointManager : MonoBehaviour,ISaveManager
 
     public void ActivateChecpoint(string checkpointId,Vector3 position)
     {
-        currentActiveCheckpoint = checkpointId;
+        GameData data = SaveManager.instance.GetCurrentGameData();
+        data.currentCheckpoint = checkpointId;
+        data.playerPosition = position;
 
-        if (SaveManager.instance != null)
-        {
-            var gameData = SaveManager.instance.GetCurrentGameData();
-            if (gameData != null)
-            {
-                gameData.playerPosition = position;
-                gameData.currentCheckpoint = checkpointId;
-            }
-
-            if (gameData.activatedCheckpoints != null)
-            {
-                if (gameData.activatedCheckpoints.ContainsKey(checkpointId))
-                    gameData.activatedCheckpoints[checkpointId] = true;
-                else gameData.activatedCheckpoints.Add(checkpointId, true);
-            }
-            Debug.Log($"gameData updated:playerPositon = {position},activatedCheckpoint = {checkpointId}");
-        }
-        else Debug.Log("Failed to activate checkpoint!");
+        if (!data.activatedCheckpoints.ContainsKey(checkpointId))
+            data.activatedCheckpoints.Add(checkpointId, true);
+        else
+            data.activatedCheckpoints[checkpointId] = true;
+        SaveManager.instance.SaveAtCheckpoint();
     }
 
     public void SaveAtCheckpoint()
@@ -71,22 +60,8 @@ public class CheckpointManager : MonoBehaviour,ISaveManager
     }
     public void RestoreFromLastCheckpoint()
     {
-        Checkpoint targetCheckpoint = checkpoints.Find(cp => cp.checkpointId == currentActiveCheckpoint);
-        if(targetCheckpoint == null)
-        {
-            Debug.Log($"cannot find checkpoint with id {currentActiveCheckpoint}");
-        }
-        GameObject player = GameObject.FindWithTag("Player");
-        if(player == null)
-        {
-            Debug.Log("cannot find object \"Player");
-            player.transform.position = targetCheckpoint.transform.position;
-        }
-        else
-        {
-
-        }
+        GameData _data = SaveManager.instance.GetCurrentGameData();
+        PlayerManager.instance.player.transform.position = _data.playerPosition;
+        PlayerState stats = PlayerManager.instance.player.GetComponent<PlayerState>();
     }
-
-   
 }

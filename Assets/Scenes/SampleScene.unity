@@ -5373,7 +5373,7 @@ Transform:
   m_GameObject: {fileID: 225067654}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7568016, y: 0.99086213, z: -10}
+  m_LocalPosition: {x: 4.41343, y: 0.99086213, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8792,7 +8792,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7568016, y: 0.99086213, z: -10}
+  m_LocalPosition: {x: 4.41343, y: 0.99086213, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18501,8 +18501,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1071268361}
   m_HandleRect: {fileID: 1071268360}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.45200005
+  m_Value: 1
+  m_Size: 0.452
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -31761,6 +31761,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2584598226630927997, guid: 3ce34ec7e43c6bf4484c6f7c81840ca5, type: 3}
+      propertyPath: chestId
+      value: 001
+      objectReference: {fileID: 0}
     - target: {fileID: 3241017712478044899, guid: 3ce34ec7e43c6bf4484c6f7c81840ca5, type: 3}
       propertyPath: m_Name
       value: PlainChest
