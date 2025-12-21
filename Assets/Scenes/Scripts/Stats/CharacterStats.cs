@@ -137,7 +137,7 @@ public class CharacterStats : MonoBehaviour
         {
 
             Decreasehealthby(_damage);
-            if (currentHP < 0)
+            if (currentHP <= 0)
             {
                 die();
             }

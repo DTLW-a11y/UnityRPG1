@@ -60,9 +60,15 @@ public class FireBall : MonoBehaviour
     // Åö×²ÉËº¦
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<Enemy>())
+        if (other.GetComponent<EnemyMaster>())
         {
             EnemyStats stats = other.GetComponent<EnemyStats>();
+            stats.takedamage(damage);
+            Destroy(gameObject);
+        }
+        else if (other.GetComponent<EnemyFly>())
+        {
+            FlyEnemyStats stats = other.GetComponent<FlyEnemyStats>();
             stats.takedamage(damage);
             Destroy(gameObject);
         }

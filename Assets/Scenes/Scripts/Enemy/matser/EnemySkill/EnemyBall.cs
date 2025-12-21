@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnemyBall : MonoBehaviour
 {
+    [SerializeField] GameObject prefab;
+    [SerializeField] private int damage = 10;
+    [SerializeField] private float lifeTime = 3;
+    [SerializeField] private float moveSpeed = 1;
+    [SerializeField] private LayerMask targetLayer;
     private Enemy enemy => GetComponentInParent<Enemy>();
 
 
@@ -13,6 +18,14 @@ public class EnemyBall : MonoBehaviour
     }
     private void AnimationFire()
     {
-        
+        //生成火球
+        GameObject fireball = Instantiate(prefab, enemy.transform.position, Quaternion.identity);//默认朝向,利用预制体创建物品
+        MagicBall MagicBallScript = fireball.GetComponent<MagicBall>();
+
+        Transform target = PlayerManager.instance.playerentity.transform;
+        MagicBallScript.SetTarget(target);
+
+        //默认的速度，朝向，伤害，持续时间
+        MagicBallScript.Init(damage, lifeTime, moveSpeed, targetLayer);
     }
 }
