@@ -32,7 +32,7 @@ public class Enemy : Entity
     protected override void Update()
     {
         base.Update();  
-        stateMachine.currentstate.Update();//µ÷ÓÃ¸üÐÂ
+        stateMachine.currentstate.Update();//ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½
     }
     public virtual void CanStunnedWindowOpen()
     {
@@ -54,7 +54,7 @@ public class Enemy : Entity
         else 
             return false;   
     }
-    public virtual RaycastHit2D isplayerdetected() =>Physics2D.Raycast(Isattackcheck.position, Vector2.right * facingdir, Isattackcheckdistance, whatisplayer);//ÎªÊ²Ã´²»ÄÜÐ´³Éº¯ÊýÐÎÊ½
+    public virtual RaycastHit2D isplayerdetected() =>Physics2D.Raycast(Isattackcheck.position, Vector2.right * facingdir, Isattackcheckdistance, whatisplayer);//ÎªÊ²Ã´ï¿½ï¿½ï¿½ï¿½Ð´ï¿½Éºï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
     public virtual void AnimationFinishTrigger() => stateMachine.currentstate.AnimationFinishTrigger();
     protected override void OnDrawGizmos()

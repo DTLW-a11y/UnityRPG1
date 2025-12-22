@@ -622,7 +622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &85275173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4309,6 +4309,17 @@ MonoBehaviour:
   item:
     ItemData: {fileID: 11400000, guid: 1d446978a08056844a69206b840cb958, type: 2}
     stacksize: 0
+  Materialimage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CanORnotIMG: {fileID: 0}
+  cando: {fileID: 0}
+  cannotdo: {fileID: 0}
+  matnum:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &195895101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4394,6 +4405,7 @@ MonoBehaviour:
   inventoryslotParent: {fileID: 1579981393}
   StashslotParent: {fileID: 852056227}
   EquipmentSlotParent: {fileID: 1378092829}
+  LoadedItems: []
 --- !u!4 &197009922
 Transform:
   m_ObjectHideFlags: 0
@@ -11173,6 +11185,17 @@ MonoBehaviour:
   item:
     ItemData: {fileID: 11400000, guid: 00a2b582fa71760439374f0f97dee6c2, type: 2}
     stacksize: 0
+  Materialimage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CanORnotIMG: {fileID: 0}
+  cando: {fileID: 0}
+  cannotdo: {fileID: 0}
+  matnum:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &724023191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11510,6 +11533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1346607159}
   playerentity: {fileID: 1346607158}
+  currency: 0
 --- !u!4 &789753998
 Transform:
   m_ObjectHideFlags: 0
@@ -15639,6 +15663,17 @@ MonoBehaviour:
   item:
     ItemData: {fileID: 11400000, guid: 5f2bc32fcdf26a7449db3ad18fe8b546, type: 2}
     stacksize: 0
+  Materialimage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CanORnotIMG: {fileID: 0}
+  cando: {fileID: 0}
+  cannotdo: {fileID: 0}
+  matnum:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1359613068
 GameObject:
   m_ObjectHideFlags: 0

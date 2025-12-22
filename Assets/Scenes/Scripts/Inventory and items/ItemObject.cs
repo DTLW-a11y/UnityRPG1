@@ -10,15 +10,15 @@ public class ItemObject : MonoBehaviour
 
     private void OnValidate()
     {
-        // È·±£ÎïÌåÓÐSpriteRenderer×é¼þ£¨Ã»ÓÐÔò×Ô¶¯Ìí¼Ó£©
+        // È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½SpriteRendererï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ó£ï¿½
         if (GetComponent<SpriteRenderer>() == null)
         {
             gameObject.AddComponent<SpriteRenderer>();
         }
-        // µ÷ÓÃÊÓ¾õ¸üÐÂÂß¼­
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
         SetUpVisuals();
 
-        // ¿ÉÑ¡£º×Ô¶¯¸ørb¸³Öµ£¨±ÜÃâÊÖ¶¯ÍÏÑ¡£©
+        // ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½rbï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
         if (rb == null)
         {
             rb = GetComponent<Rigidbody2D>();

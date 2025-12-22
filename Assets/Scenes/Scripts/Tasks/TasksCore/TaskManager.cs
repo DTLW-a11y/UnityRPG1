@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
+using static GameData;
 
-public class TaskManager : MonoBehaviour
+#if UNITY_EDITOR
+using UnityEditor.Build.Reporting;
+#endif
+public class TaskManager : MonoBehaviour,ISaveManager
 {
     
     public static TaskManager instance;
@@ -134,4 +137,73 @@ public class TaskManager : MonoBehaviour
         }
     }
     #endregion
+
+    public void LoadData(GameData _data)
+    {
+        //加载总任务数据
+        totaltasks.Clear();
+        foreach (var saveData in _data.totalTasksSave)
+        {
+            var detail = new TaskDetail();
+            detail.taskId = saveData.taskId;
+            detail.taskType = (tasktype)saveData.taskType; 
+            detail.taskName = saveData.taskName;
+            detail.taskDesc = saveData.taskDesc;
+            detail.pretaskId = saveData.pretaskId;
+            detail.taskCount = saveData.taskCount;
+            detail.targetId = saveData.targetId;
+            detail.rewarditemId = saveData.rewarditemId;
+            detail.rewardEXP = saveData.rewardEXP;
+            totaltasks[saveData.taskId] = detail;
+        }
+
+        // 加载当前任务数据
+        currenttasks.Clear();
+        foreach (var saveData in _data.currentTasksSave)
+        {
+            var taskData = new TaskData(
+                saveData.taskId,
+                (TaskStatu.taskstatus)saveData.status,
+                saveData.progress
+            );
+            currenttasks[saveData.taskId] = taskData;
+        }
+
+        OntaskStatuChange?.Invoke(); // 通知UI更新
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        // 清空已有数据
+        _data.totalTasksSave.Clear();
+        _data.currentTasksSave.Clear();
+
+        // 保存总任务数据
+        foreach (var task in totaltasks.Values)
+        {
+            _data.totalTasksSave.Add(new TaskDetailSave
+            {
+                taskId = task.taskId,
+                taskType = (int)task.taskType,
+                taskName = task.taskName,
+                taskDesc = task.taskDesc,
+                pretaskId = task.pretaskId,
+                taskCount = task.taskCount,
+                targetId = task.targetId,
+                rewarditemId = task.rewarditemId,
+                rewardEXP = task.rewardEXP,
+            });
+        }
+
+        // 保存当前任务数据
+        foreach (var task in currenttasks.Values)
+        {
+            _data.currentTasksSave.Add(new TaskDataSave
+            {
+                taskId = task.taskId,
+                status = (int)task.taskstatus,
+                progress = task.progress
+            });
+        }
+    }
 }

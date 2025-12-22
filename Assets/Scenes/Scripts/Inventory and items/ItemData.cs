@@ -1,4 +1,5 @@
 
+using UnityEditor;
 using UnityEngine;
 public enum ItemType
 {
@@ -26,6 +27,7 @@ public class ItemData : ScriptableObject
             item.ExecuteEffect();
         }
     }
+
+
+    
 }
-
-

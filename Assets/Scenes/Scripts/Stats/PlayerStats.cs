@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
-public class PlayerStats : CharacterStats
+public class PlayerStats : CharacterStats,ISaveManager
 {
     private Player player;
 
-    [Header("Level Details")]//µÈ¼¶
+    [Header("Level Details")]//ï¿½È¼ï¿½
     //[SerializeField] private int level = 1;
     //[SerializeField] private int manalevel = 1;
     [Range(0f, 1f)]
@@ -38,14 +40,14 @@ public class PlayerStats : CharacterStats
         GetComponent<PlayerItemDrop>()?.GenerateDrop();
     }
 
-    private void Modify(Stat _stat)//ÊýÖµËæµÈ¼¶Ö¸Êý¼¶Ôö³¤
+    private void Modify(Stat _stat)//ï¿½ï¿½Öµï¿½ï¿½È¼ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         
             float modifier = _stat.GetValue() * percentage;
             _stat.addmodifier(Mathf.RoundToInt(modifier));
        
     }
-    private void ModifyMana(Stat _stat)//Ä§Á¦Ôö¼Ó£¬ÏßÐÔ
+    private void ModifyMana(Stat _stat)//Ä§ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         
             float modifier = 0f;
@@ -54,7 +56,7 @@ public class PlayerStats : CharacterStats
         
     }
 
-    private void AddModifiers() // ËæµÈ¼¶Ôö³¤ÐÞ¸ÄµÄÊôÐÔ
+    private void AddModifiers() // ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½
     {
         Modify(damage);
         Modify(strenth);
@@ -74,7 +76,7 @@ public class PlayerStats : CharacterStats
         ModifyMana(maxMana);
     }
 
-    public void OnDestroy()//Ïú»ÙÎïÆ·Ê±È¡Ïû¶©ÔÄ£¬·ÀÖ¹ÄÚ´æÐ¹Â¶
+    public void OnDestroy()//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·Ê±È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ö¹ï¿½Ú´ï¿½Ð¹Â¶
     {
         if(EXPSystem.instance != null)
         {
@@ -82,4 +84,38 @@ public class PlayerStats : CharacterStats
             EXPSystem.instance.onmanaLevelUp -= manalevelup;
         }
     }
+    public void SaveData(ref GameData _data)
+    {
+        _data.playerAttributes.strength = strenth.GetValue();
+        _data.playerAttributes.agility = agility.GetValue();
+        _data.playerAttributes.intelligence = intelligence.GetValue();
+        _data.playerAttributes.vitality = vitality.GetValue();
+
+        _data.playerAttributes.maxHP = maxHP.GetValue();
+        _data.playerAttributes.currentHP = currentHP;
+        _data.playerAttributes.armor = armor.GetValue();
+        _data.playerAttributes.evasion = evision.GetValue();
+
+        _data.playerAttributes.damage = damage.GetValue();
+        _data.playerAttributes.critChance = critchance.GetValue();
+        _data.playerAttributes.critPower = critpower.GetValue();
+    }
+
+    public void LoadData(GameData _data)
+    {
+        strenth.Setvalue(_data.playerAttributes.strength);
+        agility.Setvalue(_data.playerAttributes.agility);
+        intelligence.Setvalue(_data.playerAttributes.intelligence);
+        vitality.Setvalue(_data.playerAttributes.vitality);
+
+        maxHP.Setvalue(_data.playerAttributes.maxHP);
+        currentHP = _data.playerAttributes.currentHP;
+        armor.Setvalue(_data.playerAttributes.armor);
+        evision.Setvalue(_data.playerAttributes.evasion);
+
+        damage.Setvalue(_data.playerAttributes.damage);
+        critchance.Setvalue(_data.playerAttributes.critChance);
+        critpower.Setvalue(_data.playerAttributes.critPower);
+    }
+
 }

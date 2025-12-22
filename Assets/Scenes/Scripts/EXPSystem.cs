@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EXPSystem : MonoBehaviour//等级系统单例
+public class EXPSystem : MonoBehaviour,ISaveManager//等级系统单例
 {
     public static EXPSystem instance {get; private set;}
 
@@ -55,5 +55,21 @@ public class EXPSystem : MonoBehaviour//等级系统单例
         manalevel++;
         //ModifyMana(maxMana);
         onmanaLevelUp?.Invoke();
+    }
+
+    public void LoadData(GameData _data)
+    {
+        this.level = _data.level;
+        this.manalevel = _data.manalevel;
+        this.maxEXP = _data.maxEXP;
+        this.currentEXP = _data.currentEXP;
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        _data.level = this.level;
+        _data.manalevel = this.manalevel;
+        _data.maxEXP = this.maxEXP;
+        _data.currentEXP = this.currentEXP;
     }
 }
