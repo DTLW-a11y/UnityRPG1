@@ -15,6 +15,8 @@ public class PlayerState
     protected float stateTimer;
     protected bool triggerCalled;
 
+    public static int JumpCount;
+
     public PlayerState(Player _player, PlayerStateMachine _stateMachine , string _animBoolName)
     {
         this.player = _player;

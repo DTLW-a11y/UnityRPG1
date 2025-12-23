@@ -36,9 +36,12 @@ public class playerAirstate : PlayerState
         {
             stateMachine.changeState(player.primeattack);
         }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            stateMachine.changeState(player.magicattack1);
-        }
+        //二段跳
+        if (Inventory.Instance.SkillDictionary.TryGetValue(SkillManager.instance.abilityrequirements[0].ItemData, out var itemData) && JumpCount < 2) //如果有对应数据，解锁了技能
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                stateMachine.changeState(player.jumpstate);
+            }
+
     }
 }

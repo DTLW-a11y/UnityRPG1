@@ -11,6 +11,7 @@ public class playerJumpstate : PlayerState
     public override void Enter()
     {
         base.Enter();
+        JumpCount++;
         rb.velocity = new Vector2(rb.velocity.x, player.jumpspeed);
     }
 
@@ -26,5 +27,19 @@ public class playerJumpstate : PlayerState
         {
             stateMachine.changeState(player.airstate);
         }
+        if (player.IsWallDetected())
+        {
+            stateMachine.changeState(player.wallsliderstate);
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.J))
+        {
+            stateMachine.changeState(player.primeattack);
+        }
+        //二段跳
+        if (Inventory.Instance.SkillDictionary.TryGetValue(SkillManager.instance.abilityrequirements[0].ItemData, out var itemData) && JumpCount < 2) //如果有对应数据，解锁了技能
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                stateMachine.changeState(player.jumpstate);
+            }
     }
 }

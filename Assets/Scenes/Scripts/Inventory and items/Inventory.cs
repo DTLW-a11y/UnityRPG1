@@ -29,6 +29,9 @@ public class Inventory : MonoBehaviour, ISaveManager
     //����
     public List<InventoryItem> StashItems;
     public Dictionary<ItemData,InventoryItem> StashDictionary;
+    //技能条件检索
+    public List<InventoryItem> SkillItems;
+    public Dictionary<ItemData, InventoryItem> SkillDictionary;
 
     //����Ʒ�������Ű�
     public Dictionary<int, ItemData> ItemDictionary;
@@ -51,9 +54,15 @@ public class Inventory : MonoBehaviour, ISaveManager
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
+            return;
+        }
 
         ItemDictionary = new Dictionary<int, ItemData>();
         LoadAllFiles();
@@ -71,6 +80,9 @@ public class Inventory : MonoBehaviour, ISaveManager
         StashItems = new List<InventoryItem>();
         StashDictionary = new Dictionary<ItemData, InventoryItem>();
         stashslots = StashslotParent.GetComponentsInChildren<UI_Itemslot>();
+
+        SkillItems = new List<InventoryItem>();
+        SkillDictionary = new Dictionary<ItemData, InventoryItem>();
         AddStartingItems();
 
         
@@ -164,9 +176,6 @@ public class Inventory : MonoBehaviour, ISaveManager
             }
         }
     }
-    
-
-    
 
     public void equipitems(ItemData _item)
     {
@@ -238,6 +247,10 @@ public class Inventory : MonoBehaviour, ISaveManager
         {
             AddToStash(_item);
         }
+        else if (_item.ItemType == ItemType.Skill)//���Ӳ���
+        {
+            AddToSkill(_item);
+        }
         UpdateUI();
     }//������Ʒ������ui
     public void AddItem(int itemID)
@@ -252,6 +265,10 @@ public class Inventory : MonoBehaviour, ISaveManager
         {
             AddToStash(_item);
         }
+        else if (_item.ItemType == ItemType.Skill)//添加技能
+        {
+            AddToSkill(_item);
+        }
         UpdateUI();
     }//������Ʒ������ui
     private void AddToInventory(ItemData _item)
@@ -265,6 +282,19 @@ public class Inventory : MonoBehaviour, ISaveManager
             InventoryItem newitem = new InventoryItem(_item);
             inventoryItems.Add(newitem);
             inventoryDictionary.Add(_item, newitem);
+        }
+    }
+    private void AddToSkill(ItemData _item)
+    {
+        if (SkillDictionary.TryGetValue(_item, out InventoryItem value))
+        {
+            value.Addstack();
+        }
+        else
+        {
+            InventoryItem newitem = new InventoryItem(_item);
+            SkillItems.Add(newitem);
+            SkillDictionary.Add(_item, newitem);
         }
     }
     private void AddToStash(ItemData _item)
