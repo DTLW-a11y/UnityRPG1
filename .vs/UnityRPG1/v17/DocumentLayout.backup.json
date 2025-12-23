@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Git\\UnityRPG1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|d:\\git\\unityrpg1\\assets\\scenes\\scripts\\ui\\button\\startbuttonhover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\ui\\button\\startbuttonhover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|d:\\git\\unityrpg1\\assets\\scenes\\scripts\\inventory and items\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\inventory and items\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "StartButtonHover.cs",
+              "DocumentMoniker": "D:\\Git\\UnityRPG1\\Assets\\Scenes\\Scripts\\UI\\Button\\StartButtonHover.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\UI\\Button\\StartButtonHover.cs",
+              "ToolTip": "D:\\Git\\UnityRPG1\\Assets\\Scenes\\Scripts\\UI\\Button\\StartButtonHover.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts\\UI\\Button\\StartButtonHover.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T09:28:10.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Inventory.cs",
               "DocumentMoniker": "D:\\Git\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
               "ToolTip": "D:\\Git\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAcwLwAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAGYBAAAAAAAAAABYwGsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-21T09:05:24.202Z",
               "EditorCaption": ""
