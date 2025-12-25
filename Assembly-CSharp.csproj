@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scenes\Scripts\Skill\CounterSkill.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\EnemyMaster.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\CharacterData.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\masterstunnedstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\counteringstate.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\EnemyState.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\BoundingPlatform.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueManager.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Door_1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\PlayerState.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\OptionUI.cs" />
@@ -166,6 +168,7 @@
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\ItemEffect.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerAirstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksCore\TaskManager.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\PlayerItemDrop.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\CharacterStats.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\SceenHPUI.cs" />
@@ -186,7 +189,6 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flygroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Rock.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemybattlestate.cs" />

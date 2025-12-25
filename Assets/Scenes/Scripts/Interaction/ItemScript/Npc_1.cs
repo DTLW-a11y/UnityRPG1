@@ -17,12 +17,16 @@ public class Npc_1 : MonoBehaviour, Interface
 
     public void ThingToDo()
     {
-        if (TaskManager.instance.Find(taskid[0]) == 0)
+        bool firstdialog = false;
+        bool seconddialog = false;
+        if (!firstdialog)//第一次对话
         {
-            Debug.Log(0);
+            //Debug.Log(0);
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
+            firstdialog = true;
+            TaskManager.instance.AcceptTask(1);//接取任务1
         }
-        else if (TaskManager.instance.Find(taskid[0]) == 1)
+        else if (TaskManager.instance.Find(taskid[0]) == 1)//已完成
         {
             Debug.Log(1);
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);

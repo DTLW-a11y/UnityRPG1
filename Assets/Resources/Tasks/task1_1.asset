@@ -9,10 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eedf4bd45079d7c42bd6ed3ca2c3e075, type: 3}
-  m_Name: "\u5DF2\u5B8C\u6210\u5BF9\u8BDD1"
+  m_Script: {fileID: 11500000, guid: 1b57d051cd7e20b4e92588c528901697, type: 3}
+  m_Name: task1_1
   m_EditorClassIdentifier: 
-  characterName: 
-  characterIcon: {fileID: 0}
-  dialogueText: "\u4EFB\u52A1\u5DF2\u5B8C\u6210"
-  textColor: {r: 1, g: 1, b: 1, a: 1}
+  taskId: 1
+  taskType: 1
+  taskName: 
+  taskDesc: 
+  pretaskId: -1
+  taskCount: 1
+  targetId: 1
+  rewarditemId: 
+  rewardEXP: 80

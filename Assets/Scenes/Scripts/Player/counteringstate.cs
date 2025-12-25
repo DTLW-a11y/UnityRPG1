@@ -37,7 +37,7 @@ public class counteringstate : PlayerState
 
             stateMachine.changeState(player.counteringstate);
         }
-        if (Input.GetKeyUp(KeyCode.Mouse1))
+        if (Input.GetKeyUp(KeyCode.Mouse1)&& time > 1)
         {
 
             //释放技能，检测碰撞体，根据敌人，物品
@@ -45,6 +45,10 @@ public class counteringstate : PlayerState
 
             time = 0;
             stateMachine.changeState(player.idlestate);
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse1) && time <= 1)
+        {
+            time = 0;
         }
     }
 }

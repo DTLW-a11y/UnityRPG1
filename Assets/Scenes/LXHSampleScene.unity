@@ -5896,8 +5896,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u4F60\u597D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c856fdfc1804cc24c92ec6164ad37f22, type: 2}
-  m_sharedMaterial: {fileID: -4808604658108653015, guid: c856fdfc1804cc24c92ec6164ad37f22, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b5e6b8821e6fff343813df3c5f421fcc, type: 2}
+  m_sharedMaterial: {fileID: -740954968574462161, guid: b5e6b8821e6fff343813df3c5f421fcc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11980,8 +11980,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u6D4B\u8BD5"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c856fdfc1804cc24c92ec6164ad37f22, type: 2}
-  m_sharedMaterial: {fileID: -4808604658108653015, guid: c856fdfc1804cc24c92ec6164ad37f22, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b5e6b8821e6fff343813df3c5f421fcc, type: 2}
+  m_sharedMaterial: {fileID: -740954968574462161, guid: b5e6b8821e6fff343813df3c5f421fcc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12719,6 +12719,7 @@ MonoBehaviour:
   characterIcon: {fileID: 2041567635}
   nextButton: {fileID: 1716687233}
   dialoguePanel: {fileID: 969134479}
+  playername: 
 --- !u!1 &969693806
 GameObject:
   m_ObjectHideFlags: 0
@@ -22383,8 +22384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -709.15594, y: 234.07498}
-  m_SizeDelta: {x: 348.688, y: 496.782}
+  m_AnchoredPosition: {x: -688.9297, y: 175.68591}
+  m_SizeDelta: {x: 389.141, y: 380.004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041567635
 MonoBehaviour:

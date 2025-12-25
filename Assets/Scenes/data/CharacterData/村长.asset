@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eedf4bd45079d7c42bd6ed3ca2c3e075, type: 3}
-  m_Name: "\u672A\u5B8C\u6210\u5BF9\u8BDD1"
+  m_Script: {fileID: 11500000, guid: ad9a97bf4bc096447aa8572ad9c0e43e, type: 3}
+  m_Name: "\u6751\u957F"
   m_EditorClassIdentifier: 
-  characterName: 
-  characterIcon: {fileID: 0}
-  dialogueText: "\u4EFB\u52A1\u672A\u5B8C\u6210"
-  textColor: {r: 1, g: 1, b: 1, a: 1}
+  characterName: "\u6751\u957F"
+  characterIcon: {fileID: 21300000, guid: 23ed5f7cc26bc4045a1c86361bafe5ef, type: 3}
+  textColor: {r: 0.5943396, g: 0.5302856, b: 0.12896048, a: 1}

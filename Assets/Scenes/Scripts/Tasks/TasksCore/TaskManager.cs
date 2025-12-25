@@ -82,6 +82,7 @@ public class TaskManager : MonoBehaviour,ISaveManager
     #endregion
 
     #region//任务进度更新
+    //到达地点任务   taskcount为1
     public void UpdateProgress(tasktype tasktype, int targetid ,int addCount =1)
     {
         foreach (var task in currenttasks)//遍历已有任务
