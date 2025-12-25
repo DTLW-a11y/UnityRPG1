@@ -16,7 +16,5 @@ public class GameSpot : MonoBehaviour,Interface
 
     public void ThingToDo()
     {
-        DialogueTrigger dialogueTrigger = gameObject.GetComponent<DialogueTrigger>();
-        dialogueTrigger.TriggerDialogue();
     }
 }

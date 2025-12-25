@@ -28,7 +28,7 @@ public class TaskManager : MonoBehaviour,ISaveManager
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         totaltasks = new Dictionary<int, TaskDetail>();
-        currenttasks = new Dictionary<int, TaskData>();
+        currenttasks = new Dictionary<int, TaskData>();//任务id，任务数据
         Init();
     }
 
@@ -138,6 +138,20 @@ public class TaskManager : MonoBehaviour,ISaveManager
     }
     #endregion
 
+    public int Find(int _target)//查找任务进度 未接取0 已完成1 其他-1
+    {
+        if (!currenttasks.ContainsKey(_target))
+        {
+            return 0;
+        }
+        else 
+        {
+            if (currenttasks[_target].taskstatus == TaskStatu.taskstatus.completed)
+                return 1;
+            else 
+                return -1;
+        }
+    }
     public void LoadData(GameData _data)
     {
         //加载总任务数据

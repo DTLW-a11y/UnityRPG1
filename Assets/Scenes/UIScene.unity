@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &49963346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5112,6 +5112,7 @@ MonoBehaviour:
   equipments: []
   inventoryItems: []
   StashItems: []
+  SkillItems: []
   startingItems:
   - {fileID: 11400000, guid: 02c4d1f35c3bfc74682e384b6bd6af39, type: 2}
   - {fileID: 11400000, guid: 02c4d1f35c3bfc74682e384b6bd6af39, type: 2}
@@ -14937,6 +14938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f172bb5c353ad94eaef0e405476de82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueTrigger: {fileID: 0}
   dialogueUIManager: {fileID: 969134482}
   gameObjects:
   - {fileID: 1579981392}
@@ -16571,6 +16573,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Skill: {fileID: 0}
   FireBallSkill: {fileID: 0}
+  CounterSkill: {fileID: 0}
+  requirements: []
+  abilityrequirements: []
 --- !u!4 &1021593562
 Transform:
   m_ObjectHideFlags: 0
@@ -20609,6 +20614,8 @@ MonoBehaviour:
   dashusetime: 0
   dashspeed: 50
   dashduration: 0.2
+  countercheck: {fileID: 0}
+  boxsize: {x: 0, y: 0}
 --- !u!4 &1346607160
 Transform:
   m_ObjectHideFlags: 0
@@ -21486,7 +21493,7 @@ RectTransform:
   m_Father: {fileID: 1359613069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.060012817, y: 0.10000038}
   m_SizeDelta: {x: -5.080002, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

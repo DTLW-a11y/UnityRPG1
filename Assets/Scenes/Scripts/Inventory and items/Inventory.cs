@@ -343,12 +343,12 @@ public class Inventory : MonoBehaviour, ISaveManager
 
     public List<InventoryItem> GetStashList() => StashItems;
 
-    public itemData_equipment getEquipment(ItemType _type)//������Ʒ���ͻ����װ����Ʒ
+    public itemData_equipment getEquipment(EquipmentType _type)//根据装备类型查找装备
     {
         itemData_equipment equipedItem = null;
         foreach (var item in equipmentDictionary)
         {
-            if (item.Key.ItemType == _type)
+            if (item.Key.equipmenttype == _type)
             {
                 equipedItem = item.Key;
             }

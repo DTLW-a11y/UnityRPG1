@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOpened: 0
+  chestId: 
   opened: {fileID: -3888567672798316567, guid: 19e07f9d107e445408633f50457d456e, type: 3}
 --- !u!212 &7968312870981835492
 SpriteRenderer:

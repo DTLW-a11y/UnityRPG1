@@ -33,7 +33,6 @@ public class Flybattlestate : EnemyState
             stateTime = enemy.battletime;
             if (enemy.isplayerdetected().distance < enemy.attackdistance)
             {
-                Debug.Log("kegongji");
                 if (!check())
                 {
                     combocounter=(combocounter+1)%2;
@@ -45,7 +44,6 @@ public class Flybattlestate : EnemyState
         
         else if(!enemy.isplayerdetected()&& Vector2.Distance(enemy.transform.position, player.position)>distance)
         {
-            Debug.Log("11");
             enemy.Flip();
             movedir = -movedir;
         }

@@ -33,7 +33,6 @@ public class enemybattlestate : EnemyState
             stateTime = enemy.battletime;
             if (enemy.isplayerdetected().distance < enemy.attackdistance)
             {
-                Debug.Log("kegongji");
                 if (!check())
                 {
                     combocounter=(combocounter+1)%2;

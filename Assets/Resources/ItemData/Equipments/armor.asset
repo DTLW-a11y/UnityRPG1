@@ -26,7 +26,7 @@ MonoBehaviour:
   maxHP: 30
   armor: 10
   evision: 0
-  damage: 0
+  damage: 10
   critchance: 0
   critpower: 0
   firedamage: 0

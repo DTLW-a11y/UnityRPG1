@@ -110,10 +110,13 @@
     <Compile Include="Assets\Scenes\Scripts\Interaction\Interface.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksData\TaskStatu.cs" />
     <Compile Include="Assets\Scenes\Scripts\Entity.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueLine.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Skill\CounterSkill.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\EnemyMaster.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\masterstunnedstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Player\counteringstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Npc_1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playermovestate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
@@ -169,6 +172,7 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flystunnedstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemymovestate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Skill\move\CounterWall.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playergroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemyidlestate.cs" />
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\PopupText.cs" />
@@ -184,6 +188,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flygroundstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Rock.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemybattlestate.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />

@@ -20,14 +20,14 @@ public class playeranimationtrigger : MonoBehaviour
                 EnemyStats _target = hit.GetComponent<EnemyStats>();
                 player.stats.dodamage(_target);
 
-                Inventory.Instance.getEquipment(ItemType.Equipment).ExecuteItemEffect();//
+                Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
             }
             else if (hit.GetComponent<EnemyFly>())
             {
                 FlyEnemyStats _target = hit.GetComponent<FlyEnemyStats>();
                 player.stats.dodamage(_target);
 
-                Inventory.Instance.getEquipment(ItemType.Equipment).ExecuteItemEffect();//
+                Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
             }
         }
     }

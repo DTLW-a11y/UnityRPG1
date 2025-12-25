@@ -13,6 +13,9 @@ public class FireBall : MonoBehaviour
     private Transform targetEnemy;
     private Rigidbody2D rb;
 
+    private Vector2 min = new Vector2(-.7f, -.7f);
+    private Vector2 max = new Vector2(.7f, .7f);
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,12 +31,20 @@ public class FireBall : MonoBehaviour
         this.searchRadius = searchRadius;
         this.targetLayer = targetLayer;
 
-        Vector2 direction = (targetEnemy.position - transform.position).normalized;
+        if (targetEnemy != null)
+        {
+            Vector2 direction = (targetEnemy.position - transform.position).normalized;
 
-        rb.velocity = direction * moveSpeed; //初始速度
+            rb.velocity = direction * moveSpeed; //初始速度
+        }
+        else
+        {
+            Vector2 direction = new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
+            rb.velocity = direction * moveSpeed;
+        }
 
-        // 超时销毁
-        Destroy(gameObject, lifeTime);
+            // 超时销毁
+            Destroy(gameObject, lifeTime);
     }
 
     // 设置追踪目标

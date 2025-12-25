@@ -45,7 +45,7 @@ public class eliminationplayer : PlayerState
             spriteRenderer.enabled = true;
             yield return new WaitForSeconds(flashtime + 0.1f);
             //flashtime -= .03f;
-            Debug.Log(flashtime);
+            //Debug.Log(flashtime);
         }
         enemy.gameObject.SetActive(false);
     }

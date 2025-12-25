@@ -9,6 +9,7 @@ public class SkillManager : MonoBehaviour
 
     public Skill Skill;
     public FireBallSkill FireBallSkill;
+    public CounterSkill CounterSkill;
     private Transform player;
 
     public List<InventoryItem> requirements;//技能要求
@@ -30,6 +31,7 @@ public class SkillManager : MonoBehaviour
     {
         Skill = GetComponent<Skill>();
         FireBallSkill = GetComponent<FireBallSkill>();
+        CounterSkill = GetComponent<CounterSkill>();
 
         player = PlayerManager.instance.playerentity.transform; //角色管理器获得角色
     }

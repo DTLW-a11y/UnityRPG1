@@ -131,7 +131,7 @@ public class CharacterStats : MonoBehaviour
         else return false;
     }
 
-    public virtual void takedamage(int _damage)
+    public virtual void takedamage(int _damage) //造成伤害
     {
         if(currentHP > 0)
         {

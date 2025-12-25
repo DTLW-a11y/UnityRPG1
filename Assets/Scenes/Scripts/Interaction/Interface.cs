@@ -5,7 +5,8 @@ using UnityEngine;
 public enum InterType
 {
     gamespot,
-    elsespot
+    elsespot,
+    npc
 }
 public interface Interface 
 {
