@@ -47,6 +47,6 @@ public class FireBallSkill : Skill
         //默认的速度，朝向，伤害，持续时间
         fireBallScript.Init(damage, lifeTime, moveSpeed, rotateSpeed,searchRadius, targetLayer);
 
-        
+
     }
 }

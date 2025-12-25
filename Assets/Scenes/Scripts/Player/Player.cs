@@ -19,7 +19,8 @@ public class Player : Entity
     public float dashduration;
     public float dashdir {  get; private set; }
 
-    
+    public Transform countercheck;
+    public Vector2 boxsize;
     
     
 
@@ -38,6 +39,8 @@ public class Player : Entity
     public eliminationplayer elimination { get; private set; }
 
     public magicAttack1 magicattack1 { get; private set; }
+
+    public counteringstate counteringstate { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -56,6 +59,7 @@ public class Player : Entity
         diestate = new playerdiestate(this, stateMachine, "Die");
         elimination = new eliminationplayer(this, stateMachine, "Die");
         magicattack1 = new magicAttack1(this, stateMachine, "MagicAttack1");
+        counteringstate = new counteringstate(this, stateMachine, "CounterAttack");
 
         //player = GetComponent<CharacterStats>();
     }
@@ -92,6 +96,10 @@ public class Player : Entity
     //CharacterStats player;
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
-
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+        
+    }
 }
 

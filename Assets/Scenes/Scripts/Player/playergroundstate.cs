@@ -10,6 +10,7 @@ public class playergroundstate : PlayerState
 
     public override void Enter()
     {
+        JumpCount = 0;
         base.Enter();
     }
 

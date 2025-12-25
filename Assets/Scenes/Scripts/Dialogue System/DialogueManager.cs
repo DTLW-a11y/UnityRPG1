@@ -5,6 +5,8 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
+    public DialogueTrigger dialogueTrigger;
+
     [Header("依赖组件")]
     public DialogueUIManager dialogueUIManager;
 
@@ -26,6 +28,10 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void Start()
+    {
+        dialogueTrigger = new DialogueTrigger();
     }
 
     // 启动剧情

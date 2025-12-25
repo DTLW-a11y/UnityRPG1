@@ -28,32 +28,32 @@ public class UI_craftslot : UI_Itemslot
             i++;
         }
     }
-    private void Update()
-    {
-        itemData_equipment itemCraft = item.ItemData as itemData_equipment;
-        CanORnotIMG.color = Color.white;
-        foreach (InventoryItem i in itemCraft.CraftMaterials)
-        {
-            if (Inventory.Instance.StashDictionary.TryGetValue(i.ItemData, out var itemdata))
-            {
-                if (itemdata.stacksize < i.stacksize)
-                {
-                    CanORnotIMG.sprite = cannotdo;
-                    return;
-                }
-                else
-                {
-                    CanORnotIMG.color = Color.green;
-                    CanORnotIMG.sprite = cando;
-                }
-            }
-            else
-            {
-                CanORnotIMG.sprite = cannotdo;
-                return;
-            }
-        }
-    }
+    //private void Update()
+    //{
+    //    itemData_equipment itemCraft = item.ItemData as itemData_equipment;
+    //    CanORnotIMG.color = Color.white;
+    //    foreach (InventoryItem i in itemCraft.CraftMaterials)
+    //    {
+    //        if (Inventory.Instance.StashDictionary.TryGetValue(i.ItemData, out var itemdata))
+    //        {
+    //            if (itemdata.stacksize < i.stacksize)
+    //            {
+    //                CanORnotIMG.sprite = cannotdo;
+    //                return;
+    //            }
+    //            else
+    //            {
+    //                CanORnotIMG.color = Color.green;
+    //                CanORnotIMG.sprite = cando;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            CanORnotIMG.sprite = cannotdo;
+    //            return;
+    //        }
+    //    }
+    //}
     public override void OnPointerDown(PointerEventData eventData)
     {
         itemData_equipment itemCraft = item.ItemData as itemData_equipment;

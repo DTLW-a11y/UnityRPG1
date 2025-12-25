@@ -34,7 +34,6 @@ public class playercounterstate : PlayerState
                     {
                     stateTimer = 10;
                     player.anim.SetBool("SuccessfulCounter", true);
-
                     }
             }
         }
@@ -42,6 +41,12 @@ public class playercounterstate : PlayerState
         {
             player.anim.SetBool("SuccessfulCounter", false);
             stateMachine.changeState(player.idlestate);
+        }
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            time += Time.deltaTime;
+
+            stateMachine.changeState(player.counteringstate);
         }
     }
 }

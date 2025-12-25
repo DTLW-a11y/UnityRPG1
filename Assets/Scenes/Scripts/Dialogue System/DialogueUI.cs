@@ -11,23 +11,25 @@ public class DialogueUIManager : MonoBehaviour
     public Image characterIcon;
     public Button nextButton;
     public GameObject dialoguePanel;
+    public string playername;
 
     private void Awake()
     {
         dialoguePanel.SetActive(false);
         nextButton.onClick.AddListener(OnNextButtonClick);
+        playername = "张大帅";
     }
 
     // 显示单句对话（直接完整显示文本）
     public void ShowDialogue(DialogueLine line)
     {
         dialoguePanel.SetActive(true);
-        characterNameText.text = line.characterName;
-        characterNameText.color = line.textColor;
-        characterIcon.sprite = line.characterIcon;
-        characterIcon.gameObject.SetActive(line.characterIcon != null);
-        dialogueText.text = line.dialogueText; // 直接显示完整文本
-        characterNameText.color = line.textColor.a < 0.1f ? Color.black : line.textColor;
+        characterNameText.text = line.characterData.characterName;
+        characterNameText.color = line.characterData.textColor;
+        characterIcon.sprite = line.characterData.characterIcon;
+        characterIcon.gameObject.SetActive(line.characterData.characterIcon != null);
+        dialogueText.text = line.dialogueText.Replace("{主角}",playername); // 直接显示完整文本
+        characterNameText.color = line.characterData.textColor.a < 0.1f ? Color.black : line.characterData.textColor;
     }
 
     // 隐藏对话框

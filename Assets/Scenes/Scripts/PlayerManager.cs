@@ -11,9 +11,17 @@ public class PlayerManager : MonoBehaviour,ISaveManager
     public GameObject playerentity;
 
     public int currency;
-    public void Awake()
+    private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public int Getcurrency() => currency;

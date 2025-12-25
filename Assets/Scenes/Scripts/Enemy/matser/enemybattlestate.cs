@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class enemybattlestate : EnemyState
@@ -32,7 +33,6 @@ public class enemybattlestate : EnemyState
             stateTime = enemy.battletime;
             if (enemy.isplayerdetected().distance < enemy.attackdistance)
             {
-                Debug.Log("kegongji");
                 if (!check())
                 {
                     combocounter=(combocounter+1)%2;
@@ -48,12 +48,17 @@ public class enemybattlestate : EnemyState
                 stateMachine.ChangeState(enemy.idlestate);
             }
         }
-        if (player.position.x > enemy.transform.position.x)
-            movedir = 1;
-        else if (player.position.x < enemy.transform.position.x)
-            movedir = -1;
 
-        enemy.SetVelocity(enemy.movespeed * movedir , rb.velocity.y);
+        if (Mathf.Abs(player.position.x - enemy.transform.position.x) > 1)
+        {
+            if (player.position.x >= enemy.transform.position.x)
+                movedir = 1;
+            else if (player.position.x < enemy.transform.position.x)
+                movedir = -1;
+        }
+
+            enemy.SetVelocity(enemy.movespeed * movedir, rb.velocity.y);
+        
     }
     private bool check()
     {

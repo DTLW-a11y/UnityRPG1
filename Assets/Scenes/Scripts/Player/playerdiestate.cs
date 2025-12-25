@@ -31,6 +31,7 @@ public class playerdiestate : PlayerState
         {
             //Debug.Log("die");
             player.StartCoroutine(enumerator(0f));
+            SaveManager.instance.LoadFromLastCheckpoint();
         }
     }
     private IEnumerator enumerator(float time)

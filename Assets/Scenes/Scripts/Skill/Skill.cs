@@ -35,11 +35,23 @@ public class Skill : MonoBehaviour
         foreach (Collider2D enemy in colliders)
         {
             float distance = Vector2.Distance(player, enemy.transform.position);
-            EnemyStats enemyStats = enemy.GetComponent<EnemyStats>();
-            if (distance < closedistance && !enemyStats.isdied)
+            if (enemy.GetComponent<EnemyStats>())
             {
-                closedistance = distance;
-                target = enemy.transform;
+                EnemyStats enemyStats = enemy.GetComponent<EnemyStats>();
+                if (distance < closedistance && !enemyStats.isdied)
+                {
+                    closedistance = distance;
+                    target = enemy.transform;
+                }
+            }
+            else if (enemy.GetComponent<FlyEnemyStats>())
+            {
+                FlyEnemyStats enemyStats = enemy.GetComponent<FlyEnemyStats>();
+                if (distance < closedistance && !enemyStats.isdied)
+                {
+                    closedistance = distance;
+                    target = enemy.transform;
+                }
             }
         }
         return target;

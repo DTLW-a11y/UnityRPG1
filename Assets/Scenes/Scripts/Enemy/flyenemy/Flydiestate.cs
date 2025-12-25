@@ -34,14 +34,8 @@ public class Flydiestate : EnemyState
         enemy.ZeroVelocity();
         if (TriggerCalled)
         {
-            //Debug.Log("die");
-            enemy.StartCoroutine(enumerator(0f));
+            enemy.gameObject.SetActive(false);
         }
 
-    }
-    private IEnumerator enumerator(float time)
-    {
-        yield return new WaitForSeconds(time);
-        stateMachine.ChangeState(enemy.elimination);
     }
 }
