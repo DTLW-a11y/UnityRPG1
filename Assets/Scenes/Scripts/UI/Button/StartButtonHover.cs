@@ -33,4 +33,17 @@ public class StartButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         text.color = Color.white;
     }
+
+    public void ExitGame()
+    {
+        Debug.Log("EXIT");
+        Application.Quit();
+    }
+    public void StartGame()
+    {/*
+        if (!GameManager.Instance.HasPlayerName())
+            GameManager.Instance.NormalJumpToScene("IntroScene");
+        else */
+            GameManager.Instance.NormalJumpToScene("SampleScene");
+    }
 }

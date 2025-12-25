@@ -106,6 +106,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksData\TaskDetail.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerwalljump.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\Button\NoDestory.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\Interface.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksData\TaskStatu.cs" />
     <Compile Include="Assets\Scenes\Scripts\Entity.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemygroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flybattlestate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\GameManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\EnemyFly.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\Stat.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
