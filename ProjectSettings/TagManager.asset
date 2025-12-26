@@ -46,8 +46,14 @@ TagManager:
   - name: background
     uniqueID: 3107121287
     locked: 0
+  - name: pillar
+    uniqueID: 3909743709
+    locked: 0
   - name: ground
     uniqueID: 2295744001
+    locked: 0
+  - name: furniture
+    uniqueID: 1116923405
     locked: 0
   - name: enemy
     uniqueID: 1766981509
