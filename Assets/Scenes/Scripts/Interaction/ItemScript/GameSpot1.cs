@@ -17,5 +17,6 @@ public class GameSpot1 : MonoBehaviour,Interface
     public void ThingToDo()
     {
         TaskManager.instance.UpdateProgress(tasktype.Toplace, 1, 1);
+        TaskManager.instance.AcceptTask(2);
     }
 }

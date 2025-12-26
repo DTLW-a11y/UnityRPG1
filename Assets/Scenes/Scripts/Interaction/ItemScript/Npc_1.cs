@@ -6,7 +6,9 @@ public class Npc_1 : MonoBehaviour, Interface
 {
     [SerializeField] private List<DialogueData> text;
     [SerializeField] private List<int> taskid;
-    public InterType GetType()
+    bool firstdialog = false;
+    bool seconddialog = false;
+    public  InterType GetType()
     {
         return InterType.npc;
     }
@@ -17,19 +19,21 @@ public class Npc_1 : MonoBehaviour, Interface
 
     public void ThingToDo()
     {
-        bool firstdialog = false;
-        bool seconddialog = false;
-        if (!firstdialog)//第一次对话
+
+        if (!firstdialog )//第一次对话
         {
             //Debug.Log(0);
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
             firstdialog = true;
             TaskManager.instance.AcceptTask(1);//接取任务1
         }
-        else if (TaskManager.instance.Find(taskid[0]) == 1)//已完成
+        else if (TaskManager.instance.Find(1) == 1 && TaskManager.instance.Find(2) ==-1)//已完成
         {
-            Debug.Log(1);
-            DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);
+            int a = Random.Range(0, 10);
+            if(a>=5)
+                DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);
+            else
+                DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[2]);
         }
     }
 }

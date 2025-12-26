@@ -16,6 +16,7 @@ public class PlayerDetector : MonoBehaviour
         if (Closest != null && currentTarget.GetType() == InterType.gamespot)//剧情点，靠近触发
         {
             currentTarget.ThingToDo();
+            Destroy( Closest.gameObject);
         }
         else if(Closest != null && Input.GetKeyDown(KeyCode.E))//正常交互物品
         {
