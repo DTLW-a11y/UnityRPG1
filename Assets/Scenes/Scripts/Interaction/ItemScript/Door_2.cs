@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door_1 : MonoBehaviour,Interface
+public class Door_2 : MonoBehaviour,Interface
 {
     [SerializeField] private List<DialogueData> text;
     [SerializeField] private List<int> taskid;
+    bool first = false;
     public InterType GetType()
     {
         return InterType.elsespot;
@@ -17,13 +18,16 @@ public class Door_1 : MonoBehaviour,Interface
 
     public void ThingToDo()
     {
-        if (TaskManager.instance.Find(1) == 1)
+        if (TaskManager.instance.Find(2) == 0)
         {
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
         }
-        else if(TaskManager.instance.Find(1) == 0)
+        else if(TaskManager.instance.Find(2) == 1 && !first)//完成第二个任务,回到刘伯家
         {
-            //切换下一场景
+            DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);
+
+            //切换到刘伯家
+            first = true;
         }
     }
 }

@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scenes\Scripts\Save and Load\ISaveManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\GameData.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\itemData_equipment.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Door_2.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\FlyEnemyStats.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueUI.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\PlayerDetector.cs" />

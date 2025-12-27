@@ -15,11 +15,13 @@ public class PlayerDetector : MonoBehaviour
         Detect();
         if (Closest != null && currentTarget.GetType() == InterType.gamespot)//剧情点，靠近触发
         {
+            Debug.Log("gamespot");
             currentTarget.ThingToDo();
             Destroy( Closest.gameObject);
         }
         else if(Closest != null && Input.GetKeyDown(KeyCode.E))//正常交互物品
         {
+            Debug.Log("thing");
             currentTarget.ThingToDo();
         }
     }

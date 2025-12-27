@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\GitPack\\UnityRPG1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|d:\\gitpack\\unityrpg1\\assets\\scenes\\scripts\\interaction\\itemscript\\npc_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|d:\\gitpack\\unityrpg1\\assets\\scenes\\scripts\\interaction\\itemscript\\door_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\interaction\\itemscript\\door_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|d:\\gitpack\\unityrpg1\\assets\\scenes\\scripts\\interaction\\itemscript\\door_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\interaction\\itemscript\\door_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|D:\\GitPack\\UnityRPG1\\assets\\scenes\\scripts\\interaction\\itemscript\\npc_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\interaction\\itemscript\\npc_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|D:\\GitPack\\UnityRPG1\\assets\\scenes\\scripts\\interaction\\playerdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\interaction\\playerdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|D:\\GitPack\\UnityRPG1\\assets\\scenes\\scripts\\interaction\\itemscript\\gamespot1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\interaction\\itemscript\\gamespot1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|D:\\GitPack\\UnityRPG1\\assets\\scenes\\scripts\\tasks\\taskscore\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\tasks\\taskscore\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|d:\\gitpack\\unityrpg1\\assets\\scenes\\scripts\\interaction\\itemscript\\gamespot1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\interaction\\itemscript\\gamespot1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|D:\\GitPack\\UnityRPG1\\assets\\scenes\\scripts\\characterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\characterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|D:\\GitPack\\UnityRPG1\\assets\\scenes\\scripts\\interaction\\playerdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts\\interaction\\playerdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{590931B7-84D7-C0CA-C845-3B3D829FBFCF}|Assembly-CSharp.csproj|D:\\GitPack\\UnityRPG1\\assets\\scenes\\scripts\\dialogue system\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -139,19 +147,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Door_2.cs",
+              "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_2.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_2.cs",
+              "ToolTip": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_2.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxoAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T10:29:05.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Door_1.cs",
+              "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_1.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_1.cs",
+              "ToolTip": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_1.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Door_1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T10:17:52.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Npc_1.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Npc_1.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Npc_1.cs",
               "ToolTip": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Npc_1.cs",
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Npc_1.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBoAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAywB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T13:02:05.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T13:02:05.394Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CharacterData.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\CharacterData.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\CharacterData.cs",
@@ -163,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "DialogueData.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Dialogue System\\DialogueData.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Dialogue System\\DialogueData.cs",
@@ -175,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Interface.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\Interface.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\Interface.cs",
@@ -187,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GameSpot1.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\GameSpot1.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\GameSpot1.cs",
@@ -195,24 +228,23 @@
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\GameSpot1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T14:26:11.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-23T14:26:11.461Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "PlayerDetector.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\PlayerDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\PlayerDetector.cs",
               "ToolTip": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\PlayerDetector.cs",
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Interaction\\PlayerDetector.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-23T15:12:27.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "TaskManager.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Tasks\\TasksCore\\TaskManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Tasks\\TasksCore\\TaskManager.cs",
@@ -220,12 +252,11 @@
               "RelativeToolTip": "Assets\\Scenes\\Scripts\\Tasks\\TasksCore\\TaskManager.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAqwFQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T11:52:52.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-23T11:52:52.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "DialogueTrigger.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Dialogue System\\DialogueTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Dialogue System\\DialogueTrigger.cs",
@@ -237,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "DialogueLine.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Dialogue System\\DialogueLine.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Dialogue System\\DialogueLine.cs",
@@ -249,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "DialogueUI.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Dialogue System\\DialogueUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Dialogue System\\DialogueUI.cs",
@@ -261,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "TreasureChest.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\TreasureChest.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\TreasureChest.cs",
@@ -273,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Rock.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Rock.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Interaction\\ItemScript\\Rock.cs",
@@ -285,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "CounterWall.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Skill\\move\\CounterWall.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Skill\\move\\CounterWall.cs",
@@ -297,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "counteringstate.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\counteringstate.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Player\\counteringstate.cs",
@@ -309,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "eliminationplayer.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\eliminationplayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Player\\eliminationplayer.cs",
@@ -321,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "FireBall.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Skill\\move\\FireBall.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Skill\\move\\FireBall.cs",
@@ -333,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "PlayerState.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\PlayerState.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Player\\PlayerState.cs",
@@ -345,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "enemybattlestate.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Enemy\\matser\\enemybattlestate.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Enemy\\matser\\enemybattlestate.cs",
@@ -357,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "PlayerStats.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Stats\\PlayerStats.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Stats\\PlayerStats.cs",
@@ -369,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "itemData_equipment.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\itemData_equipment.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Inventory and items\\itemData_equipment.cs",
@@ -381,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Inventory.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Inventory and items\\Inventory.cs",
@@ -393,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "playerprimeattack.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\playerprimeattack.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Player\\playerprimeattack.cs",
@@ -405,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "UI_craftslot.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\UI\\UI_craftslot.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\UI\\UI_craftslot.cs",
@@ -417,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "playerJumpstate.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\playerJumpstate.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Player\\playerJumpstate.cs",
@@ -429,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\PlayerManager.cs",
@@ -441,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "SenceLoader.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\SenceLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\SenceLoader.cs",
@@ -453,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "EXPSystem.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\EXPSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\EXPSystem.cs",
@@ -465,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "EnemyMaster.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Enemy\\matser\\EnemyMaster.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Enemy\\matser\\EnemyMaster.cs",
@@ -477,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Checkpoint.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\Checkpoint\\Checkpoint.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\Checkpoint\\Checkpoint.cs",
@@ -489,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "GameData.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Save and Load\\GameData.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Save and Load\\GameData.cs",
@@ -501,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "playerdiestate.cs",
               "DocumentMoniker": "D:\\GitPack\\UnityRPG1\\Assets\\Scenes\\Scripts\\Player\\playerdiestate.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts\\Player\\playerdiestate.cs",
