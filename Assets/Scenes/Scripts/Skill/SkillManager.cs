@@ -33,14 +33,13 @@ public class SkillManager : MonoBehaviour
         FireBallSkill = GetComponent<FireBallSkill>();
         CounterSkill = GetComponent<CounterSkill>();
 
-        player = PlayerManager.instance.playerentity.transform; //角色管理器获得角色
     }
     public void Update()//按键触发技能
     {
         if(Inventory.Instance.SkillDictionary.TryGetValue(requirements[0].ItemData, out var itemData))//如果有对应数据，解锁了技能
         if(Input.GetKeyDown(KeyCode.U))
         {
-            FireBallSkill.CastSkill(player);
+            FireBallSkill.CastSkill(PlayerManager.instance.playerentity.transform);
             
             Debug.Log("cast fireball");
         }

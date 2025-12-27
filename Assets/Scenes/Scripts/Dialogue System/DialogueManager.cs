@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,6 +18,16 @@ public class DialogueManager : MonoBehaviour
     [Header("需要隐藏的其他ui")]
     public GameObject[] gameObjects;
 
+    public void RefreshSceneReferences()
+    {
+        // 在新场景中查找ui
+        gameObjects[0] = GameObject.Find("HealthUI");
+        gameObjects[1] = GameObject.Find("BagUI");
+        //dialogpanel
+        dialogueUIManager = GameObject.Find("DialoguePanel").GetComponent<DialogueUIManager>();
+
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,10 +39,20 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     public void Start()
     {
         dialogueTrigger = new DialogueTrigger();
+    }
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        RefreshSceneReferences();
     }
 
     // 启动剧情

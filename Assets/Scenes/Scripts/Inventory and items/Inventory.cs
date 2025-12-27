@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 #if UNITY_EDITOR
 using UnityEditor;
 using static UnityEditor.Progress;
@@ -49,8 +51,19 @@ public class Inventory : MonoBehaviour, ISaveManager
     /*
      * ����װ���Ĳ�����stash����
      * */
+    public void RefreshSceneReferences()
+    {
+        // 在新场景中查找ui
+        inventoryslotParent = GameObject.Find("inventory").GetComponent<RectTransform>();
+        StashslotParent = GameObject.Find("Stash").GetComponent<RectTransform>();
+        EquipmentSlotParent = GameObject.Find("Equipment").GetComponent<RectTransform>();
+        //清空ui槽
+        itemslots = inventoryslotParent.GetComponentsInChildren<UI_Itemslot>();
+        stashslots = StashslotParent.GetComponentsInChildren<UI_Itemslot>();
+        equipmentslots = EquipmentSlotParent.GetComponentsInChildren<UI_equipmentslot>();
+        UpdateUI();
+    }
 
-    
     private void Awake()
     {
         if (Instance == null)
@@ -64,9 +77,20 @@ public class Inventory : MonoBehaviour, ISaveManager
             return;
         }
 
+        SceneManager.sceneLoaded += OnSceneLoaded;
         ItemDictionary = new Dictionary<int, ItemData>();
         LoadAllFiles();
     }   
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        RefreshSceneReferences();
+    }
     private void Start()
     {
         equipments = new List<InventoryItem>();

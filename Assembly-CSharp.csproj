@@ -194,6 +194,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flygroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Rock.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemybattlestate.cs" />
@@ -214,6 +215,7 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\EnemySkill\EnemyBall.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flyattackstate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ButtonAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\SpawnManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueData.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Chest.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\UI_Itemslot.cs" />
