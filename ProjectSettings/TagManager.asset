@@ -43,17 +43,32 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: hidden Rock
+    uniqueID: 2030712823
+    locked: 0
   - name: background
     uniqueID: 3107121287
     locked: 0
   - name: pillar
     uniqueID: 3909743709
     locked: 0
+  - name: cell
+    uniqueID: 4058300293
+    locked: 0
+  - name: trees
+    uniqueID: 3997146403
+    locked: 0
+  - name: grass
+    uniqueID: 486217497
+    locked: 0
   - name: ground
     uniqueID: 2295744001
     locked: 0
   - name: furniture
     uniqueID: 1116923405
+    locked: 0
+  - name: Decor
+    uniqueID: 1091713567
     locked: 0
   - name: enemy
     uniqueID: 1766981509

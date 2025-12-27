@@ -133,6 +133,7 @@
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\HealthSystem.cs" />
     <Compile Include="Assets\Scenes\Scripts\Skill\FireBallSkill.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\elimination.cs" />
+    <Compile Include="Assets\Scenes\Scripts\TilemapToggleOnTrigger.cs" />
     <Compile Include="Assets\Scenes\Scripts\EntityFX.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\Player StateMachine.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\ManaBarUI.cs" />
