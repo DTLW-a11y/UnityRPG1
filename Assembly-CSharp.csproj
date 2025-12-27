@@ -108,6 +108,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksData\TaskDetail.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerwalljump.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\Button\NoDestory.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\Interface.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksData\TaskStatu.cs" />
     <Compile Include="Assets\Scenes\Scripts\Entity.cs" />
@@ -121,9 +122,11 @@
     <Compile Include="Assets\Scenes\Scripts\Player\counteringstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Npc_1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playermovestate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\Button\StartButtonHover.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flydiestate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BoxGroupAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\Button\SkipIntro.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flyidlestate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelTextAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemyattackcontroller.cs" />
@@ -184,6 +187,7 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemygroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\Checkpoint\Checkpoint.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flybattlestate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\GameManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\EnemyFly.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\Stat.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
@@ -245,6 +249,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\RPG Button 7\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
   </ItemGroup>

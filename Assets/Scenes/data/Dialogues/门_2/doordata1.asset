@@ -10,10 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e8c45f4a8ec55e4c8a4bf9170246819, type: 3}
+<<<<<<<< HEAD:Assets/Scenes/data/Dialogues/门_2/doordata1.asset
   m_Name: doordata1
   m_EditorClassIdentifier: 
   dialogueLines:
   - {fileID: 11400000, guid: d718dc06ab92c944b85a1ee1232d34b7, type: 2}
   - {fileID: 11400000, guid: 20804b6730ff4e54fa7f20d835da8635, type: 2}
+========
+  m_Name: "\u5BF9\u8BDD2"
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - {fileID: 11400000, guid: f1f816faf31fb124993a0a757b333d71, type: 2}
+>>>>>>>> 44ca6824dba4e7f270ae0d02d7137616079e1a44:Assets/Scenes/data/Dialogues/村长/对话数据/对话2.asset
   autoNext: 0
   autoNextDelay: 2
