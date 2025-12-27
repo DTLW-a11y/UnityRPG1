@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void Start()
     {
-        dialogueTrigger = new DialogueTrigger();
+        //dialogueTrigger = new DialogueTrigger();
     }
 
     // Æô¶¯¾çÇé

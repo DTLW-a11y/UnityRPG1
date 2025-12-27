@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scenes\Scripts\Interaction\Interface.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksData\TaskStatu.cs" />
     <Compile Include="Assets\Scenes\Scripts\Entity.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\Button\SwitchLeaf.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueLine.cs" />
     <Compile Include="Assets\Scenes\Scripts\Skill\CounterSkill.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\EnemyMaster.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Assets\Scenes\Scripts\Player\playergroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemyidlestate.cs" />
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\PopupText.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\Button\Book.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemygroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\Checkpoint\Checkpoint.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\TreasureChest.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\EnemyStats.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\BookLeafUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cainos\Third Party\Lucid Editor\License.txt" />
