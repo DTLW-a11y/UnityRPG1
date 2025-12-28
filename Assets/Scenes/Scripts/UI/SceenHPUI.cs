@@ -6,12 +6,12 @@ using UnityEngine.UIElements;
 
 public class SceenHPUI : MonoBehaviour
 {
-    [SerializeField] GameObject player, topui;
+    [SerializeField] GameObject player, topui, bookui, bookleaf;
     private CharacterStats characterStats;
     [SerializeField] GameObject hurtbar, nowbar;
     private RectTransform nowsize, hurtsize;
     private float maxhp, nowhp, lasthp;
-    private RectTransform selftrans, reftrans;
+    private RectTransform selftrans, reftrans, booktrans, leaftrans;
     private UnityEngine.UI.Image barflashing;
     private float flashingalpha = 1.0f, deltaalpha = -2.0f;
     // Start is called before the first frame update
@@ -20,6 +20,8 @@ public class SceenHPUI : MonoBehaviour
         characterStats = player.GetComponent<CharacterStats>();
         selftrans = GetComponent<RectTransform>();
         reftrans = topui.GetComponent<RectTransform>();
+        booktrans = bookui.GetComponent<RectTransform>();
+        leaftrans = bookleaf.GetComponent<RectTransform>();
         maxhp = characterStats.GetMaxHP();
         nowhp = characterStats.currentHP;
         lasthp = maxhp;
@@ -36,6 +38,8 @@ public class SceenHPUI : MonoBehaviour
     void Update()
     {
         selftrans.anchoredPosition = new Vector2(selftx, (reftrans.anchoredPosition.y / 10.0f) - 200.0f);
+        booktrans.anchoredPosition = new Vector2(0, (reftrans.anchoredPosition.y / 10.0f) - 200.0f);
+        leaftrans.anchoredPosition = new Vector2(leaftrans.anchoredPosition.x, reftrans.anchoredPosition.y / 1.7f  - (2000.0f / 1.7f - 50.0f));
         maxhp = characterStats.GetMaxHP();
         if (nowhp > characterStats.currentHP)
         {

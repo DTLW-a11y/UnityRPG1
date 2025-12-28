@@ -36,12 +36,21 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(ClothFadeIn(true, SceneName));
     }
+    public void WaitingThenJump(float seconds, string SceneName)
+    {
+        StartCoroutine(WaitingThen(seconds, SceneName));
+    }
     /*
     public void JumpToSceneWithData(string SceneName)
     {
         StartCoroutine(ClothFadeIn(false, SceneName));
     }
     */
+    IEnumerator WaitingThen(float seconds, string SceneName)
+    {
+        yield return new WaitForSeconds(seconds);
+        StartCoroutine(ClothFadeIn(true, SceneName));
+    }
     IEnumerator ClothFadeIn(bool isnormal, string SceneName)
     {
         clothrec.anchoredPosition = Vector2.zero;
