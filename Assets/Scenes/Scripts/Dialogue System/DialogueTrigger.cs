@@ -31,8 +31,9 @@ public class DialogueTrigger : MonoBehaviour
     // ´¥·¢¾çÇé
     public void TriggerDialogue(DialogueData dialogueData)
     {
+        Debug.Log("chufa");
         if (hasTriggered || DialogueManager.Instance.IsDialoguePlaying()) return;
-
+        Debug.Log("1");
         DialogueManager.Instance.StartDialogue(dialogueData);
         if (oneTimeOnly)
         {

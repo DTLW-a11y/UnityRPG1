@@ -24,8 +24,10 @@ public class DialogueManager : MonoBehaviour
         gameObjects[0] = GameObject.Find("HealthUI");
         gameObjects[1] = GameObject.Find("BagUI");
         //dialogpanel
-        dialogueUIManager = GameObject.Find("DialoguePanel").GetComponent<DialogueUIManager>();
-
+        dialogueUIManager = GameObject.Find("UICanvas/DialoguePanel").GetComponent<DialogueUIManager>();
+        dialogueUIManager.gameObject.SetActive(false);//默认隐藏
+        //dialoguetrigger
+        dialogueTrigger = GameObject.Find("dialoguetrigger").GetComponent<DialogueTrigger>();
     }
 
     private void Awake()
@@ -43,7 +45,8 @@ public class DialogueManager : MonoBehaviour
     }
     public void Start()
     {
-        dialogueTrigger = new DialogueTrigger();
+        dialogueTrigger = GameObject.Find("dialoguetrigger").GetComponent<DialogueTrigger>();
+        dialogueUIManager.gameObject.SetActive(false);
     }
     void OnDestroy()
     {
@@ -58,7 +61,9 @@ public class DialogueManager : MonoBehaviour
     // 启动剧情
     public void StartDialogue(DialogueData dialogue)
     {
+        Debug.Log("kaishi");
         if (isDialoguePlaying) return;
+        Debug.Log("jieshu");
 
         currentDialogue = dialogue;
         currentLineIndex = 0;
@@ -74,6 +79,7 @@ public class DialogueManager : MonoBehaviour
     // 播放当前行
     private void PlayCurrentLine()
     {
+        Debug.Log("bofang");
         if (currentLineIndex >= currentDialogue.dialogueLines.Length)
         {
             EndDialogue();
@@ -81,6 +87,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueLine currentLine = currentDialogue.dialogueLines[currentLineIndex];
+        Debug.Log("show");
         dialogueUIManager.ShowDialogue(currentLine);
 
         // 自动下一步逻辑（保留）

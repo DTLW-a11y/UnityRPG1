@@ -15,15 +15,20 @@ public class DialogueUIManager : MonoBehaviour
 
     private void Awake()
     {
-        dialoguePanel.SetActive(false);
+        //dialoguePanel.SetActive(false);
         nextButton.onClick.AddListener(OnNextButtonClick);
         playername = "张大帅";
+        dialoguePanel = gameObject;
+    }
+    private void Start()
+    {
+        //dialoguePanel.SetActive(false);
     }
 
     // 显示单句对话（直接完整显示文本）
     public void ShowDialogue(DialogueLine line)
     {
-        dialoguePanel.SetActive(true);
+        dialoguePanel.SetActive(true);Debug.Log(dialoguePanel.name);
         characterNameText.text = line.characterData.characterName;
         characterNameText.color = line.characterData.textColor;
         characterIcon.sprite = line.characterData.characterIcon;

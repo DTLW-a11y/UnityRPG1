@@ -20,7 +20,7 @@ public class Npc_1 : MonoBehaviour, Interface
     public void ThingToDo()
     {
 
-        if (!firstdialog )//第一次对话
+        if (!firstdialog && TaskManager.instance.Find(1) == 0)//第一次对话
         {
             //Debug.Log(0);
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
@@ -29,6 +29,7 @@ public class Npc_1 : MonoBehaviour, Interface
         }
         else if (TaskManager.instance.Find(1) == 1 && TaskManager.instance.Find(2) ==-1)//已完成
         {
+            Debug.Log(0);
             int a = Random.Range(0, 10);
             if(a>=5)
                 DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);

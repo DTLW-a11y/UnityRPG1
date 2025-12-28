@@ -137,6 +137,7 @@
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\HealthSystem.cs" />
     <Compile Include="Assets\Scenes\Scripts\Skill\FireBallSkill.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\elimination.cs" />
+    <Compile Include="Assets\Scenes\Scripts\TilemapToggleOnTrigger.cs" />
     <Compile Include="Assets\Scenes\Scripts\EntityFX.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\Player StateMachine.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\ManaBarUI.cs" />
@@ -219,6 +220,7 @@
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueData.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Chest.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\UI_Itemslot.cs" />
+    <Compile Include="Assets\Scenes\Scripts\startPlay.cs" />
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\Demo\Demo.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\TreasureChest.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
@@ -252,6 +254,7 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\RPG Button 7\Readme.txt" />
+    <None Include="Assets\Cainos\oak_woods_v1.0\readme.TXT" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
   </ItemGroup>

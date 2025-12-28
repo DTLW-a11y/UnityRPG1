@@ -17,6 +17,6 @@ public class SkipIntro : MonoBehaviour
     }
     public void Skip()
     {
-        Debug.Log("Skip");
+        GameManager.Instance.NormalJumpToScene("InitScene");
     }
 }

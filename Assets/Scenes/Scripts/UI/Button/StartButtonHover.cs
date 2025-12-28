@@ -44,6 +44,6 @@ public class StartButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (!GameManager.Instance.HasPlayerName())
             GameManager.Instance.NormalJumpToScene("IntroScene");
         else */
-            GameManager.Instance.NormalJumpToScene("SampleScene");
+            GameManager.Instance.NormalJumpToScene("IntroScene");
     }
 }
