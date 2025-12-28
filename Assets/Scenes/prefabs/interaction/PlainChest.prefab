@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3241017712478044899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.8157, y: -2.14, z: -0.015243646}
+  m_LocalPosition: {x: 22.22, y: -3.84, z: -0.015243646}
   m_LocalScale: {x: 1.782567, y: 1.5795, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,9 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleitemDrop: 3
   possibledrop:
-  - {fileID: 11400000, guid: 02c4d1f35c3bfc74682e384b6bd6af39, type: 2}
-  - {fileID: 11400000, guid: 5bc920b2a35a48540b9382e246986908, type: 2}
-  - {fileID: 11400000, guid: c06dd47e788a2eb42875a280d5a3e471, type: 2}
+  - {fileID: 11400000, guid: e3a5fc0b4bf46f049a51dd7223885c4d, type: 2}
   dropPrefab: {fileID: 3120617463538930331, guid: 1b8909abfb9ccdf449fe4e92a802adae, type: 3}
 --- !u!114 &2584598226630927997
 MonoBehaviour:
@@ -107,7 +105,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1999223295
-  m_SortingLayer: 2
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -6929924221510541977, guid: 19e07f9d107e445408633f50457d456e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

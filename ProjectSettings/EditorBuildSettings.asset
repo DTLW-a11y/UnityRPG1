@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Home of Liu.unity
     guid: 73325bceee2c0454c9d66f3547d2598e
+  - enabled: 1
+    path: Assets/Scenes/InputNameScene.unity
+    guid: 5e433e7f326410148835d6de3557f3c0
+  - enabled: 1
+    path: Assets/Scenes/testscene.unity
+    guid: 866d2da54c503fe48afc6185ce22a3ef
   m_configObjects: {}

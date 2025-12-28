@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueData currentDialogue;
     private int currentLineIndex = 0;
-    private bool isDialoguePlaying = false;
+    public bool isDialoguePlaying = false;
 
     [Header("需要隐藏的其他ui")]
     public GameObject[] gameObjects;
@@ -28,6 +28,9 @@ public class DialogueManager : MonoBehaviour
         dialogueUIManager.gameObject.SetActive(false);//默认隐藏
         //dialoguetrigger
         dialogueTrigger = GameObject.Find("dialoguetrigger").GetComponent<DialogueTrigger>();
+
+        //dialogueUIManager.nextButton.onClick.RemoveAllListeners();
+        //dialogueUIManager.nextButton.onClick.AddListener(dialogueUIManager.OnNextButtonClick);
     }
 
     private void Awake()
@@ -56,6 +59,11 @@ public class DialogueManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         RefreshSceneReferences();
+    }
+    private void Update()
+    {
+        if (isDialoguePlaying && Input.GetKey(KeyCode.Z))
+            EndDialogue();
     }
 
     // 启动剧情

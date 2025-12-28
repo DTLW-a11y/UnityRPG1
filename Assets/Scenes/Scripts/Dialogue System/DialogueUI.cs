@@ -16,9 +16,23 @@ public class DialogueUIManager : MonoBehaviour
     private void Awake()
     {
         //dialoguePanel.SetActive(false);
-        nextButton.onClick.AddListener(OnNextButtonClick);
+        //nextButton.onClick.AddListener(OnNextButtonClick);
         playername = "张大帅";
         dialoguePanel = gameObject;
+    }
+    private void Update()
+    {
+        // 只有对话面板显示时，才检测点击
+        if (dialoguePanel.activeSelf && DialogueManager.Instance.IsDialoguePlaying())
+        {
+            // 检测鼠标左键点击（或手机触屏点击）
+            if (Input.GetMouseButtonDown(0))
+            {
+                // 触发下一步对话（直接调用，绕开按钮事件）
+                DialogueManager.Instance.NextDialogueLine();
+                Debug.Log("点击屏幕触发下一步对话");
+            }
+        }
     }
     private void Start()
     {
@@ -45,8 +59,9 @@ public class DialogueUIManager : MonoBehaviour
     }
 
     // 下一步按钮点击
-    private void OnNextButtonClick()
+    public void OnNextButtonClick()
     {
+        Debug.Log(0);
         DialogueManager.Instance.NextDialogueLine();
     }
 }

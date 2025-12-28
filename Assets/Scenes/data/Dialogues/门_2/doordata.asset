@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: doordata
   m_EditorClassIdentifier: 
   dialogueLines:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 403de14433de83e4e940686ca64b7700, type: 2}
   autoNext: 0
   autoNextDelay: 2

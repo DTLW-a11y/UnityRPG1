@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2911dc3ba7ddf9479b9846ccdd303c7, type: 3}
   m_Name: Animskin
   m_EditorClassIdentifier: 
-  itemId: 101
+  itemId: 104
   itemEffects: []
   ItemType: 0
   itemname: animskin

@@ -3,7 +3,7 @@ using UnityEngine;
 // 单句对话的数据结构
 [System.Serializable]
 // 整段剧情的配置文件
-[CreateAssetMenu(fileName = "NewDialogue", menuName = "剧情/对话数据")]
+[CreateAssetMenu(fileName = "NewDialogueData", menuName = "剧情/对话数据")]
 
 public class DialogueData : ScriptableObject
 {

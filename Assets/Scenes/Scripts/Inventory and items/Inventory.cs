@@ -79,7 +79,7 @@ public class Inventory : MonoBehaviour, ISaveManager
 
         SceneManager.sceneLoaded += OnSceneLoaded;
         ItemDictionary = new Dictionary<int, ItemData>();
-        LoadAllFiles();
+        LoadFileName();
     }   
 
     void OnDestroy()
@@ -112,18 +112,26 @@ public class Inventory : MonoBehaviour, ISaveManager
         
 
     }
-    private void LoadAllFiles()//��itemdata����resource/itemdata�ļ��У���������ļ������ֵ�
+    private void LoadFileName()
     {
-        ItemData[] itemDatas = Resources.LoadAll<ItemData>("ItemData");
+        LoadAllFiles("ItemData/Consumables");
+        LoadAllFiles("ItemData/Demands");
+        LoadAllFiles("ItemData/Equipments");
+        LoadAllFiles("ItemData/Materials");
+    }
+    private void LoadAllFiles(string file)
+    {
+        ItemData[] itemDatas = Resources.LoadAll<ItemData>(file);
         foreach (ItemData itemData in itemDatas)
         {
             if (ItemDictionary.ContainsKey(itemData.itemId))
             {
-                Debug.Log("�Ѵ�����ͬ��Ʒ");
+                Debug.Log("已有该物品");
                 return;
             }
             else
             {
+                Debug.Log(itemData.itemId);
                 ItemDictionary.Add(itemData.itemId, itemData);
             }
         }
@@ -281,20 +289,22 @@ public class Inventory : MonoBehaviour, ISaveManager
     {
         ItemData _item = ItemDictionary[itemID];
         TaskManager.instance.UpdateProgress(tasktype.Collectitem, itemID, 1);
-        if (_item.ItemType == ItemType.Equipment || _item.ItemType == ItemType.Item)//����װ��������Ʒ
+        Debug.Log(_item.ItemType);
+        if (_item.ItemType == ItemType.Equipment || _item.ItemType == ItemType.Item)
         {
             AddToInventory(_item);
         }
-        else if (_item.ItemType == ItemType.Material)//���Ӳ���
+        else if (_item.ItemType == ItemType.Material)
         {
             AddToStash(_item);
         }
         else if (_item.ItemType == ItemType.Skill)//添加技能
         {
+            Debug.Log(1);
             AddToSkill(_item);
         }
         UpdateUI();
-    }//������Ʒ������ui
+    }
     private void AddToInventory(ItemData _item)
     {
         if (inventoryDictionary.TryGetValue(_item, out InventoryItem value))

@@ -34,7 +34,9 @@ public class InputDoneButton : MonoBehaviour
             PlayerPrefs.SetString("PlayerName", playername.text);
             warnrec.anchoredPosition = new Vector2(5000, -100);
             welcomerec.anchoredPosition = new Vector2(0, -100);
-            GameManager.Instance.WaitingThenJump(0.6f, "LXHSampleScene");
+            //确定出生位置
+            SpawnManager.position = new Vector2(-3, -7);
+            GameManager.Instance.WaitingThenJump(0.6f, "Home");
         }
     }
     public void PointerUp()

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b57d051cd7e20b4e92588c528901697, type: 3}
+  m_Name: task5
+  m_EditorClassIdentifier: 
+  taskId: 5
+  taskType: 0
+  taskName: "\u62FF\u56DE\u5DE5\u5177"
+  taskDesc: "\u524D\u5F80\u68EE\u6797\u4E2D\u7684\u6811\u5C4B\uFF0C\u62FF\u56DE\u5218\u4F2F\u7684\u5DE5\u5177"
+  pretaskId: -1
+  taskCount: 5
+  targetId: 901
+  rewarditemId: 91010000
+  rewardEXP: 200

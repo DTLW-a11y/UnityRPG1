@@ -134,6 +134,7 @@ public class TaskManager : MonoBehaviour,ISaveManager
         EXPSystem.instance.AddEXP(taskDetail.rewardEXP);//增加经验
         foreach(var ID in taskDetail.rewarditemId) //增加物品
         {
+            Debug.Log($"{ID}");
             Inventory.Instance.AddItem(ID);
         }
     }

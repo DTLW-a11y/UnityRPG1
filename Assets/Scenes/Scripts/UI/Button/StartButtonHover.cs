@@ -44,6 +44,10 @@ public class StartButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (!GameManager.Instance.HasPlayerName())
             GameManager.Instance.NormalJumpToScene("IntroScene");
         else
-            GameManager.Instance.NormalJumpToScene("LXHSampleScene");
+        {
+            //确定出生位置
+            SpawnManager.position = new Vector2(-3, -7);
+            GameManager.Instance.NormalJumpToScene("Home");
+        }
     }
 }

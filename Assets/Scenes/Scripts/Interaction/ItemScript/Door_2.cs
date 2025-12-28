@@ -6,6 +6,7 @@ public class Door_2 : MonoBehaviour,Interface
 {
     [SerializeField] private List<DialogueData> text;
     [SerializeField] private List<int> taskid;
+    [SerializeField] Transform PlaceToGo;
     bool first = false;
     public InterType GetType()
     {
@@ -18,15 +19,15 @@ public class Door_2 : MonoBehaviour,Interface
 
     public void ThingToDo()
     {
-        if (TaskManager.instance.Find(2) == 0)
+        if (TaskManager.instance.Find(2) == -1)
         {
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
         }
-        else if(TaskManager.instance.Find(2) == 1 && !first)//完成第二个任务,回到刘伯家
+        else if(TaskManager.instance.Find(2) == 1 )//完成第二个任务,回到刘伯家
         {
-            DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);
 
-            //切换到刘伯家
+            SpawnManager.position = PlaceToGo.position;
+            GameManager.Instance.NormalJumpToScene("Home of Liu");
             first = true;
         }
     }

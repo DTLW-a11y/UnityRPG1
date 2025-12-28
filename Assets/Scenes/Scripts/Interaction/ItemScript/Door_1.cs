@@ -5,7 +5,8 @@ using UnityEngine;
 public class Door_1 : MonoBehaviour,Interface
 {
     [SerializeField] private List<DialogueData> text;
-    [SerializeField] private List<int> taskid;
+    [SerializeField] private List<int> taskid; 
+    [SerializeField] Transform PlaceToGo;
     public InterType GetType()
     {
         return InterType.elsespot;
@@ -21,9 +22,10 @@ public class Door_1 : MonoBehaviour,Interface
         {
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
         }
-        else if(TaskManager.instance.Find(1) == 0)
+        else if(TaskManager.instance.Find(1) == -1)
         {
-            //ÇÐ»»ÏÂÒ»³¡¾°
+            SpawnManager.position = PlaceToGo.position;
+            GameManager.Instance.NormalJumpToScene("Village");
         }
     }
 }
