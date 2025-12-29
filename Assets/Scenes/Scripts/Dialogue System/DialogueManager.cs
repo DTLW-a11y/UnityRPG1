@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,8 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance;
 
     public DialogueTrigger dialogueTrigger;
+
+    public event Action OnDialogueEnd;
 
     [Header("依赖组件")]
     public DialogueUIManager dialogueUIManager;
@@ -132,6 +135,7 @@ public class DialogueManager : MonoBehaviour
             ui.SetActive(true);
         }
         Debug.Log("剧情结束");
+        OnDialogueEnd?.Invoke();
     }
 
     // 跳过剧情

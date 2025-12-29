@@ -26,7 +26,7 @@ public class GameSpot3 : MonoBehaviour, Interface
         {
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);
         }
-        else
+        else if(TaskManager.instance.Find(3) == 1)//完成某任务，向右走
         {
             SpawnManager.position = PlaceToGo.position;
             GameManager.Instance.NormalJumpToScene(SceneName);

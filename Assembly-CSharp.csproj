@@ -83,7 +83,9 @@
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Elevator.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flyattackcontroller.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot3.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot7.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ObjectTrigger.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Place2.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\SaveManager.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Scenes\Scripts\prallaxBackground.cs" />
@@ -149,6 +151,7 @@
     <Compile Include="Assets\Scenes\Scripts\Player\playerJumpstate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\InputTitleUI.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot5.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Door3.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
@@ -169,6 +172,7 @@
     <Compile Include="Assets\Hero Knight - Pixel Art\ColorSwap\ColorSwap_HeroKnight.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\EnemyState.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Crack.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\BoundingPlatform.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Door_1.cs" />

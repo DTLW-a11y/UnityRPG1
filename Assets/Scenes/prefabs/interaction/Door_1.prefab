@@ -48,6 +48,7 @@ MonoBehaviour:
   text:
   - {fileID: 11400000, guid: b9c02e04bdcafdb48ad47c787bc5ddba, type: 2}
   taskid: 
+  PlaceToGo: {fileID: 0}
 --- !u!61 &4987906374413471298
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2536537380695871946}
   - component: {fileID: 7555294602326366660}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AirWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

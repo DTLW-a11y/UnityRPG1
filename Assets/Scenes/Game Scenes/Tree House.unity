@@ -18429,7 +18429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detector: {fileID: 1385662723}
-  radius: 3
+  radius: 1
   layer:
     serializedVersion: 2
     m_Bits: 1024
@@ -23846,8 +23846,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 47306699}
   m_HandleRect: {fileID: 47306698}
   m_Direction: 2
-  m_Value: 0.9999996
-  m_Size: 0.452
+  m_Value: 1.0000006
+  m_Size: 0.45200002
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -29347,7 +29347,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1868042492}
-  - component: {fileID: 1868042491}
   - component: {fileID: 1868042490}
   - component: {fileID: 1868042493}
   m_Layer: 10
@@ -29402,22 +29401,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.345944, y: 11.38635}
   m_EdgeRadius: 0
---- !u!114 &1868042491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868042488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fe104c5f2d9264488ec69514feed97b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueToTrigger: {fileID: 11400000, guid: 8762e1f431e43f7408142263486521e0, type: 2}
-  triggerOnEnter: 1
-  triggerOnClick: 0
-  oneTimeOnly: 1
 --- !u!4 &1868042492
 Transform:
   m_ObjectHideFlags: 0
@@ -29427,7 +29410,7 @@ Transform:
   m_GameObject: {fileID: 1868042488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.38, y: 4.41, z: -0.07169089}
+  m_LocalPosition: {x: 13.27, y: 5.32, z: -0.07169089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29589,6 +29572,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 590233733260117090, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590233733260117090, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8429467
@@ -29603,11 +29594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.8
+      value: 3.2215393
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 1.7999996
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29643,8 +29634,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6265289607279902655, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: orthographic size
-      value: 10.049372
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7302659795639001313, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1385662723}
     - target: {fileID: 7918563028362224505, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_Name
       value: CameraPrefab

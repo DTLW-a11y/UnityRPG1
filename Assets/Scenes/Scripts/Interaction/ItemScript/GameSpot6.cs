@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 
-public class GameSpot6 : MonoBehaviour
+public class GameSpot6 : MonoBehaviour,Interface
 {
     private bool first = false;
     [SerializeField] private List<DialogueData> text;
+    InterType Interface.GetType()
+    {
+        return InterType.gamespot;
+    }
     public void Awake()
     {
         TaskManager.instance.OntaskStatuChange += ThingToDo;
@@ -23,5 +27,10 @@ public class GameSpot6 : MonoBehaviour
             TaskManager.instance.AcceptTask(7);
             first = true;
         }
+    }
+
+    public void Text()
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -27,7 +27,7 @@ public class Npc_2 : MonoBehaviour, Interface
             TaskManager.instance.UpdateProgress(tasktype.TalkToNPC, 802, 1);//完成任务3
             TaskManager.instance.AcceptTask(4);//接取任务4
         }
-        else if(TaskManager.instance.Find(3) == -1 && firstdialog)//对话过1次
+        else if(TaskManager.instance.Find(3) == -1 && TaskManager.instance.Find(4) == -1)//对话过1次
         {
             int a = Random.Range(0, 10);
             if (a >= 5)
