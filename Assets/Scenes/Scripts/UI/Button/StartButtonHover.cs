@@ -46,4 +46,9 @@ public class StartButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExi
         else
             GameManager.Instance.NormalJumpToScene("LXHSampleScene");
     }
+    public void testshowing()
+    {
+        GameManager.Instance.BlockWayAndShow("此路不通！");
+        return;
+    }
 }

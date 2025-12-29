@@ -168,6 +168,7 @@
     <Compile Include="Assets\Scenes\Scripts\Player\PlayerState.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\OptionUI.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\Button\CloseTaskPanel.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\ItemEffect.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerAirstate.cs" />
@@ -197,6 +198,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flygroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Rock.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\TaskUI.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemybattlestate.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
