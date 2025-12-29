@@ -63,6 +63,8 @@
     <Compile Include="Assets\Scenes\Scripts\Save and Load\CharacterAttributesData.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\InventoryItem.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerwallsliderstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossattackstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bosselimination.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\HealthEffect.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\SerializableDictionary.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\FileDataHandler.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Assets\Scenes\Scripts\Save and Load\ISaveManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\GameData.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Tools.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossidlestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\itemData_equipment.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Door_2.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\FlyEnemyStats.cs" />
@@ -82,23 +85,26 @@
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Elevator.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flyattackcontroller.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot3.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot7.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot3.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ObjectTrigger.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Place2.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\SaveManager.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Scenes\Scripts\prallaxBackground.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossgroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\LevelEffect.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\Button\InventoryUIChangeButton.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TitleHeaderAttribute.cs" />
     <Compile Include="Assets\Cainos\Common\Script\Utils\SecondOrderDynamics.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playeridlestate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Boss.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowInInspectorAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\MaxManaEffect.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\SectionHeaderAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossbattlestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Inventory.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot2.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\UI_craftslot.cs" />
@@ -127,6 +133,7 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\masterstunnedstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\counteringstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Npc_1.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossstunnedstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playermovestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\Button\StartButtonHover.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
@@ -137,6 +144,7 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemyattackcontroller.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ItemObject.cs" />
     <Compile Include="Assets\Scenes\Scripts\EXPSystem.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossdiestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerdashstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ItemDrop.cs" />
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\HealthSystem.cs" />
@@ -187,6 +195,7 @@
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\PlayerItemDrop.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\CharacterStats.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\SceenHPUI.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossmovestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flystunnedstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemymovestate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
@@ -225,6 +234,7 @@
     <Compile Include="Assets\Scenes\Scripts\Skill\move\MagicBall.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\UI_equipmentslot.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerprimeattack.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossattackcontroller.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\IndentAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\Button\SkipIntroButton.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\EnemySkill\EnemyBall.cs" />
@@ -254,6 +264,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Characters\FREE_Samurai 2D Pixel Art v1.2\FREE_Samurai 2D Pixel Art v1.2\License.txt" />
     <None Include="Assets\Martial Hero\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -265,6 +276,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Characters\Knight 2D Pixel Art\Knight 2D Pixel Art\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
