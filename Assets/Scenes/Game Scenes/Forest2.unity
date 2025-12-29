@@ -2479,7 +2479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2215393
+      value: 3.5945466
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13240,8 +13240,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1486264039}
   m_HandleRect: {fileID: 1486264038}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.45200002
+  m_Value: 0.9999999
+  m_Size: 0.452
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22483,7 +22483,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1235210283}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a1257a52f5fe1a44a8c570b9d9913897, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
