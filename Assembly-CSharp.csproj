@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scenes\Scripts\Player\magicAttack1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\masterdiestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\ISaveManager.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossairstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\GameData.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Tools.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossidlestate.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scenes\Scripts\Stats\FlyEnemyStats.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueUI.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\PlayerDetector.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\BossBall1.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Enum.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Elevator.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot3.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ObjectTrigger.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Place2.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Skill\move\IceBall.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\SaveManager.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Scenes\Scripts\prallaxBackground.cs" />
@@ -101,6 +104,8 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Boss.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowInInspectorAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\BossEnterairstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\BossBall.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\MaxManaEffect.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\SectionHeaderAttribute.cs" />
@@ -142,9 +147,9 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flyidlestate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelTextAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemyattackcontroller.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossdiestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ItemObject.cs" />
     <Compile Include="Assets\Scenes\Scripts\EXPSystem.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossdiestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerdashstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ItemDrop.cs" />
     <Compile Include="Assets\ZombiSoft\TinyHealthSystem\HealthSystem.cs" />
@@ -164,6 +169,8 @@
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Door3.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\Bag_UI.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\BossDashPreparestate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\BossCastSkillstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\SenceLoader.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Item.cs" />
@@ -187,6 +194,7 @@
     <Compile Include="Assets\Scenes\Scripts\Player\PlayerState.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\OptionUI.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\BossDashingstate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\ItemEffect.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerAirstate.cs" />
@@ -216,12 +224,14 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Npc_2.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Stats\BossStats.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flygroundstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot6.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Rock.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemybattlestate.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Skill\move\BlackHole.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playercounterstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\Button\SwitchToCraftButton.cs" />
@@ -243,6 +253,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ButtonAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\SpawnManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueData.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\BossCastSkill1state.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Chest.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\UI_Itemslot.cs" />
     <Compile Include="Assets\Scenes\Scripts\startPlay.cs" />

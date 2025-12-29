@@ -31,6 +31,10 @@ public class playerJumpstate : PlayerState
         {
             stateMachine.changeState(player.wallsliderstate);
         }
+        if (xInput != 0)
+        {
+            rb.velocity = new Vector2(xInput * player.movespeed * .8f, rb.velocity.y);
+        }
         if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.J))
         {
             stateMachine.changeState(player.primeattack);

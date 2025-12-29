@@ -31,6 +31,14 @@ public class playeranimationtrigger : MonoBehaviour
                 if (Inventory.Instance.getEquipment(EquipmentType.Weapon))
                     Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
             }
+            else if (hit.GetComponent<Boss>())
+            {
+                BossStats _target = hit.GetComponent<BossStats>();
+                player.stats.dodamage(_target);
+
+                if (Inventory.Instance.getEquipment(EquipmentType.Weapon))//ÅÐ¶Ï×°±¸ÁËÎäÆ÷
+                    Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
+            }
         }
     }
 }

@@ -83,5 +83,16 @@ public class FireBall : MonoBehaviour
             stats.takedamage(damage);
             Destroy(gameObject);
         }
+        else if (other.GetComponent<Boss>())
+        {
+            BossStats stats = other.GetComponent<BossStats>();
+            stats.takedamage(damage);
+            Destroy(gameObject);
+        }
+        else if (other.GetComponent<IceBall>())
+        {
+            GameObject ice = other.gameObject;
+            Destroy(ice);
+        }
     }
 }

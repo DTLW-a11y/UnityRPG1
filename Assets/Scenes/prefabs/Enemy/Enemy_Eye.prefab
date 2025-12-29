@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 4278850442082786145}
   - component: {fileID: 6872628759300638745}
   - component: {fileID: 2942877812897718447}
-  - component: {fileID: 271029381648801000}
   m_Layer: 8
   m_Name: Enemy_Eye
   m_TagString: Untagged
@@ -289,56 +288,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f2bc32fcdf26a7449db3ad18fe8b546, type: 2}
   - {fileID: 11400000, guid: 5f2bc32fcdf26a7449db3ad18fe8b546, type: 2}
   dropPrefab: {fileID: 3120617463538930331, guid: 1b8909abfb9ccdf449fe4e92a802adae, type: 3}
---- !u!114 &271029381648801000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4826075564499781678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6b45fa6271d05409a00df68f411fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  strenth:
-    Value: 0
-    modifiers: 
-  agility:
-    Value: 0
-    modifiers: 
-  intelligence:
-    Value: 0
-    modifiers: 
-  vitality:
-    Value: 0
-    modifiers: 
-  maxHP:
-    Value: 0
-    modifiers: 
-  armor:
-    Value: 0
-    modifiers: 
-  evision:
-    Value: 0
-    modifiers: 
-  damage:
-    Value: 0
-    modifiers: 
-  critchance:
-    Value: 0
-    modifiers: 
-  critpower:
-    Value: 0
-    modifiers: 
-  currentHP: 0
-  maxMana:
-    Value: 0
-    modifiers: 
-  Mana: 0
-  isdied: 0
-  level: 1
-  percentage: 0.1
 --- !u!1 &5571496858144160433
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +611,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1766981509
-  m_SortingLayer: 3
+  m_SortingLayer: 10
   m_SortingOrder: -10
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.9433962, g: 0.27589887, b: 0.27589887, a: 0.56078434}
@@ -748,7 +697,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1766981509
-  m_SortingLayer: 3
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -4795363162621231457, guid: 6d7cd4f7505dc674c891ca8946cfd98b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
