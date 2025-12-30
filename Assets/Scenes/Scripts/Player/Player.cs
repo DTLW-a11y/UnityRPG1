@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
@@ -62,8 +63,9 @@ public class Player : Entity
         counteringstate = new counteringstate(this, stateMachine, "CounterAttack");
 
         transform.position = SpawnManager.position;//切换场景时出生在位置
-    }
 
+
+    }
     public void CheckDash()
     {
         if(IsWallDetected())

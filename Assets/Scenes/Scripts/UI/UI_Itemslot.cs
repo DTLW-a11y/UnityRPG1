@@ -32,17 +32,17 @@ public class UI_Itemslot : MonoBehaviour , IPointerDownHandler
         itemtext.text = "";   
     }
 
-    public virtual void OnPointerDown(PointerEventData eventData)//�������Ʒ��
+    public virtual void OnPointerDown(PointerEventData eventData)
     {
         if (Input.GetKey(KeyCode.LeftControl)) {
             Inventory.Instance.RemoveItem(item.ItemData);
                 return;
         }
-        if (item.ItemData.ItemType == ItemType.Equipment)//װ��
+        if (item.ItemData.ItemType == ItemType.Equipment)
         {
             Inventory.Instance.equipitems(item.ItemData);
         }
-        if (item.ItemData.ItemType == ItemType.Item)//ʹ������Ʒ
+        if (item.ItemData.ItemType == ItemType.Item)
         {
             Inventory.Instance.useitems(item.ItemData);
         }

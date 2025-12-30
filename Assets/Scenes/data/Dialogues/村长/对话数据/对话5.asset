@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e8c45f4a8ec55e4c8a4bf9170246819, type: 3}
-  m_Name: doordata
+  m_Name: "\u5BF9\u8BDD5"
   m_EditorClassIdentifier: 
   dialogueLines:
-  - {fileID: 11400000, guid: 68246af9933a6594caed3921e5cd6411, type: 2}
+  - {fileID: 11400000, guid: 28126fd9cbe6a2a458085babb3698570, type: 2}
   autoNext: 0
   autoNextDelay: 2

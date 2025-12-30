@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EXPSystem : MonoBehaviour,ISaveManager//µÈ¼¶ÏµÍ³µ¥Àý
+public class EXPSystem : MonoBehaviour,ISaveManager//ï¿½È¼ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½
 {
     public static EXPSystem instance {get; private set;}
 
@@ -14,8 +15,12 @@ public class EXPSystem : MonoBehaviour,ISaveManager//µÈ¼¶ÏµÍ³µ¥Àý
     public int currentEXP;
 
     public event Action onEXPchange;
+    PlayerStats playerStats;
+    public int currenthp;
+    public int currentmana;
+
     public event Action onLevelUp;
-    public event Action onmanaLevelUp;//ÊÂ¼þ£¬Éý¼¶Ê±Í¨Öª¶©ÔÄÕß
+    public event Action onmanaLevelUp;//ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Í¨Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void Awake()
     {
         if(instance != null )
@@ -25,8 +30,41 @@ public class EXPSystem : MonoBehaviour,ISaveManager//µÈ¼¶ÏµÍ³µ¥Àý
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    public void AddEXP(int experience)//Ôö¼Ó¾­Ñé
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StartCoroutine(DelayLevelUp());
+        //playerStats =  GameObject.Find("player").GetComponent<PlayerStats>();
+        //playerStats.currentHP = playerStats.GetMaxHP();
+        //playerStats.Mana = playerStats.GetMaxMana();
+    }
+    private IEnumerator DelayLevelUp()
+    {
+        yield return null;//ï¿½Ó³ï¿½Ò»Ö¡
+        ToCurrentLevel();
+    }
+    private void ToCurrentLevel()
+    {
+        for (int i = 0; i < level; i++)
+        {
+            onLevelUp?.Invoke();
+        }
+        for(int i = 0;i < manalevel; i++)
+        {
+            onmanaLevelUp?.Invoke();
+        }
+    }//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØµÈ¼ï¿½
+    private void ToLastState()
+    {
+
+    }
+    public void AddEXP(int experience)//ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½
     {
         if (currentEXP + experience <= maxEXP)
         {
@@ -41,17 +79,17 @@ public class EXPSystem : MonoBehaviour,ISaveManager//µÈ¼¶ÏµÍ³µ¥Àý
         }
         onEXPchange?.Invoke();
     }
-    private void changeMaxEXP()//¸Ä±ä×î´ó¾­Ñé
+    private void changeMaxEXP()//ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         maxEXP = Mathf.RoundToInt(maxEXP * 1.1f);
     }
-    public void levelUP()//Ôö¼ÓµÈ¼¶
+    public void levelUP()//ï¿½ï¿½ï¿½ÓµÈ¼ï¿½
     {
         level++;
         //AddModifiers();
         onLevelUp?.Invoke();
     }
-    public void manalevelUP()//Ôö¼ÓÄ§Á¦µÈ¼¶
+    public void manalevelUP()//ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½È¼ï¿½
     {
         manalevel++;
         //ModifyMana(maxMana);
