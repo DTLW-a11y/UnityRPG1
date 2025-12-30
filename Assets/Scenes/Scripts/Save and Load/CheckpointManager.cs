@@ -41,9 +41,10 @@ public class CheckpointManager : MonoBehaviour,ISaveManager
         {
             foreach(var checkpoint in checkpoints)
             {
-                if (_data.activatedCheckpoints.ContainsKey(checkpoint.checkpointId))
+                if (_data.activatedCheckpoints.TryGetValue(checkpoint.checkpointId,out bool isActive))
                 {
-                    checkpoint.SetActivated(_data.activatedCheckpoints[checkpoint.checkpointId]);
+                    checkpoint.SetActivated(isActive);
+                    if(isActive)currentActiveCheckpoint = checkpoint.checkpointId;
                 }
             }
         }
@@ -62,6 +63,17 @@ public class CheckpointManager : MonoBehaviour,ISaveManager
     {
         GameData _data = SaveManager.instance.GetCurrentGameData();
         PlayerManager.instance.player.transform.position = _data.playerPosition;
-        PlayerState stats = PlayerManager.instance.player.GetComponent<PlayerState>();
+        PlayerStats stats = PlayerManager.instance.player.GetComponent<PlayerStats>();
+        if(stats != null)
+        {
+            stats.currentHP = _data.playerAttributes.currentHP;
+            stats.isdied = false;
+            stats.onhealthchange? .Invoke();
+        }
+        Player player = PlayerManager.instance.player;
+        if(player != null && player.stateMachine != null)
+        {
+            player.stateMachine.changeState(player.idlestate);
+        }
     }
 }
