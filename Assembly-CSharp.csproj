@@ -191,8 +191,8 @@
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\Effect\ItemEffect.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerAirstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksCore\TaskManager.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Checkpoint.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\PlayerItemDrop.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\CharacterStats.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\SceenHPUI.cs" />

@@ -4661,7 +4661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &411262170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4675,6 +4675,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data.alexdev
+  gameData:
+    currency: 0
+    inventory:
+      keys: []
+      values: 
+    playerPosition: {x: 0, y: 0, z: 0}
+    currentCheckpoint: start
+    activatedCheckpoints:
+      keys: []
+      values: 
+    playerAttributes:
+      strength: 10
+      agility: 10
+      intelligence: 10
+      vitality: 10
+      maxHP: 100
+      currentHP: 100
+      armor: 0
+      evasion: 5
+      damage: 20
+      critChance: 10
+      critPower: 150
+    level: 0
+    manalevel: 0
+    maxEXP: 0
+    currentEXP: 0
+    openedChests:
+      keys: []
+      values: 
 --- !u!4 &411262171
 Transform:
   m_ObjectHideFlags: 0
@@ -11657,7 +11686,13 @@ MonoBehaviour:
   inventoryslotParent: {fileID: 0}
   StashslotParent: {fileID: 0}
   EquipmentSlotParent: {fileID: 0}
+  ItemDataBase:
+  - {fileID: 11400000, guid: 1d446978a08056844a69206b840cb958, type: 2}
+  - {fileID: 11400000, guid: 5f2bc32fcdf26a7449db3ad18fe8b546, type: 2}
+  - {fileID: 11400000, guid: 50b8d111cbe0ee5428c7e0f5de1f52e4, type: 2}
+  - {fileID: 11400000, guid: 00a2b582fa71760439374f0f97dee6c2, type: 2}
   LoadedItems: []
+  loadedEquipment: []
 --- !u!4 &1031406264
 Transform:
   m_ObjectHideFlags: 0
@@ -27730,7 +27765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9943194
+      value: 1.8909101
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36336,7 +36371,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 532494797}
   m_HandleRect: {fileID: 532494796}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 0.99999976
   m_Size: 0.45199996
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -38250,9 +38285,9 @@ SceneRoots:
   - {fileID: 335635821}
   - {fileID: 2038671198}
   - {fileID: 700580048}
+  - {fileID: 1031406264}
   - {fileID: 411262171}
   - {fileID: 1833973653}
-  - {fileID: 1031406264}
   - {fileID: 524937995}
   - {fileID: 1621236142}
   - {fileID: 312054377}

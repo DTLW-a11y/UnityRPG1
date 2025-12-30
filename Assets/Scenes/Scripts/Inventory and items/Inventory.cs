@@ -48,6 +48,11 @@ public class Inventory : MonoBehaviour, ISaveManager
     private UI_Itemslot[] itemslots;
     private UI_Itemslot[] stashslots;
     private UI_equipmentslot[] equipmentslots;
+
+    [Header("Data base")]
+    public List<ItemData> ItemDataBase;
+    public List<InventoryItem> LoadedItems;
+    public List<itemData_equipment> loadedEquipment;
     /*
      * ����װ���Ĳ�����stash����
      * */
@@ -138,13 +143,16 @@ public class Inventory : MonoBehaviour, ISaveManager
     }
     private void AddStartingItems()
     {
+        foreach(itemData_equipment item in loadedEquipment)
+        {
+            AddItemByData(item);
+        }
         for (int i = 0; i < startingItems.Count; i++)
         {
             AddItemByData(startingItems[i]);
         }
     }
-    [Header("Data base")]
-    public List<InventoryItem> LoadedItems;
+
     public bool CanCraft(itemData_equipment itemToCraft, List<InventoryItem> requirements)  //��Ʒ�ϳ��ж�
     {
         List<InventoryItem> itemsToRemove = new List<InventoryItem>();
@@ -393,38 +401,30 @@ public class Inventory : MonoBehaviour, ISaveManager
     public void LoadData(GameData _data)
     {
         //删除现有物品
-        if (_data != null)
+        if (_data.inventory != null && _data.inventory.Count > 0)
         {
             inventoryItems.Clear();
             inventoryDictionary.Clear();
             StashItems.Clear();
             StashDictionary.Clear();
             LoadedItems.Clear();
-        }
-        // 加载存档物品
-        foreach (var pair in _data.inventory)
-        {
-            if (int.TryParse(pair.Key, out int itemId) && ItemDictionary.TryGetValue(itemId, out ItemData itemData))
+            // 加载存档物品
+            foreach (KeyValuePair<string, int> pair in _data.inventory)
             {
-                InventoryItem itemToLoad = new InventoryItem(itemData);
-                itemToLoad.stacksize = pair.Value;
-                LoadedItems.Add(itemToLoad);
+                foreach (var item in ItemDataBase)
+                {
+                    if (item != null)
+                    {
+                        InventoryItem itemToLoad = new InventoryItem(item);
+                        itemToLoad.stacksize = pair.Value;
 
-                // 根据物品类型添加到对应容器
-                if (itemData.ItemType == ItemType.Equipment || itemData.ItemType == ItemType.Item)
-                {
-                    inventoryItems.Add(itemToLoad);
-                    inventoryDictionary.Add(itemData, itemToLoad);
-                }
-                else if (itemData.ItemType == ItemType.Material)
-                {
-                    StashItems.Add(itemToLoad);
-                    StashDictionary.Add(itemData, itemToLoad);
+                        LoadedItems.Add(itemToLoad);
+                    }
                 }
             }
-        }
 
-        UpdateUI();
+            UpdateUI();
+        }
     }
 
     public void SaveData(ref GameData _data)
@@ -435,6 +435,9 @@ public class Inventory : MonoBehaviour, ISaveManager
             _data.inventory.Add(pair.Key.itemId.ToString(), pair.Value.stacksize);
         }
     }
+#if UNITY_EDITOR
+    [ContextMenu("Fill up item data base")]
+    private void FillUpItemDataBase() => ItemDataBase = new List<ItemData>(GetItemDataBase());
     private List<ItemData> GetItemDataBase()
     {
         List <ItemData>itemDataBase = new List<ItemData>();
@@ -448,4 +451,5 @@ public class Inventory : MonoBehaviour, ISaveManager
         }
         return itemDataBase;
     }
+#endif
 }

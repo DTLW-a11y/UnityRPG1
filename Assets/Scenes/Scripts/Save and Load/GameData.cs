@@ -8,7 +8,6 @@ public class GameData
     public int currency;
 
     public SerializableDictionary<string, int> inventory;
-
     public Vector3 playerPosition;
     public string currentCheckpoint;
     public SerializableDictionary<string, bool> activatedCheckpoints;
