@@ -6,6 +6,7 @@ using static Cinemachine.DocumentationSortingAttribute;
 
 public class PlayerStats : CharacterStats,ISaveManager
 {
+    public static PlayerStats Instance;
     private Player player;
 
     [Header("Level Details")]//�ȼ�
@@ -14,17 +15,17 @@ public class PlayerStats : CharacterStats,ISaveManager
     [Range(0f, 1f)]
     [SerializeField] private float percentage = .1f;
 
-
     //[SerializeField] int currentEXP;
     //[SerializeField] int maxEXP;
+
     protected override void Start()
     {
         base.Start();
        // AddModifiers();
         player = GetComponent<Player>();
-
         EXPSystem.instance.onLevelUp += levelup;
         EXPSystem.instance.onmanaLevelUp += manalevelup;
+
     }
     public override void takedamage(int _damage)
     {
@@ -39,15 +40,14 @@ public class PlayerStats : CharacterStats,ISaveManager
 
         GetComponent<PlayerItemDrop>()?.GenerateDrop();
     }
-
-    private void Modify(Stat _stat)//��ֵ��ȼ�ָ��������
+    private void Modify(Stat _stat)//
     {
         
             float modifier = _stat.GetValue() * percentage;
             _stat.addmodifier(Mathf.RoundToInt(modifier));
        
     }
-    private void ModifyMana(Stat _stat)//ħ�����ӣ�����
+    private void ModifyMana(Stat _stat)//
     {
         
             float modifier = 0f;
@@ -55,9 +55,9 @@ public class PlayerStats : CharacterStats,ISaveManager
             _stat.addmodifier(Mathf.RoundToInt(modifier));
         
     }
-
-    private void AddModifiers() // ��ȼ������޸ĵ�����
+    private void AddModifiers() // 修改属性
     {
+        Debug.Log("levelup");
         Modify(damage);
         Modify(strenth);
 
@@ -66,17 +66,18 @@ public class PlayerStats : CharacterStats,ISaveManager
 
         //ModifyMana(intelligence);
     }
-
     private void levelup()
     {
         AddModifiers();
+        currentHP = GetMaxHP();
     }
     private void manalevelup()
     {
         ModifyMana(maxMana);
+        Mana = GetMaxMana();
     }
 
-    public void OnDestroy()//������Ʒʱȡ�����ģ���ֹ�ڴ�й¶
+    public void OnDestroy()//防止内存泄露
     {
         if(EXPSystem.instance != null)
         {
@@ -100,7 +101,6 @@ public class PlayerStats : CharacterStats,ISaveManager
         _data.playerAttributes.critChance = critchance.GetValue();
         _data.playerAttributes.critPower = critpower.GetValue();
     }
-
     public void LoadData(GameData _data)
     {
         strenth.Setvalue(_data.playerAttributes.strength);

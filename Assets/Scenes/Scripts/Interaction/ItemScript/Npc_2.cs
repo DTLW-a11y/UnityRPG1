@@ -41,6 +41,32 @@ public class Npc_2 : MonoBehaviour, Interface
             TaskManager.instance.UpdateProgress(tasktype.TalkToNPC, 802, 1);//完成任务7
             TaskManager.instance.AcceptTask(8);//接取任务8
         }
+        else
+        {
+            DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[4]);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        SpriteRenderer spriteRenderer;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (collision.GetComponent<Player>() != null)
+        {
+            Transform tip = transform.Find("Canvas");
+            tip.gameObject.SetActive(true);
+            spriteRenderer.color = Color.yellow;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        SpriteRenderer spriteRenderer;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (collision.GetComponent<Player>() != null)
+        {
+            Transform tip = transform.Find("Canvas");
+            tip.gameObject.SetActive(false);
+            spriteRenderer.color = Color.white;
+        }
     }
 }
 

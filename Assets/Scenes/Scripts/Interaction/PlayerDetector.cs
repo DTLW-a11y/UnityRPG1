@@ -27,7 +27,12 @@ public class PlayerDetector : MonoBehaviour
             Debug.Log("thing");
             currentTarget.ThingToDo();
         }
-        if(Closest == null)
+        //else if (Closest != null )//靠近可交互物品
+        //{
+        //    Debug.Log("高亮");
+        //    currentTarget.Text();
+        //}
+        if (Closest == null)
         {
             hastrigger = false;
         }

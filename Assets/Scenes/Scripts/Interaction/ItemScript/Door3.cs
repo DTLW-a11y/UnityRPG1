@@ -27,4 +27,26 @@ public class Door3 : MonoBehaviour, Interface
             GameManager.Instance.NormalJumpToScene("Village");
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        SpriteRenderer spriteRenderer;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (collision.GetComponent<Player>() != null)
+        {
+            Transform tip = transform.Find("Canvas");
+            tip.gameObject.SetActive(true);
+            spriteRenderer.color = Color.yellow;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        SpriteRenderer spriteRenderer;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (collision.GetComponent<Player>() != null)
+        {
+            Transform tip = transform.Find("Canvas");
+            tip.gameObject.SetActive(false);
+            spriteRenderer.color = Color.white;
+        }
+    }
 }

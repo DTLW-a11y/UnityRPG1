@@ -8,12 +8,17 @@ public class Npc_1 : MonoBehaviour, Interface
     [SerializeField] private List<int> taskid;
     bool firstdialog = false;
     bool seconddialog = false;
+    float time = 0;
+    
     public  InterType GetType()
     {
         return InterType.npc;
     }
+    
     public void Text()
     {
+        
+        //spriteRenderer.color = Color.yellow;
         // Debug.Log("text");//显示的文字，和对话系统接轨
     }
 
@@ -43,5 +48,31 @@ public class Npc_1 : MonoBehaviour, Interface
             TaskManager.instance.UpdateProgress(tasktype.TalkToNPC, 801, 1);//完成任务9
             TaskManager.instance.AcceptTask(10);
         }
+        else
+        {
+            DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[4]);
+        }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        SpriteRenderer spriteRenderer;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (collision.GetComponent<Player>() != null) {
+            Transform tip = transform.Find("Canvas");
+            tip.gameObject.SetActive(true);
+            spriteRenderer.color = Color.yellow;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        SpriteRenderer spriteRenderer;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (collision.GetComponent<Player>() != null)
+        {
+            Transform tip = transform.Find("Canvas");
+            tip.gameObject.SetActive(false);
+            spriteRenderer.color = Color.white;
+        }
+    }
+
 }

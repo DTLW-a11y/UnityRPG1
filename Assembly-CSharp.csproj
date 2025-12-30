@@ -132,6 +132,7 @@
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueLine.cs" />
     <Compile Include="Assets\Scenes\Scripts\Skill\CounterSkill.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\EnemyMaster.cs" />
+    <Compile Include="Assets\Scenes\Scripts\InteractionText.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\CharacterData.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />

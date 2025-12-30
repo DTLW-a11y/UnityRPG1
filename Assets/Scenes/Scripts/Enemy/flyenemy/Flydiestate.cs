@@ -21,7 +21,7 @@ public class Flydiestate : EnemyState
 
         base.Enter();
         enemyname = enemy.gameObject.name;
-        TaskManager.instance.UpdateProgress(tasktype.Killenemy, 903, 1);
+        TaskManager.instance.UpdateProgress(tasktype.Killenemy, 904, 1);
     }
 
     public override void Exit()
