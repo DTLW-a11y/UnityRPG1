@@ -10276,7 +10276,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.065085, y: 1.0708622, z: -10}
+  m_LocalPosition: {x: 3.4260027, y: 1.0708622, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17499,6 +17499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 0}
   dialogueUIManager: {fileID: 969134482}
+  isDialoguePlaying: 0
   gameObjects:
   - {fileID: 1181307398}
   - {fileID: 1684758012}
@@ -35169,8 +35170,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 492433455}
   m_HandleRect: {fileID: 492433454}
   m_Direction: 2
-  m_Value: 0.9999996
-  m_Size: 0.452
+  m_Value: 1.0000001
+  m_Size: 0.45200005
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -37441,6 +37442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlainChest
       objectReference: {fileID: 0}
+    - target: {fileID: 3692249025483590579, guid: 3ce34ec7e43c6bf4484c6f7c81840ca5, type: 3}
+      propertyPath: possibledrop.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 00a2b582fa71760439374f0f97dee6c2, type: 2}
     - target: {fileID: 9029600074576681194, guid: 3ce34ec7e43c6bf4484c6f7c81840ca5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.8157

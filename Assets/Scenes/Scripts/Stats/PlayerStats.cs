@@ -38,6 +38,7 @@ public class PlayerStats : CharacterStats,ISaveManager
         player.stateMachine.changeState(player.diestate);
 
         GetComponent<PlayerItemDrop>()?.GenerateDrop();
+        SaveManager.instance.LoadFromLastCheckpoint();
     }
 
     private void Modify(Stat _stat)//��ֵ��ȼ�ָ��������

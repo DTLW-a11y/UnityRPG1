@@ -155,7 +155,6 @@
     <Compile Include="Assets\Scenes\Scripts\EntityFX.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\Player StateMachine.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\ManaBarUI.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Save and Load\Checkpoint\CheckpointManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerJumpstate.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\InputTitleUI.cs" />
@@ -172,6 +171,7 @@
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksData\TaskData.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\EnemyStateMachine.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Save and Load\CheckpointManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ItemData.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\HealthBarUI.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueTrigger.cs" />
@@ -192,6 +192,7 @@
     <Compile Include="Assets\Scenes\Scripts\Player\playerAirstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Tasks\TasksCore\TaskManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\GameSpot1.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Checkpoint.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\PlayerItemDrop.cs" />
     <Compile Include="Assets\Scenes\Scripts\Stats\CharacterStats.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\SceenHPUI.cs" />
@@ -206,7 +207,6 @@
     <Compile Include="Assets\Scenes\Scripts\UI\Button\Book.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\enemygroundstate.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Save and Load\Checkpoint\Checkpoint.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\Flybattlestate.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\GameManager.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\flyenemy\EnemyFly.cs" />

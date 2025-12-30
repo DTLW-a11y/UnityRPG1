@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90706f8e7ae5679418e278f6264b5e87, type: 3}
   m_Name: wood_sword
   m_EditorClassIdentifier: 
+  itemId: 0
+  itemEffects: []
   ItemType: 1
   itemname: wood_sword
   icon: {fileID: 21300166, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
-  dropChance: 21.8
+  dropChance: 30.3
   equipmenttype: 0
   strenth: 0
   agility: 0

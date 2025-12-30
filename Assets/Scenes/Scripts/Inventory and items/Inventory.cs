@@ -392,19 +392,39 @@ public class Inventory : MonoBehaviour, ISaveManager
 
     public void LoadData(GameData _data)
     {
-        foreach(KeyValuePair<string,int> pair in _data.inventory)
+        //删除现有物品
+        if (_data != null)
         {
-            foreach(var item in GetItemDataBase())
+            inventoryItems.Clear();
+            inventoryDictionary.Clear();
+            StashItems.Clear();
+            StashDictionary.Clear();
+            LoadedItems.Clear();
+        }
+        // 加载存档物品
+        foreach (var pair in _data.inventory)
+        {
+            if (int.TryParse(pair.Key, out int itemId) && ItemDictionary.TryGetValue(itemId, out ItemData itemData))
             {
-                if(item != null)
-                {
-                    InventoryItem itemToLoad = new InventoryItem(item);
-                    itemToLoad.stacksize = pair.Value;
+                InventoryItem itemToLoad = new InventoryItem(itemData);
+                itemToLoad.stacksize = pair.Value;
+                LoadedItems.Add(itemToLoad);
 
-                    LoadedItems.Add(itemToLoad);
+                // 根据物品类型添加到对应容器
+                if (itemData.ItemType == ItemType.Equipment || itemData.ItemType == ItemType.Item)
+                {
+                    inventoryItems.Add(itemToLoad);
+                    inventoryDictionary.Add(itemData, itemToLoad);
+                }
+                else if (itemData.ItemType == ItemType.Material)
+                {
+                    StashItems.Add(itemToLoad);
+                    StashDictionary.Add(itemData, itemToLoad);
                 }
             }
         }
+
+        UpdateUI();
     }
 
     public void SaveData(ref GameData _data)
@@ -418,7 +438,7 @@ public class Inventory : MonoBehaviour, ISaveManager
     private List<ItemData> GetItemDataBase()
     {
         List <ItemData>itemDataBase = new List<ItemData>();
-        string[] assetNames = AssetDatabase.FindAssets("", new[] { "Assets/Scenes/Data/Equipments" });
+        string[] assetNames = AssetDatabase.FindAssets("", new[] { "Assets/Resources/ItemData/Equipments" });
         
         foreach(string SOName in assetNames)
         {
