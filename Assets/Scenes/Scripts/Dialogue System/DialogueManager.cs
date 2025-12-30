@@ -51,6 +51,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void Start()
     {
+        dialogueUIManager = GameObject.Find("UICanvas/DialoguePanel").GetComponent<DialogueUIManager>();
         dialogueTrigger = GameObject.Find("dialoguetrigger").GetComponent<DialogueTrigger>();
         dialogueUIManager.gameObject.SetActive(false);
     }

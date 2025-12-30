@@ -27,6 +27,11 @@ public class TaskUI : MonoBehaviour
         TaskManager.instance.OntaskStatuChange += updatetaskui;
         updatetaskui();
     }
+    private void OnDestroy()
+    {
+        TaskManager.instance.OntaskProgressChange -= updatetaskui;
+        TaskManager.instance.OntaskStatuChange -= updatetaskui;
+    }
     void updatetaskui()
     {
         for (int i = 0; i < 4; i++)
@@ -34,14 +39,14 @@ public class TaskUI : MonoBehaviour
             switch(TaskManager.instance.Find(findindex[i]))
             {
                 case 0:
-                    taskrec[i].anchoredPosition = new Vector2(-500.0f, -260.0f * i + 130.0f);
+                    taskrec[i].anchoredPosition = new Vector2(-500.0f, -260.0f * i - 130.0f);
                     break;
                 case 1:
-                    taskrec[i].anchoredPosition = new Vector2(320.0f, -260.0f * i + 130.0f);
+                    taskrec[i].anchoredPosition = new Vector2(320.0f, -260.0f * i - 130.0f);
                     status[i].sprite = doneimg;
                     break;
                 default:
-                    taskrec[i].anchoredPosition = new Vector2(320.0f, -260.0f * i + 130.0f);
+                    taskrec[i].anchoredPosition = new Vector2(320.0f, -260.0f * i - 130.0f);
                     status[i].sprite = notdoneimg;
                     break;
             }

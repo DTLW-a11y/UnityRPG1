@@ -22,14 +22,23 @@ public class EXPUI : MonoBehaviour
         backimg = GetComponent<Image>();
         iconimg = icon.GetComponent<Image>();
         EXPSystem.instance.onEXPchange += updateexp;
+        EXPSystem.instance.onLevelUp += updateexp;
         EXPSystem.instance.onmanaLevelUp += updatemana;
+        EXPSystem.instance.onmanaLevelUp += updateexp;
         updateexp();
         switchtoshow();
     }
+    private void OnDestroy()
+    {
+        EXPSystem.instance.onEXPchange -= updateexp;
+        EXPSystem.instance.onLevelUp -= updateexp;
+        EXPSystem.instance.onmanaLevelUp -= updatemana;
+        EXPSystem.instance.onmanaLevelUp -= updateexp;
+    }
     void updateexp()
     {
-        expbar.sizeDelta = new Vector2(420.0f * EXPSystem.instance.currentEXP / EXPSystem.instance.maxEXP, 0.0f);
-        expbar.anchoredPosition = new Vector2((420.0f - expbar.sizeDelta.x) / 2.0f - 81.0f, -260.0f);
+        expbar.sizeDelta = new Vector2(420.0f * EXPSystem.instance.currentEXP / EXPSystem.instance.maxEXP, 40.0f);
+        expbar.anchoredPosition = new Vector2(-((420.0f - expbar.sizeDelta.x) / 2.0f) - 81.0f, -260.0f);
         valuetext.text = EXPSystem.instance.currentEXP.ToString() + " / " + EXPSystem.instance.maxEXP.ToString();
         if (ismana) return;
         numtext.text = EXPSystem.instance.level.ToString();
@@ -53,8 +62,8 @@ public class EXPUI : MonoBehaviour
             backimg.sprite = expback;
             iconimg.sprite = expico;
             titletext.text = "µÈ      ¼¶";
-            updateexp();
         }
+        updateexp();
     }
     public void OnClick()
     {

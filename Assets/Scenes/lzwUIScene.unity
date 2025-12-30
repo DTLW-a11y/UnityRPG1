@@ -6948,6 +6948,8 @@ MonoBehaviour:
   manalevel: 1
   maxEXP: 100
   currentEXP: 0
+  currenthp: 0
+  currentmana: 0
 --- !u!4 &256696688
 Transform:
   m_ObjectHideFlags: 0

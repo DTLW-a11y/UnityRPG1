@@ -34,7 +34,7 @@ MonoBehaviour:
   icedamage: 0
   lightingdamage: 0
   CraftMaterials:
-  - ItemData: {fileID: 11400000, guid: 4f4406fce7ff3964a8f0aed36f6fdb55, type: 2}
+  - ItemData: {fileID: 11400000, guid: 5bc920b2a35a48540b9382e246986908, type: 2}
     stacksize: 1
-  - ItemData: {fileID: 11400000, guid: 29b811e8938108f469382dd9203f484a, type: 2}
+  - ItemData: {fileID: 11400000, guid: c06dd47e788a2eb42875a280d5a3e471, type: 2}
     stacksize: 1
