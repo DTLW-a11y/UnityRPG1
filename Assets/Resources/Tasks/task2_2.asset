@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: task2_2
   m_EditorClassIdentifier: 
   taskId: 2
-  taskType: 1
+  taskType: 0
   taskName: 
   taskDesc: 
   pretaskId: -1
-  taskCount: 2
-  targetId: 1
+  taskCount: 3
+  targetId: 901
   rewarditemId: 
   rewardEXP: 80

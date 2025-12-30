@@ -74,7 +74,7 @@ public class TaskManager : MonoBehaviour,ISaveManager
                 return;
             }
         }
-        Debug.Log("ttt");
+        Debug.Log("接取任务"+ _taskid);
         TaskData newdata = new TaskData(_taskid, TaskStatu.taskstatus.inprogress, 0);
         currenttasks.Add(_taskid, newdata);
         OntaskStatuChange?.Invoke();//状态变更，通知ui
@@ -134,6 +134,7 @@ public class TaskManager : MonoBehaviour,ISaveManager
         EXPSystem.instance.AddEXP(taskDetail.rewardEXP);//增加经验
         foreach(var ID in taskDetail.rewarditemId) //增加物品
         {
+            Debug.Log($"{ID}");
             Inventory.Instance.AddItem(ID);
         }
     }

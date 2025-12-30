@@ -53,6 +53,15 @@ public class Skill : MonoBehaviour
                     target = enemy.transform;
                 }
             }
+            else if (enemy.GetComponent<BossStats>())
+            {
+                BossStats enemyStats = enemy.GetComponent<BossStats>();
+                if (distance < closedistance && !enemyStats.isdied)
+                {
+                    closedistance = distance;
+                    target = enemy.transform;
+                }
+            }
         }
         return target;
     }

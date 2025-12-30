@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedf4bd45079d7c42bd6ed3ca2c3e075, type: 3}
+  m_Name: NewDialogue 6
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 6434d1ebe9608a748950c445612bf4d8, type: 2}
+  dialogueText: "\u6211\u542C\u6751\u91CC\u7684\u730E\u6237\u8BF4\uFF0C\u90A3\u4E9B\u9B54\u7269\u5728\u68EE\u6797\u6700\u9AD8\u7684\u90A3\u68F5\u53E4\u6811\u9876\u5EFA\u4E86\u4E2A\u4E34\u65F6\u8425\u5730\uFF0C\u4ED6\u4EEC\u62A2\u7684\u4E1C\u897F\u5927\u591A\u6CA1\u6765\u5F97\u53CA\u8FD0\u8D70\uFF0C\u6211\u7684\u5DE5\u5177\u5E94\u8BE5\u5C31\u5B58\u653E\u5728\u90A3\u6811\u5C4B\u91CC\u3002\u53EA\u662F\u90A3\u5730\u65B9\u5730\u52BF\u9AD8\uFF0C\u4E00\u822C\u4EBA\u8FDE\u722C\u4E0A\u53BB\u90FD\u662F\u4E2A\u95EE\u9898\uFF0C\u4F60\u8981\u53BB\u7684\u8BDD\uFF0C\u53EF\u5F97\u5F53\u5FC3\u3002"

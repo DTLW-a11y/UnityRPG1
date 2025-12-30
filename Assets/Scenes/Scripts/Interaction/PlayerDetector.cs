@@ -9,18 +9,27 @@ public class PlayerDetector : MonoBehaviour
     [SerializeField] private LayerMask layer;
     Collider2D Closest = null;
     private Interface currentTarget;
+    private bool hastrigger = false;
 
     public void Update()
     {
+        //Debug.Log(hastrigger);
         Detect();
-        if (Closest != null && currentTarget.GetType() == InterType.gamespot)//剧情点，靠近触发
+        if (Closest != null && currentTarget.GetType() == InterType.gamespot && !hastrigger)//剧情点，靠近触发
         {
+            Debug.Log("gamespot");
             currentTarget.ThingToDo();
-            Destroy( Closest.gameObject);
+            //Destroy( Closest.gameObject);
+            hastrigger = true;
         }
         else if(Closest != null && Input.GetKeyDown(KeyCode.E))//正常交互物品
         {
+            Debug.Log("thing");
             currentTarget.ThingToDo();
+        }
+        if(Closest == null)
+        {
+            hastrigger = false;
         }
     }
     public void Detect()
@@ -44,7 +53,7 @@ public class PlayerDetector : MonoBehaviour
         if (Closest.TryGetComponent(out Interface component))
         {
             currentTarget = component;
-            //Debug.Log("detected");
+            //Debug.Log(Closest.gameObject.name);
             //检测到了物体ui显示
         }
     }

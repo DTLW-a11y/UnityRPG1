@@ -40,7 +40,7 @@ public class SceenHPUI : MonoBehaviour
     }
 
     // Update is called once per frame
-    private float anitime = 0.5f, anitimemana = 0.35f;
+    private float anitime = 0.5f, anitimemana = 0.2f;
     public static float selftx = 0.0f;
     void Update()
     {
@@ -93,7 +93,7 @@ public class SceenHPUI : MonoBehaviour
         maxmana = characterStats.maxMana.GetValue();
         if (nowmana > characterStats.Mana)
         {
-            anitimemana = 0.35f;
+            anitimemana = 0.2f;
             nowmana -= 4.4f * (nowmana - characterStats.Mana + 0.9f) * Time.deltaTime;
         }
         else

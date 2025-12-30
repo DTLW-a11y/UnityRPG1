@@ -61,7 +61,7 @@ public class Player : Entity
         magicattack1 = new magicAttack1(this, stateMachine, "MagicAttack1");
         counteringstate = new counteringstate(this, stateMachine, "CounterAttack");
 
-        //player = GetComponent<CharacterStats>();
+        transform.position = SpawnManager.position;//切换场景时出生在位置
     }
 
     public void CheckDash()

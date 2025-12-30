@@ -40,8 +40,8 @@ public class counteringstate : PlayerState
         if (Input.GetKeyUp(KeyCode.Mouse1)&& time > 1)
         {
 
-            //释放技能，检测碰撞体，根据敌人，物品
-            SkillManager.instance.CounterSkill.CastSkill(PlayerManager.instance.player.transform);
+            if (Inventory.Instance.SkillDictionary.TryGetValue(SkillManager.instance.abilityrequirements[1].ItemData, out var itemData)) //如果有对应数据，解锁了技能
+                SkillManager.instance.CounterSkill.CastSkill(PlayerManager.instance.player.transform);
 
             time = 0;
             stateMachine.changeState(player.idlestate);

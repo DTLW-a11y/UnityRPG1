@@ -15,7 +15,7 @@ public class prallaxBackground : MonoBehaviour
 
     void Start()
     {
-         cam = GameObject.Find("Main Camera");//和getcompoent的区别
+         cam = GameObject.Find("CameraPrefab");//和getcompoent的区别
         lenth = GetComponent<SpriteRenderer>().bounds.size.x;//背景长度
         xPosition = transform.position.x;//背景位置
     }

@@ -20,6 +20,7 @@ public class playeranimationtrigger : MonoBehaviour
                 EnemyStats _target = hit.GetComponent<EnemyStats>();
                 player.stats.dodamage(_target);
 
+                if(Inventory.Instance.getEquipment(EquipmentType.Weapon))//判断装备了武器
                 Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
             }
             else if (hit.GetComponent<EnemyFly>())
@@ -27,7 +28,16 @@ public class playeranimationtrigger : MonoBehaviour
                 FlyEnemyStats _target = hit.GetComponent<FlyEnemyStats>();
                 player.stats.dodamage(_target);
 
-                Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
+                if (Inventory.Instance.getEquipment(EquipmentType.Weapon))
+                    Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
+            }
+            else if (hit.GetComponent<Boss>())
+            {
+                BossStats _target = hit.GetComponent<BossStats>();
+                player.stats.dodamage(_target);
+
+                if (Inventory.Instance.getEquipment(EquipmentType.Weapon))//判断装备了武器
+                    Inventory.Instance.getEquipment(EquipmentType.Weapon).ExecuteItemEffect();//
             }
         }
     }

@@ -1,27 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class TaskUI : MonoBehaviour
 {
     [SerializeField] GameObject[] singletask = new GameObject[4];
     [SerializeField] GameObject[] taskstatusimg = new GameObject[4];
-    [SerializeField] Sprite doneimg;
+    [SerializeField] Sprite doneimg, notdoneimg;
     private RectTransform selfrec;
     private RectTransform[] taskrec = new RectTransform[4];
     private Image[] status = new Image[4];
     public float targetx = -420;
+    private int[] findindex = { 5, 6, 8, 9 };
     // Start is called before the first frame update
     void Start()
     {
         selfrec = GetComponent<RectTransform>();
-        for (int i = 0; i < 4; i ++)
+        for (int i = 0; i < 4; i++)
         {
             taskrec[i] = singletask[i].GetComponent<RectTransform>();
             status[i] = taskstatusimg[i].GetComponent<Image>();
         }
         selfrec.anchoredPosition = new Vector2(-420.0f, 0);
+        TaskManager.instance.OntaskProgressChange += updatetaskui;
+        TaskManager.instance.OntaskStatuChange += updatetaskui;
+        updatetaskui();
+    }
+    void updatetaskui()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            switch(TaskManager.instance.Find(findindex[i]))
+            {
+                case 0:
+                    taskrec[i].anchoredPosition = new Vector2(-500.0f, -260.0f * i + 130.0f);
+                    break;
+                case 1:
+                    taskrec[i].anchoredPosition = new Vector2(320.0f, -260.0f * i + 130.0f);
+                    status[i].sprite = doneimg;
+                    break;
+                default:
+                    taskrec[i].anchoredPosition = new Vector2(320.0f, -260.0f * i + 130.0f);
+                    status[i].sprite = notdoneimg;
+                    break;
+            }
+        }
     }
 
     // Update is called once per frame

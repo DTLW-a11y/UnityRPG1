@@ -20,20 +20,28 @@ public class Npc_1 : MonoBehaviour, Interface
     public void ThingToDo()
     {
 
-        if (!firstdialog )//第一次对话
+        if (!firstdialog && TaskManager.instance.Find(1) == 0)//第一次对话
         {
             //Debug.Log(0);
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
             firstdialog = true;
             TaskManager.instance.AcceptTask(1);//接取任务1
         }
-        else if (TaskManager.instance.Find(1) == 1 && TaskManager.instance.Find(2) ==-1)//已完成
+        else if (TaskManager.instance.Find(1) == 1 && TaskManager.instance.Find(2) ==-1 && TaskManager.instance.Find(9) ==0)//已完成
         {
+            
             int a = Random.Range(0, 10);
             if(a>=5)
                 DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[1]);
             else
                 DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[2]);
+        }
+        else if (TaskManager.instance.Find(9) == -1 )//9未完成
+        {
+            
+            DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[3]);
+            TaskManager.instance.UpdateProgress(tasktype.TalkToNPC, 801, 1);//完成任务9
+            TaskManager.instance.AcceptTask(10);
         }
     }
 }

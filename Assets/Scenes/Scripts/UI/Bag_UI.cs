@@ -10,11 +10,14 @@ public class Bag_UI : MonoBehaviour
     [SerializeField] GameObject hptext, manatext;
     [SerializeField] GameObject hpbar, manabar;
     [SerializeField] GameObject valuelist;
+    [SerializeField] GameObject BagTitle;
+    [SerializeField] GameObject[] bags = new GameObject[3];
 
     private RectTransform recTrans;
+    private RectTransform[] bagrec = new RectTransform[3];
     private CharacterStats playerstats;
     private RectTransform bartrans, manabartrans;
-    private TextMeshProUGUI hptextmeshpro, manatextmeshpro, value;
+    private TextMeshProUGUI hptextmeshpro, manatextmeshpro, value, title;
     private float hp = 100.0f, maxhp, mana, maxmana;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,27 @@ public class Bag_UI : MonoBehaviour
         value = valuelist.GetComponent<TextMeshProUGUI>();
         recTrans = GetComponent<RectTransform>();
         recTrans.anchoredPosition = new Vector2(0, 2000);
+        title = BagTitle.GetComponent<TextMeshProUGUI>();
+        for (int i = 0; i < 3; i ++)
+        {
+            bagrec[i] = bags[i].GetComponent<RectTransform>();
+        }
+    }
+    private void UpdateTitle()
+    {
+        if (bagrec[2].anchoredPosition.x < 100.0f)
+        {
+            title.text = "制作台";
+            return;
+        }
+        if (bagrec[0].anchoredPosition.x < 100.0f)
+        {
+            title.text = "物 品";
+        }
+        else
+        {
+            title.text = "材 料";
+        }
     }
     private void UpdateHP()
     {
@@ -68,6 +92,7 @@ public class Bag_UI : MonoBehaviour
     {
         KeyEDown = Input.GetKeyDown(KeyCode.B);
         UpdateHP();
+        UpdateTitle();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isMoving = false;

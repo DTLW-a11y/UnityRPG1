@@ -67,6 +67,23 @@ public class CounterWall : MonoBehaviour
                 _target.takedamage(Mathf.RoundToInt(time * 30));
 
         }
+        else if (hit.GetComponent<Boss>())
+        {
+            BossStats _target = hit.GetComponent<BossStats>();
+            Boss boss = hit.GetComponent<Boss>();
+
+            if (Inventory.Instance.getEquipment(EquipmentType.Armor))//有护盾
+            {
+                int damage = Inventory.Instance.getEquipment(EquipmentType.Armor).damage;
+                //Debug.Log(damage);
+                _target.takedamage(Mathf.RoundToInt(time * (damage + 30)));
+            }//伤害等于蓄力时间*护盾
+            else//无护盾
+                _target.takedamage(Mathf.RoundToInt(time * 30));
+
+            boss.stateMachine.ChangeState(boss.stunnedstate);
+
+        }
         else if ((hit.GetComponent<Rock>()))
             {
             Debug.Log("touch");

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flydiestate : EnemyState
 {
     EnemyFly enemy;
-    
+    string enemyname;
     public Flydiestate(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, EnemyFly enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
         this.enemy = enemy;
@@ -20,7 +20,8 @@ public class Flydiestate : EnemyState
     {
 
         base.Enter();
-
+        enemyname = enemy.gameObject.name;
+        TaskManager.instance.UpdateProgress(tasktype.Killenemy, 903, 1);
     }
 
     public override void Exit()
@@ -34,6 +35,7 @@ public class Flydiestate : EnemyState
         enemy.ZeroVelocity();
         if (TriggerCalled)
         {
+      
             enemy.gameObject.SetActive(false);
         }
 

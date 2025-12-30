@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InputTitleUI : MonoBehaviour
 {
-    string title = "风尘澒洞四海乱，英雄攘臂收功名";
+    string title = "风尘汞洞四海乱，英雄攘臂收功名";
     TextMeshProUGUI titletext;
     [SerializeField] GameObject titleline;
     RectTransform line;

@@ -31,13 +31,13 @@ public class UI_craftslot : UI_Itemslot
     private void Update()
     {
         itemData_equipment itemCraft = item.ItemData as itemData_equipment;
-        CanORnotIMG.color = Color.white;
         foreach (InventoryItem i in itemCraft.CraftMaterials)
         {
             if (Inventory.Instance.StashDictionary.TryGetValue(i.ItemData, out var itemdata))
             {
                 if (itemdata.stacksize < i.stacksize)
                 {
+                    CanORnotIMG.color = Color.white;
                     CanORnotIMG.sprite = cannotdo;
                     return;
                 }
@@ -49,6 +49,7 @@ public class UI_craftslot : UI_Itemslot
             }
             else
             {
+                CanORnotIMG.color = Color.white;
                 CanORnotIMG.sprite = cannotdo;
                 return;
             }

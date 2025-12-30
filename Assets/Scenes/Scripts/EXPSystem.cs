@@ -13,6 +13,7 @@ public class EXPSystem : MonoBehaviour,ISaveManager//等级系统单例
     public int maxEXP;
     public int currentEXP;
 
+    public event Action onEXPchange;
     public event Action onLevelUp;
     public event Action onmanaLevelUp;//事件，升级时通知订阅者
     public void Awake()
@@ -38,7 +39,7 @@ public class EXPSystem : MonoBehaviour,ISaveManager//等级系统单例
             levelUP();
             changeMaxEXP();
         }
-
+        onEXPchange?.Invoke();
     }
     private void changeMaxEXP()//改变最大经验
     {

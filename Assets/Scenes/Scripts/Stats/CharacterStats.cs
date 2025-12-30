@@ -77,6 +77,21 @@ public class CharacterStats : MonoBehaviour
         onhealthchange();
 
     }
+    public virtual void changehealthto(int _hp)
+    {
+        if(_hp > GetMaxHP())
+        {
+            currentHP = GetMaxHP();
+            if (onhealthchange != null)
+                onhealthchange();
+        }
+        else
+        {
+            currentHP =_hp;
+            if (onhealthchange != null)
+                onhealthchange();
+        }
+    }
     public virtual void Increasehealthby(int _heal)
     {
         int maxhp = GetMaxHP();

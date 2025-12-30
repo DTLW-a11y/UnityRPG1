@@ -18,6 +18,36 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: 0a8322a7f610dba49a712298d8254d9e
   - enabled: 1
+    path: Assets/Scenes/hgySampleScene.unity
+    guid: 9dbc3b644a4017942ab26b626791a560
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Forest3.unity
+    guid: 0ae5e8819cd36ba49aa14ba2ca2a81bf
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Home.unity
+    guid: e0a7c0aea771372459dea7a769c8b7e2
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Cave.unity
+    guid: bbe16b7c78862e741b5b07066fa7509b
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Village.unity
+    guid: 275d668122a159b4689f305c1b972738
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Forest2.unity
+    guid: fb2cd851e21f0fa4d93fe3660a36a4fd
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Forest1.unity
+    guid: eb8139ab72e533c44a188188dedc7400
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Tree House.unity
+    guid: 542a53777a9e8524cbcd02f9b3c5054c
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Home of Liu.unity
+    guid: 73325bceee2c0454c9d66f3547d2598e
+  - enabled: 1
     path: Assets/Scenes/InputNameScene.unity
     guid: 5e433e7f326410148835d6de3557f3c0
+  - enabled: 1
+    path: Assets/Scenes/testscene.unity
+    guid: 866d2da54c503fe48afc6185ce22a3ef
   m_configObjects: {}
