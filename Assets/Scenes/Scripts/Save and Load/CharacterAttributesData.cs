@@ -25,7 +25,7 @@ public class CharacterAttributesData
         strength = 10;
         agility = 10;
         intelligence = 10;
-        vitality = 10;
+        vitality = 0;
         maxHP = 100;
         currentHP = 100;
         armor = 0;

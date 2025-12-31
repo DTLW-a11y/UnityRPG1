@@ -102,13 +102,14 @@ public class PlayerStats : CharacterStats,ISaveManager
         _data.playerAttributes.critChance = critchance.GetValue();
         _data.playerAttributes.critPower = critpower.GetValue();
     }
-    public void LoadData(GameData _data)
+    public void LoadData(GameData _data)//加载数据时应该加载等级modifier || 升级时直接改变基础数值
     {
         strenth.Setvalue(_data.playerAttributes.strength);
         agility.Setvalue(_data.playerAttributes.agility);
         intelligence.Setvalue(_data.playerAttributes.intelligence);
         vitality.Setvalue(_data.playerAttributes.vitality);
 
+        //Debug.Log(_data.playerAttributes.maxHP);
         maxHP.Setvalue(_data.playerAttributes.maxHP);
         currentHP = _data.playerAttributes.currentHP;
         armor.Setvalue(_data.playerAttributes.armor);

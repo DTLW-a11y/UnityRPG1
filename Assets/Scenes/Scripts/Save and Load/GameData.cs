@@ -13,7 +13,7 @@ public class GameData
     public string currentCheckpoint;
     public SerializableDictionary<string, bool> activatedCheckpoints;
 
-    public CharacterAttributesData playerAttributes;
+    public CharacterAttributesData playerAttributes;//角色的所有数据
 
     public int level, manalevel, maxEXP, currentEXP;
 
@@ -52,8 +52,9 @@ public class GameData
         activatedCheckpoints = new SerializableDictionary<string, bool>();
         level = 0;
         manalevel = 0;
-        maxEXP = 0;
+        maxEXP = 100;
         currentEXP = 0;
+
         openedChests = new SerializableDictionary<string, bool>();
     }
     public List<TaskDataSave> currentTasksSave = new List<TaskDataSave>();

@@ -17,12 +17,13 @@ public class SceenHPUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        characterStats = player.GetComponent<CharacterStats>();
+        characterStats = player.GetComponent<PlayerStats>();
         selftrans = GetComponent<RectTransform>();
         reftrans = topui.GetComponent<RectTransform>();
         booktrans = bookui.GetComponent<RectTransform>();
         leaftrans = bookleaf.GetComponent<RectTransform>();
         maxhp = characterStats.GetMaxHP();
+        Debug.Log(maxhp);
         nowhp = characterStats.currentHP;
         lasthp = maxhp;
         maxmana = characterStats.maxMana.GetValue();
