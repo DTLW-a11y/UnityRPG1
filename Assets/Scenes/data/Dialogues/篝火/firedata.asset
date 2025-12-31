@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: firedata
   m_EditorClassIdentifier: 
   dialogueLines:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c57d7c57bb8719f4ba7aa89e8ee932cc, type: 2}
   autoNext: 0
   autoNextDelay: 2

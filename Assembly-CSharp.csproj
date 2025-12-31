@@ -247,6 +247,7 @@
     <Compile Include="Assets\Scenes\Scripts\Skill\Skill.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\PropertyOrderAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\masterattackstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scenes\Scripts\Skill\move\MagicBall.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\UI_equipmentslot.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playerprimeattack.cs" />
