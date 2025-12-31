@@ -85,6 +85,8 @@ public class TaskManager : MonoBehaviour,ISaveManager
     //到达地点任务   taskcount为1
     public void UpdateProgress(tasktype tasktype, int targetid ,int addCount =1)
     {
+        bool iscompleted = false;
+        bool updated = false;
         foreach (var task in currenttasks)//遍历已有任务
         {
             //int progress = task.Value.progress;
@@ -103,16 +105,24 @@ public class TaskManager : MonoBehaviour,ISaveManager
                 if (tot < targetnum)
                 {
                     task.Value.progress += addCount;
-                    OntaskProgressChange?.Invoke();
+                    updated = true;
                     Debug.Log("任务进度更新");
                 }
                 else
                 {
                     task.Value.progress = targetnum;
                     Complete(taskid);
-                    OntaskProgressChange?.Invoke();
+                    iscompleted = true;
                 }
             }
+        }
+        if (iscompleted)
+        {
+            OntaskStatuChange?.Invoke();
+        }
+        if (updated)
+        {
+            OntaskProgressChange?.Invoke();
         }
     }
     #endregion
@@ -123,7 +133,6 @@ public class TaskManager : MonoBehaviour,ISaveManager
         if (!currenttasks.ContainsKey(_taskid)) return;
         currenttasks[_taskid].taskstatus = TaskStatu.taskstatus.completed;
         Reward(_taskid);
-        OntaskStatuChange?.Invoke();
         Debug.Log("任务完成");
     }
     public void Reward(int _taskid)

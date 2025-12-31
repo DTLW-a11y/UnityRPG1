@@ -137,6 +137,7 @@
     <Compile Include="Assets\Scenes\Scripts\CharacterData.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\masterstunnedstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\TheEnd.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\counteringstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Npc_1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossstunnedstate.cs" />

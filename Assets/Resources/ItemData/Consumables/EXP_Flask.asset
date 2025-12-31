@@ -18,4 +18,4 @@ MonoBehaviour:
   ItemType: 2
   itemname: EXP_Flask
   icon: {fileID: 21300000, guid: aa590f0874ea2024ea4eb284491850a8, type: 3}
-  dropChance: 0
+  dropChance: 100
