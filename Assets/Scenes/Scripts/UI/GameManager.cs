@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,6 +8,8 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
+    public event Action AfterChange;
+
     public static GameManager Instance;
     [SerializeField] GameObject cloth, text;
     private RectTransform clothrec, textrec;
@@ -77,6 +80,8 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator ClothFadeOut()
     {
+        AfterChange?.Invoke();
+        AfterChange = null;
         textrec.anchoredPosition = new Vector2(5000, 0);
         float alpha = 255.0f;
         do

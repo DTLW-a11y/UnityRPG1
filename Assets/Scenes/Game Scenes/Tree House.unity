@@ -14075,8 +14075,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7653423537919415264, guid: 8bf369b53d14b6847ab1be540ccbf6c2, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1065789627}
   m_SourcePrefab: {fileID: 100100000, guid: 8bf369b53d14b6847ab1be540ccbf6c2, type: 3}
+--- !u!1 &1065789626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7653423537919415264, guid: 8bf369b53d14b6847ab1be540ccbf6c2, type: 3}
+  m_PrefabInstance: {fileID: 1065789625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1065789627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065789626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37073ce322273854b88efea0ae034c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: []
+  taskid: 
+  checkpointId: checkpoint_002
+  isActivated: 0
+  IsInRange: 0
 --- !u!1 &1066170130
 GameObject:
   m_ObjectHideFlags: 0
@@ -23979,8 +24004,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 47306699}
   m_HandleRect: {fileID: 47306698}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.45200005
+  m_Value: 0.99999976
+  m_Size: 0.45199996
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -29727,7 +29752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.6025012
+      value: 4.2309103
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.y

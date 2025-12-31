@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Checkpoint: MonoBehaviour, Interface
 {
@@ -10,8 +11,8 @@ public class Checkpoint: MonoBehaviour, Interface
     bool seconddialog = false;
     public string checkpointId = "checkpoint_001";
     public bool isActivated = false;
+    public string SceneName;
     public bool IsActivated => isActivated;
-    private bool IsInRange = false;
     public InterType GetType()
     {
         return InterType.elsespot;
@@ -24,10 +25,10 @@ public class Checkpoint: MonoBehaviour, Interface
     public void ThingToDo()
     {
         isActivated = true;
-        IsInRange = false;
+        SceneName = SceneManager.GetActiveScene().name;
         if (CheckpointManager.instance != null)
         {
-            CheckpointManager.instance.ActivateChecpoint(checkpointId, transform.position);
+            CheckpointManager.instance.ActivateChecpoint(checkpointId, transform.position,SceneName);
         }
     }
     public void SetActivated(bool activated)
