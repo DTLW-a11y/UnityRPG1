@@ -138,6 +138,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\matser\masterstunnedstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\counteringstate.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\TheEnd.cs" />
     <Compile Include="Assets\Scenes\Scripts\Interaction\ItemScript\Npc_1.cs" />
     <Compile Include="Assets\Scenes\Scripts\Enemy\Boss\Bossstunnedstate.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player\playermovestate.cs" />
@@ -181,6 +182,7 @@
     <Compile Include="Assets\Scenes\Scripts\Enemy\EnemyStateMachine.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
     <Compile Include="Assets\Scenes\Scripts\Save and Load\CheckpointManager.cs" />
+    <Compile Include="Assets\Scenes\Scripts\UI\UpGradeUI.cs" />
     <Compile Include="Assets\Scenes\Scripts\Inventory and items\ItemData.cs" />
     <Compile Include="Assets\Scenes\Scripts\UI\HealthBarUI.cs" />
     <Compile Include="Assets\Scenes\Scripts\Dialogue System\DialogueTrigger.cs" />

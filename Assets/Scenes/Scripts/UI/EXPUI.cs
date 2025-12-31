@@ -61,7 +61,7 @@ public class EXPUI : MonoBehaviour
         {
             backimg.sprite = expback;
             iconimg.sprite = expico;
-            titletext.text = "等      级";
+            titletext.text = "等    级";
         }
         updateexp();
     }

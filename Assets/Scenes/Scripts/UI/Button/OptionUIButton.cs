@@ -10,6 +10,11 @@ public class OptionUIButton : MonoBehaviour
         SceenHPUI.selftx += 1000.0f;
         return;
     }
+    public void GoHome()
+    {
+        BackGame();
+        GameManager.Instance.NormalJumpToScene("Home");
+    }
     public void ExitGame()
     {
         Application.Quit();

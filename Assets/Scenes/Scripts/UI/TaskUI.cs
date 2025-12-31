@@ -8,21 +8,24 @@ public class TaskUI : MonoBehaviour
     [SerializeField] GameObject[] singletask = new GameObject[4];
     [SerializeField] GameObject[] taskstatusimg = new GameObject[4];
     [SerializeField] Sprite doneimg, notdoneimg;
-    private RectTransform selfrec;
+    [SerializeField] GameObject warningimg;
+    private RectTransform selfrec, warningrec;
     private RectTransform[] taskrec = new RectTransform[4];
     private Image[] status = new Image[4];
-    public float targetx = -420;
+    public float targetx = -320.0f;
     private int[] findindex = { 5, 6, 8, 9 };
+    private float warningx = -100.0f;
     // Start is called before the first frame update
     void Start()
     {
         selfrec = GetComponent<RectTransform>();
+        warningrec = warningimg.GetComponent<RectTransform>();
         for (int i = 0; i < 4; i++)
         {
             taskrec[i] = singletask[i].GetComponent<RectTransform>();
             status[i] = taskstatusimg[i].GetComponent<Image>();
         }
-        selfrec.anchoredPosition = new Vector2(-420.0f, 0);
+        selfrec.anchoredPosition = new Vector2(-320.0f, 0);
         TaskManager.instance.OntaskProgressChange += updatetaskui;
         TaskManager.instance.OntaskStatuChange += updatetaskui;
         updatetaskui();
@@ -34,6 +37,7 @@ public class TaskUI : MonoBehaviour
     }
     void updatetaskui()
     {
+        warningx = -100.0f;
         for (int i = 0; i < 4; i++)
         {
             switch(TaskManager.instance.Find(findindex[i]))
@@ -48,9 +52,11 @@ public class TaskUI : MonoBehaviour
                 default:
                     taskrec[i].anchoredPosition = new Vector2(320.0f, -260.0f * i - 130.0f);
                     status[i].sprite = notdoneimg;
+                    warningx = 60.0f;
                     break;
             }
         }
+        warningrec.anchoredPosition = new Vector2(warningx, 0.0f);
     }
 
     // Update is called once per frame
@@ -58,7 +64,7 @@ public class TaskUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            targetx = (targetx == -420.0f) ? 340.0f : -420.0f;
+            targetx = (targetx == -320.0f) ? 340.0f : -320.0f;
         }
         selfrec.anchoredPosition = new Vector2(selfrec.anchoredPosition.x + (targetx - selfrec.anchoredPosition.x) * 2.6f * Time.deltaTime, 0);
     }
