@@ -15,6 +15,11 @@ public class UpGradeUI : MonoBehaviour
         EXPSystem.instance.onLevelUp += expshow;
         EXPSystem.instance.onmanaLevelUp += manashow;
     }
+    private void OnDestroy()
+    {
+        EXPSystem.instance.onLevelUp -= expshow;
+        EXPSystem.instance.onmanaLevelUp -= manashow;
+    }
     void expshow()
     {
         if (showexpcor != null) StopCoroutine(showexpcor);

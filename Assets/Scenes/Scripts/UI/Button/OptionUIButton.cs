@@ -13,7 +13,7 @@ public class OptionUIButton : MonoBehaviour
     public void GoHome()
     {
         BackGame();
-        GameManager.Instance.NormalJumpToScene("Home");
+        GameManager.Instance.NormalJumpToScene("StartMenu");
     }
     public void ExitGame()
     {

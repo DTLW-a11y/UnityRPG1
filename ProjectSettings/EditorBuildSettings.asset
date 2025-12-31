@@ -9,23 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 1cc4619bc16f01e4387d7ff9c18d7889
   - enabled: 1
-    path: Assets/Scenes/InitSence.unity
-    guid: f7cc8cd383823aa41a42c9236721de0e
-  - enabled: 1
-    path: Assets/Scenes/LXHSampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: 0a8322a7f610dba49a712298d8254d9e
   - enabled: 1
-    path: Assets/Scenes/hgySampleScene.unity
-    guid: 9dbc3b644a4017942ab26b626791a560
-  - enabled: 1
     path: Assets/Scenes/InputNameScene.unity
     guid: 5e433e7f326410148835d6de3557f3c0
-  - enabled: 1
-    path: Assets/Scenes/testscene.unity
-    guid: 866d2da54c503fe48afc6185ce22a3ef
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Cave.unity
     guid: 6a7ee31b15edddc4c810bc357bc69db1
