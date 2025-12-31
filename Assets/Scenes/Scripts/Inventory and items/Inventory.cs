@@ -403,11 +403,11 @@ public class Inventory : MonoBehaviour, ISaveManager
         //删除现有物品
         if (_data.inventory != null && _data.inventory.Count > 0)
         {
-            inventoryItems.Clear();
-            inventoryDictionary.Clear();
-            StashItems.Clear();
-            StashDictionary.Clear();
-            LoadedItems.Clear();
+            //inventoryItems.Clear();
+            //inventoryDictionary.Clear();
+            //StashItems.Clear();
+            //StashDictionary.Clear();
+            //LoadedItems.Clear();
             // 加载存档物品
             foreach (KeyValuePair<string, int> pair in _data.inventory)
             {
