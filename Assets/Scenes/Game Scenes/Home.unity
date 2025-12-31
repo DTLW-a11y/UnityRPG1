@@ -12434,6 +12434,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762339489}
   m_CullTransparentMesh: 1
+--- !u!1 &781018542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781018544}
+  - component: {fileID: 781018543}
+  m_Layer: 0
+  m_Name: CheckpointManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &781018543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781018542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11b5f146144ce747a10b35d940a52d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoints: []
+--- !u!4 &781018544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781018542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.486395, y: -0.54051745, z: 0.10432643}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789335147
 GameObject:
   m_ObjectHideFlags: 0
@@ -17301,7 +17346,14 @@ MonoBehaviour:
   inventoryslotParent: {fileID: 0}
   StashslotParent: {fileID: 0}
   EquipmentSlotParent: {fileID: 0}
-  ItemDataBase: []
+  ItemDataBase:
+  - {fileID: 11400000, guid: 1d446978a08056844a69206b840cb958, type: 2}
+  - {fileID: 11400000, guid: d9308e8744e9fe24ca4c193f5e77f402, type: 2}
+  - {fileID: 11400000, guid: 5f2bc32fcdf26a7449db3ad18fe8b546, type: 2}
+  - {fileID: 11400000, guid: 50b8d111cbe0ee5428c7e0f5de1f52e4, type: 2}
+  - {fileID: 11400000, guid: 478894da444973446aa5c28c40ff7a16, type: 2}
+  - {fileID: 11400000, guid: 456fd7adafa49214bb2c961adcf9475e, type: 2}
+  - {fileID: 11400000, guid: 00a2b582fa71760439374f0f97dee6c2, type: 2}
   LoadedItems: []
   loadedEquipment: []
 --- !u!4 &1031406264
@@ -17562,6 +17614,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1744878109902270248, guid: 264a6092f145ffc458fffded7f29c54c, type: 3}
+      propertyPath: chanceToLoseItems
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2534687973611324199, guid: 264a6092f145ffc458fffded7f29c54c, type: 3}
       propertyPath: m_Name
       value: player
@@ -17693,8 +17749,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247727469}
   m_HandleRect: {fileID: 247727468}
   m_Direction: 2
-  m_Value: 0.9999999
-  m_Size: 0.45199993
+  m_Value: 1.0000005
+  m_Size: 0.45200002
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -34926,7 +34982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0147703
+      value: 1.0115392
       objectReference: {fileID: 0}
     - target: {fileID: 4234446506364549942, guid: 6cebf5e07234b3a4abc8df374d4ad84e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35186,6 +35242,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460047616}
   m_CullTransparentMesh: 1
+--- !u!1 &1461708220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461708222}
+  - component: {fileID: 1461708221}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1461708221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461708220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd9317b61fc95e4f80aa42b779e1327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: data.alexdev
+  gameData:
+    currency: 0
+    inventory:
+      keys: []
+      values: 
+    playerPosition: {x: 0, y: 0, z: 0}
+    playerScene: village
+    currentCheckpoint: start
+    activatedCheckpoints:
+      keys: []
+      values: 
+    playerAttributes:
+      strength: 10
+      agility: 10
+      intelligence: 10
+      vitality: 10
+      maxHP: 100
+      currentHP: 100
+      armor: 0
+      evasion: 5
+      damage: 20
+      critChance: 10
+      critPower: 150
+    level: 1
+    manalevel: 1
+    maxEXP: 100
+    currentEXP: 0
+    openedChests:
+      keys: []
+      values: 
+--- !u!4 &1461708222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461708220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.486395, y: -0.54051745, z: 0.10432643}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462050303
 GameObject:
   m_ObjectHideFlags: 0
@@ -37833,7 +37964,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1836369373}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.43269226
+  m_Size: 0.43269232
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -45913,6 +46044,8 @@ SceneRoots:
   - {fileID: 335635821}
   - {fileID: 2038671198}
   - {fileID: 700580048}
+  - {fileID: 781018544}
+  - {fileID: 1461708222}
   - {fileID: 1833973653}
   - {fileID: 1031406264}
   - {fileID: 524937995}
