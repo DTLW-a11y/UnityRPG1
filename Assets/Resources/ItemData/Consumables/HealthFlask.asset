@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05c80f49617beb14b9d8a5f4aa3f1589, type: 2}
   ItemType: 2
   itemname: HealthFlask
-  icon: {fileID: 21300000, guid: 5d9ba4e7d0964044ea54abe409d81dfd, type: 3}
-  dropChance: 0
+  icon: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9, type: 3}
+  dropChance: 100

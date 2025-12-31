@@ -22,8 +22,10 @@ public class Player : Entity
 
     public Transform countercheck;
     public Vector2 boxsize;
-    
-    
+
+    [SerializeField] protected LayerMask whatisWall;
+
+
 
     #region States
     public PlayerStateMachine stateMachine { get; private set; }//
@@ -97,6 +99,16 @@ public class Player : Entity
     }
     //CharacterStats player;
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+
+    public override bool IsWallDetected()
+    {
+        if (Physics2D.Raycast(wallcheck.position, Vector2.right * facingdir, wallcheckdistance , whatisWall))
+        {
+            Debug.Log("11");
+        return true;
+    }
+        return false;
+    }
 
     protected override void OnDrawGizmos()
     {

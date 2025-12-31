@@ -85,6 +85,8 @@ public class TaskManager : MonoBehaviour,ISaveManager
     //到达地点任务   taskcount为1
     public void UpdateProgress(tasktype tasktype, int targetid ,int addCount =1)
     {
+        bool iscompleted = false;
+        bool updated = false;
         foreach (var task in currenttasks)//遍历已有任务
         {
             //int progress = task.Value.progress;
@@ -103,16 +105,24 @@ public class TaskManager : MonoBehaviour,ISaveManager
                 if (tot < targetnum)
                 {
                     task.Value.progress += addCount;
-                    OntaskProgressChange?.Invoke();
+                    updated = true;
                     Debug.Log("任务进度更新");
                 }
                 else
                 {
                     task.Value.progress = targetnum;
                     Complete(taskid);
-                    OntaskProgressChange?.Invoke();
+                    iscompleted = true;
                 }
             }
+        }
+        if (iscompleted)
+        {
+            OntaskStatuChange?.Invoke();
+        }
+        if (updated)
+        {
+            OntaskProgressChange?.Invoke();
         }
     }
     #endregion
@@ -123,7 +133,6 @@ public class TaskManager : MonoBehaviour,ISaveManager
         if (!currenttasks.ContainsKey(_taskid)) return;
         currenttasks[_taskid].taskstatus = TaskStatu.taskstatus.completed;
         Reward(_taskid);
-        OntaskStatuChange?.Invoke();
         Debug.Log("任务完成");
     }
     public void Reward(int _taskid)
@@ -157,32 +166,38 @@ public class TaskManager : MonoBehaviour,ISaveManager
     public void LoadData(GameData _data)
     {
         //加载总任务数据
-        totaltasks.Clear();
-        foreach (var saveData in _data.totalTasksSave)
+        if(_data.totalTasksSave !=null &&_data.totalTasksSave.Count>0)
         {
-            var detail = new TaskDetail();
-            detail.taskId = saveData.taskId;
-            detail.taskType = (tasktype)saveData.taskType; 
-            detail.taskName = saveData.taskName;
-            detail.taskDesc = saveData.taskDesc;
-            detail.pretaskId = saveData.pretaskId;
-            detail.taskCount = saveData.taskCount;
-            detail.targetId = saveData.targetId;
-            detail.rewarditemId = saveData.rewarditemId;
-            detail.rewardEXP = saveData.rewardEXP;
-            totaltasks[saveData.taskId] = detail;
+            totaltasks.Clear();
+            foreach (var saveData in _data.totalTasksSave)
+            {
+                var detail = new TaskDetail();
+                detail.taskId = saveData.taskId;
+                detail.taskType = (tasktype)saveData.taskType;
+                detail.taskName = saveData.taskName;
+                detail.taskDesc = saveData.taskDesc;
+                detail.pretaskId = saveData.pretaskId;
+                detail.taskCount = saveData.taskCount;
+                detail.targetId = saveData.targetId;
+                detail.rewarditemId = saveData.rewarditemId;
+                detail.rewardEXP = saveData.rewardEXP;
+                totaltasks[saveData.taskId] = detail;
+            }
         }
 
         // 加载当前任务数据
-        currenttasks.Clear();
-        foreach (var saveData in _data.currentTasksSave)
+        if (_data.currentTasksSave != null && _data.currentTasksSave.Count > 0)
         {
-            var taskData = new TaskData(
-                saveData.taskId,
-                (TaskStatu.taskstatus)saveData.status,
-                saveData.progress
-            );
-            currenttasks[saveData.taskId] = taskData;
+            currenttasks.Clear();
+            foreach (var saveData in _data.currentTasksSave)
+            {
+                var taskData = new TaskData(
+                    saveData.taskId,
+                    (TaskStatu.taskstatus)saveData.status,
+                    saveData.progress
+                );
+                currenttasks[saveData.taskId] = taskData;
+            }
         }
 
         OntaskStatuChange?.Invoke(); // 通知UI更新

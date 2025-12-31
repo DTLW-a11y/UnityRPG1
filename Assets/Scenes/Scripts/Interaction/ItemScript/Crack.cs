@@ -33,7 +33,7 @@ public class Crack : MonoBehaviour, Interface
 
     public void ThingToDo()
     {
-        if (TaskManager.instance.Find(10) == 1)
+        if (TaskManager.instance.Find(10) ==1)
         {
             DialogueManager.Instance.dialogueTrigger.TriggerDialogue(text[0]);
         }

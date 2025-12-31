@@ -8,8 +8,8 @@ public class GameData
     public int currency;
 
     public SerializableDictionary<string, int> inventory;
-
     public Vector3 playerPosition;
+    public string playerScene;
     public string currentCheckpoint;
     public SerializableDictionary<string, bool> activatedCheckpoints;
 
@@ -46,6 +46,7 @@ public class GameData
         this.currency = 0;
         inventory = new SerializableDictionary<string, int>();
         playerPosition = Vector3.zero;
+        playerScene = "village";
         playerAttributes = new CharacterAttributesData();
         currentCheckpoint = "start";
         activatedCheckpoints = new SerializableDictionary<string, bool>();

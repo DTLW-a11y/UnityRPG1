@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleitemDrop: 3
   possibledrop:
-  - {fileID: 11400000, guid: e3a5fc0b4bf46f049a51dd7223885c4d, type: 2}
+  - {fileID: 11400000, guid: 3739cfa2d46b39e44a485dfb1af222f2, type: 2}
   dropPrefab: {fileID: 3120617463538930331, guid: 1b8909abfb9ccdf449fe4e92a802adae, type: 3}
 --- !u!114 &2584598226630927997
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOpened: 0
-  chestId: 
+  chestId: 004
   opened: {fileID: -3888567672798316567, guid: 19e07f9d107e445408633f50457d456e, type: 3}
 --- !u!212 &7968312870981835492
 SpriteRenderer:
@@ -105,8 +105,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1999223295
-  m_SortingLayer: 7
+  m_SortingLayerID: 1091713567
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -6929924221510541977, guid: 19e07f9d107e445408633f50457d456e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.453125}
