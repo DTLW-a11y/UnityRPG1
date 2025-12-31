@@ -37,6 +37,7 @@
   - 存档点系统，靠近篝火按e键可以保存位置，死亡后在上一次存档的地方复活
   - 敌人：共设计四种敌人，包括一个最终boss，设计有两个阶段
 
-  #### PART 4 Github地址
-  
-  https://github.com/DTLW-a11y/UnityRPG1
+
+#### PART 3 Github地址
+
+https://github.com/DTLW-a11y/UnityRPG1
